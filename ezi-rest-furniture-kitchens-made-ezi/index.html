@@ -35,7 +35,9 @@ p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.95em;margin-bottom:16px}
 
 #about{background:#0f0b08}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about-image{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(135deg,#78350f,#c0842f);opacity:.15;display:flex;align-items:center;justify-content:center;font-size:3em}
+.about-image{aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#78350f,#c0842f)}
+.about-image img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9;transition:transform .5s,opacity .3s}
+.about-image:hover img{transform:scale(1.03);opacity:1}
 @media(max-width:768px){.about-grid{grid-template-columns:1fr}}
 
 .rating-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:6px 14px;border-radius:20px;font-size:.8em;color:#c0842f;margin-bottom:20px}
@@ -100,7 +102,9 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="rating-badge">⭐ 4.8/5 (17 reviews)</div>
 <p>Ezi-Rest Furniture & Kitchens Made Ezi has been serving Hamilton for years with a strong 4.8-star reputation. We specialise in custom furniture, kitchen renovations, and cabinetry solutions. Our workshop crafts beautiful, functional pieces using quality New Zealand materials — from solid timber dining tables to fully fitted kitchens that transform your home.</p>
 </div>
-<div class="about-image"></div>
+<div class="about-image">
+<img src="https://scopio-photo-submissions-resized.s3.amazonaws.com/d7ce36b8-0eee-4d88-9e0a-d306dcd7a21e/1500-9a088969-e053-43cf-8044-7d07d3608d2f.jpeg" alt="Modern furniture collection" loading="lazy">
+</div>
 </div>
 </div>
 </section>
@@ -122,9 +126,21 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <h2>What Our Clients Say</h2>
 <p class="subtitle">Real reviews from real customers</p>
 <div class="testimonial-grid">
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Ezi-Rest built our dream kitchen. The cabinetry is stunning — solid, beautifully finished, and the team was a pleasure to deal with."</blockquote><div class="author"><div class="author-avatar">PJ</div><div><div class="author-name">Patricia J.</div><div class="author-title">Homeowner</div></div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Custom dining table and chairs that are absolute heirlooms. The craftsmanship is outstanding and it was made right here in Hamilton."</blockquote><div class="author"><div class="author-avatar">WH</div><div><div class="author-name">Wayne H.</div><div class="author-title">Homeowner</div></div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Complete laundry renovation with custom cabinetry. Transformed the space completely. Excellent workmanship and fair pricing."</blockquote><div class="author"><div class="author-avatar">SB</div><div><div class="author-name">Sandra B.</div><div class="author-title">Homeowner</div></div></div></div>
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<blockquote>"Ezi-Rest built our dream kitchen. The cabinetry is stunning — solid, beautifully finished, and the team was a pleasure to deal with."</blockquote>
+<div class="author"><div class="author-avatar">PJ</div><div><div class="author-name">Patricia J.</div><div class="author-title">Homeowner</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<blockquote>"Custom dining table and chairs that are absolute heirlooms. The craftsmanship is outstanding and it was made right here in Hamilton."</blockquote>
+<div class="author"><div class="author-avatar">WH</div><div><div class="author-name">Wayne H.</div><div class="author-title">Homeowner</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<blockquote>"Complete laundry renovation with custom cabinetry. Transformed the space completely. Excellent workmanship and fair pricing."</blockquote>
+<div class="author"><div class="author-avatar">SB</div><div><div class="author-name">Sandra B.</div><div class="author-title">Homeowner</div></div></div>
+</div>
 </div>
 </div>
 </section>
@@ -134,27 +150,15 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <h2>Get In Touch</h2>
 <p class="subtitle">Ready to get started? Reach out today</p>
 <div class="contact-grid">
-<div class="contact-card">
-<div class="icon">📞</div>
-<a href="tel:07 849 6710">07 849 6710</a>
-<p>Call us for a free quote</p>
-</div>
-<div class="contact-card">
-<div class="icon">📧</div>
-<a href="mailto:info@ezirest.co.nz">Email Us</a>
-<p>We'll get back to you fast</p>
-</div>
-<div class="contact-card">
-<div class="icon">📍</div>
-<p style="color:rgba(255,255,255,.6);font-size:.95em;margin-bottom:4px;font-weight:600">Te Rapa, Hamilton</p>
-<p>Serving the local area</p>
-</div>
+<div class="contact-card"><div class="icon">📞</div><a href="tel:07 849 6710">07 849 6710</a><p>Call us for a free quote</p></div>
+<div class="contact-card"><div class="icon">📧</div><a href="mailto:ezi.rest@example.com">Email Us</a><p>We'll get back to you fast</p></div>
+<div class="contact-card"><div class="icon">📍</div><p style="color:#c0842f;font-size:1.1em;font-weight:600;margin-bottom:8px">Te Rapa, Hamilton</p><p>Serving the local area</p></div>
 </div>
 </div>
 </section>
 
 <footer>
-<p>&copy; 2026 Ezi-Rest Furniture &amp; Kitchens Made Ezi. All rights reserved. | Te Rapa, Hamilton</p>
+<p>© 2026 Ezi-Rest Furniture & Kitchens Made Ezi. All rights reserved. | Te Rapa, Hamilton</p>
 </footer>
 </body>
 </html>
