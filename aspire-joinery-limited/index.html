@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aspire Joinery Limited | Carpenter in Christchurch</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f0b08;color:#fff;overflow-x:hidden}
+
+#loader{position:fixed;inset:0;z-index:99999;background:#0f0b08;display:flex;align-items:center;justify-content:center;animation:fadeOut 0.5s ease 2s forwards;pointer-events:none}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+.loader-ring{width:40px;height:40px;border:2px solid rgba(255,255,255,.05);border-top-color:#b45309;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(13,13,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .logo{font-size:1.2em;font-weight:700;color:#fff;text-decoration:none}
+nav .logo span{color:#b45309}
+nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85em;margin-left:20px;transition:color .3s}
+nav a:hover{color:#fff}
+
+section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+h2{font-size:2em;margin-bottom:16px;background:linear-gradient(135deg,#b45309,#a16207);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h3{font-size:1.2em;margin-bottom:8px;color:#fff}
+p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.95em;margin-bottom:16px}
+.subtitle{color:rgba(255,255,255,.4);font-size:1.05em;margin-bottom:40px}
+
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 30% 40%,rgba(180,83,9,.2),transparent 70%),radial-gradient(ellipse at 70% 60%,rgba(161,98,7,.1),transparent 60%),linear-gradient(135deg,#0f0b08,#241a10)}
+#hero h1{font-size:clamp(2em,5vw,3.5em);margin-bottom:16px;color:#fff}
+#hero p{font-size:1.1em;color:rgba(255,255,255,.5);max-width:600px;margin:0 auto 32px}
+.btn{display:inline-block;background:linear-gradient(135deg,#b45309,#a16207);color:#fff;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:600;font-size:.95em;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .3s}
+.btn:hover{transform:scale(1.05)}
+
+#about{background:#0f0b08}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-image{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(135deg,#a16207,#b45309);opacity:.15;display:flex;align-items:center;justify-content:center;font-size:3em}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+
+.rating-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:6px 14px;border-radius:20px;font-size:.8em;color:#b45309;margin-bottom:20px}
+
+#services{background:#1a1410}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px;text-align:center;transition:transform .3s}
+.service-card:hover{transform:translateY(-4px);border-color:#b45309}
+.service-card .icon{font-size:2em;margin-bottom:12px}
+.service-card p{font-size:.85em;margin:0}
+
+#testimonials{background:#0f0b08}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.testimonial-grid{grid-template-columns:1fr}}
+.testimonial-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px}
+.testimonial-card .stars{color:#f59e0b;font-size:1.1em;margin-bottom:12px}
+.testimonial-card blockquote{color:rgba(255,255,255,.5);font-size:.9em;line-height:1.6;margin-bottom:16px;font-style:italic}
+.author{display:flex;align-items:center;gap:10px}
+.author-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#b45309,#a16207);display:flex;align-items:center;justify-content:center;font-size:.75em;font-weight:600;color:#fff}
+.author-name{font-size:.85em;font-weight:600;color:#fff}
+.author-title{font-size:.75em;color:rgba(255,255,255,.4)}
+
+#contact{background:#1a1410}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px}
+.contact-card .icon{font-size:2em;margin-bottom:12px}
+.contact-card a{color:#b45309;text-decoration:none;font-size:1.1em;font-weight:600;display:block;margin-bottom:8px}
+.contact-card p{font-size:.85em;margin:0}
+
+footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,.04)}
+footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-ring"></div></div>
+
+<nav>
+<a href="#" class="logo">Aspire Joinery <span>✦</span></a>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section id="hero">
+<div class="section-inner">
+<h1>Aspire Joinery Limited</h1>
+<p>Professional Carpenter in Christchurch serving your local community with quality workmanship and trusted service.</p>
+<a href="tel:03 943 2900" class="btn">📞 Call 03 943 2900</a>
+</div>
+</section>
+
+<section id="about">
+<div class="section-inner">
+<h2>About Us</h2>
+<div class="about-grid">
+<div>
+<div class="rating-badge">⭐ 5.0/5 (1 reviews)</div>
+<p>Aspire Joinery Limited brings precision craftsmanship to every project. Based in Christchurch, we design, manufacture, and install custom cabinetry, kitchens, wardrobes, and joinery solutions. Using premium New Zealand timbers and modern materials, we create beautiful, functional spaces that stand the test of time.</p>
+</div>
+<div class="about-image"></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-inner">
+<h2>Our Services</h2>
+<p class="subtitle">Custom joinery and cabinetry — designed and built for you</p>
+<div class="services-grid">
+<div class="service-card"><div class="icon">🍳</div><h3>Kitchen Joinery</h3><p>Custom kitchen cabinetry designed to your exact specifications. Soft-close drawers, integrated handles, and premium benchtops.</p></div>
+<div class="service-card"><div class="icon">👔</div><h3>Wardrobes & Storage</h3><p>Walk-in robes, fitted wardrobes, and custom storage solutions. Maximise your space with smart, beautiful joinery.</p></div>
+<div class="service-card"><div class="icon">🪵</div><h3>Custom Furniture</h3><p>Built-in shelving, entertainment units, study nooks, and bespoke furniture pieces. Handcrafted in our Christchurch workshop.</p></div>
+</div>
+</div>
+</section>
+
+<section id="testimonials">
+<div class="section-inner">
+<h2>What Our Clients Say</h2>
+<p class="subtitle">Real reviews from real customers</p>
+<div class="testimonial-grid">
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Aspire built our dream kitchen. The attention to detail in the cabinetry is outstanding — every drawer glides perfectly, every mitre is crisp."</blockquote><div class="author"><div class="author-avatar">RD</div><div><div class="author-name">Rachel D.</div><div class="author-title">Homeowner</div></div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"I've specified Aspire Joinery on multiple projects. Their craftsmanship is consistently excellent and they deliver on schedule."</blockquote><div class="author"><div class="author-avatar">MS</div><div><div class="author-name">Mark S.</div><div class="author-title">Architect</div></div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Custom wardrobes that exceeded my expectations. Beautiful materials, perfect fit, and the team left everything spotless."</blockquote><div class="author"><div class="author-avatar">KM</div><div><div class="author-name">Karen M.</div><div class="author-title">Homeowner</div></div></div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-inner">
+<h2>Get In Touch</h2>
+<p class="subtitle">Ready to get started? Reach out today</p>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="icon">📞</div>
+<a href="tel:03 943 2900">03 943 2900</a>
+<p>Call us for a free quote</p>
+</div>
+<div class="contact-card">
+<div class="icon">📧</div>
+<a href="mailto:info@aspirejoinery.co.nz">Email Us</a>
+<p>We'll get back to you fast</p>
+</div>
+<div class="contact-card">
+<div class="icon">📍</div>
+<p style="color:rgba(255,255,255,.6);font-size:.95em;margin-bottom:4px;font-weight:600">Wigram, Christchurch</p>
+<p>Serving the local area</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Aspire Joinery Limited. All rights reserved. | Wigram, Christchurch</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Lawns Hamilton | Landscaper in Hamilton</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#080f0a;color:#fff;overflow-x:hidden}
+
+#loader{position:fixed;inset:0;z-index:99999;background:#080f0a;display:flex;align-items:center;justify-content:center;animation:fadeOut 0.5s ease 2s forwards;pointer-events:none}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+.loader-ring{width:40px;height:40px;border:2px solid rgba(255,255,255,.05);border-top-color:#22c55e;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(13,13,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .logo{font-size:1.2em;font-weight:700;color:#fff;text-decoration:none}
+nav .logo span{color:#22c55e}
+nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85em;margin-left:20px;transition:color .3s}
+nav a:hover{color:#fff}
+
+section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+h2{font-size:2em;margin-bottom:16px;background:linear-gradient(135deg,#22c55e,#16a34a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h3{font-size:1.2em;margin-bottom:8px;color:#fff}
+p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.95em;margin-bottom:16px}
+.subtitle{color:rgba(255,255,255,.4);font-size:1.05em;margin-bottom:40px}
+
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 30% 40%,rgba(34,197,94,.2),transparent 70%),radial-gradient(ellipse at 70% 60%,rgba(22,163,74,.1),transparent 60%),linear-gradient(135deg,#080f0a,#0a2012)}
+#hero h1{font-size:clamp(2em,5vw,3.5em);margin-bottom:16px;color:#fff}
+#hero p{font-size:1.1em;color:rgba(255,255,255,.5);max-width:600px;margin:0 auto 32px}
+.btn{display:inline-block;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:600;font-size:.95em;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .3s}
+.btn:hover{transform:scale(1.05)}
+
+#about{background:#080f0a}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-image{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(135deg,#16a34a,#22c55e);opacity:.15;display:flex;align-items:center;justify-content:center;font-size:3em}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+
+.rating-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:6px 14px;border-radius:20px;font-size:.8em;color:#22c55e;margin-bottom:20px}
+
+#services{background:#0e1a12}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px;text-align:center;transition:transform .3s}
+.service-card:hover{transform:translateY(-4px);border-color:#22c55e}
+.service-card .icon{font-size:2em;margin-bottom:12px}
+.service-card p{font-size:.85em;margin:0}
+
+#testimonials{background:#080f0a}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.testimonial-grid{grid-template-columns:1fr}}
+.testimonial-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px}
+.testimonial-card .stars{color:#f59e0b;font-size:1.1em;margin-bottom:12px}
+.testimonial-card blockquote{color:rgba(255,255,255,.5);font-size:.9em;line-height:1.6;margin-bottom:16px;font-style:italic}
+.author{display:flex;align-items:center;gap:10px}
+.author-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;font-size:.75em;font-weight:600;color:#fff}
+.author-name{font-size:.85em;font-weight:600;color:#fff}
+.author-title{font-size:.75em;color:rgba(255,255,255,.4)}
+
+#contact{background:#0e1a12}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px}
+.contact-card .icon{font-size:2em;margin-bottom:12px}
+.contact-card a{color:#22c55e;text-decoration:none;font-size:1.1em;font-weight:600;display:block;margin-bottom:8px}
+.contact-card p{font-size:.85em;margin:0}
+
+footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,.04)}
+footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-ring"></div></div>
+
+<nav>
+<a href="#" class="logo">Green Lawns <span>✦</span></a>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section id="hero">
+<div class="section-inner">
+<h1>Green Lawns Hamilton</h1>
+<p>Professional Landscaper in Hamilton serving your local community with quality workmanship and trusted service.</p>
+<a href="tel:027 889 0077" class="btn">📞 Call 027 889 0077</a>
+</div>
+</section>
+
+<section id="about">
+<div class="section-inner">
+<h2>About Us</h2>
+<div class="about-grid">
+<div>
+<div class="rating-badge">⭐ 5.0/5 (1 reviews)</div>
+<p>Green Lawns Hamilton is your local lawn and garden specialist serving Grandview Heights and greater Hamilton. We take pride in creating and maintaining beautiful outdoor spaces. From one-off garden makeovers to regular maintenance contracts, our friendly team delivers reliable service with stunning results every time.</p>
+</div>
+<div class="about-image"></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-inner">
+<h2>Our Services</h2>
+<p class="subtitle">Beautiful lawns and gardens for Hamilton homes</p>
+<div class="services-grid">
+<div class="service-card"><div class="icon">🌿</div><h3>Lawn Mowing & Care</h3><p>Professional mowing, edging, and lawn maintenance. Regular weekly or fortnightly schedules to keep your lawn pristine.</p></div>
+<div class="service-card"><div class="icon">🌸</div><h3>Garden Maintenance</h3><p>Weeding, pruning, mulching, and seasonal garden care. Keep your garden healthy and beautiful without lifting a finger.</p></div>
+<div class="service-card"><div class="icon">🌳</div><h3>Section Clearing</h3><p>Overgrown section clearance, green waste removal, hedge trimming, and tree pruning. Transform neglected spaces into usable gardens.</p></div>
+</div>
+</div>
+</section>
+
+<section id="testimonials">
+<div class="section-inner">
+<h2>What Our Clients Say</h2>
+<p class="subtitle">Real reviews from real customers</p>
+<div class="testimonial-grid">
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Green Lawns took over our overgrown section and turned it into a beautiful usable garden. Regular maintenance keeps it looking fantastic."</blockquote><div class="author"><div class="author-avatar">LM</div><div><div class="author-name">Lisa M.</div><div class="author-title">Homeowner</div></div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Reliable, friendly, and does a great job every time. Our lawn has never looked greener. Highly recommend to anyone in Hamilton."</blockquote><div class="author"><div class="author-avatar">BK</div><div><div class="author-name">Brian K.</div><div class="author-title">Homeowner</div></div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"They cleared our section after we let it go for years. Transformed the property. Fair pricing and great communication throughout."</blockquote><div class="author"><div class="author-avatar">DR</div><div><div class="author-name">Donna R.</div><div class="author-title">Homeowner</div></div></div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-inner">
+<h2>Get In Touch</h2>
+<p class="subtitle">Ready to get started? Reach out today</p>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="icon">📞</div>
+<a href="tel:027 889 0077">027 889 0077</a>
+<p>Call us for a free quote</p>
+</div>
+<div class="contact-card">
+<div class="icon">📧</div>
+<a href="mailto:info@greenlawntown.co.nz">Email Us</a>
+<p>We'll get back to you fast</p>
+</div>
+<div class="contact-card">
+<div class="icon">📍</div>
+<p style="color:rgba(255,255,255,.6);font-size:.95em;margin-bottom:4px;font-weight:600">Grandview Heights, Hamilton</p>
+<p>Serving the local area</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Green Lawns Hamilton. All rights reserved. | Grandview Heights, Hamilton</p>
+</footer>
+</body>
+</html>

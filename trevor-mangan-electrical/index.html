@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trevor Mangan Electrical | Electrician in Wellington</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#14100a;color:#fff;overflow-x:hidden}
+
+#loader{position:fixed;inset:0;z-index:99999;background:#14100a;display:flex;align-items:center;justify-content:center;animation:fadeOut 0.5s ease 2s forwards;pointer-events:none}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+.loader-ring{width:40px;height:40px;border:2px solid rgba(255,255,255,.05);border-top-color:#f59e0b;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(13,13,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .logo{font-size:1.2em;font-weight:700;color:#fff;text-decoration:none}
+nav .logo span{color:#f59e0b}
+nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85em;margin-left:20px;transition:color .3s}
+nav a:hover{color:#fff}
+
+section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+h2{font-size:2em;margin-bottom:16px;background:linear-gradient(135deg,#f59e0b,#d97706);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h3{font-size:1.2em;margin-bottom:8px;color:#fff}
+p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.95em;margin-bottom:16px}
+.subtitle{color:rgba(255,255,255,.4);font-size:1.05em;margin-bottom:40px}
+
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 30% 40%,rgba(245,158,11,.2),transparent 70%),radial-gradient(ellipse at 70% 60%,rgba(217,119,6,.1),transparent 60%),linear-gradient(135deg,#14100a,#2a2210)}
+#hero h1{font-size:clamp(2em,5vw,3.5em);margin-bottom:16px;color:#fff}
+#hero p{font-size:1.1em;color:rgba(255,255,255,.5);max-width:600px;margin:0 auto 32px}
+.btn{display:inline-block;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:600;font-size:.95em;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .3s}
+.btn:hover{transform:scale(1.05)}
+
+#about{background:#14100a}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-image{aspect-ratio:4/3;border-radius:16px;background:linear-gradient(135deg,#d97706,#f59e0b);opacity:.15;display:flex;align-items:center;justify-content:center;font-size:3em}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+
+.rating-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:6px 14px;border-radius:20px;font-size:.8em;color:#f59e0b;margin-bottom:20px}
+
+#services{background:#1f1a10}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px;text-align:center;transition:transform .3s}
+.service-card:hover{transform:translateY(-4px);border-color:#f59e0b}
+.service-card .icon{font-size:2em;margin-bottom:12px}
+.service-card p{font-size:.85em;margin:0}
+
+#testimonials{background:#14100a}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.testimonial-grid{grid-template-columns:1fr}}
+.testimonial-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px}
+.testimonial-card .stars{color:#f59e0b;font-size:1.1em;margin-bottom:12px}
+.testimonial-card blockquote{color:rgba(255,255,255,.5);font-size:.9em;line-height:1.6;margin-bottom:16px;font-style:italic}
+.author{display:flex;align-items:center;gap:10px}
+.author-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center;font-size:.75em;font-weight:600;color:#fff}
+.author-name{font-size:.85em;font-weight:600;color:#fff}
+.author-title{font-size:.75em;color:rgba(255,255,255,.4)}
+
+#contact{background:#1f1a10}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px}
+.contact-card .icon{font-size:2em;margin-bottom:12px}
+.contact-card a{color:#f59e0b;text-decoration:none;font-size:1.1em;font-weight:600;display:block;margin-bottom:8px}
+.contact-card p{font-size:.85em;margin:0}
+
+footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,.04)}
+footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-ring"></div></div>
+
+<nav>
+<a href="#" class="logo">TM Electrical <span>✦</span></a>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section id="hero">
+<div class="section-inner">
+<h1>Trevor Mangan Electrical</h1>
+<p>Professional Electrician in Wellington serving your local community with quality workmanship and trusted service.</p>
+<a href="tel:022 673 5962" class="btn">📞 Call 022 673 5962</a>
+</div>
+</section>
+
+<section id="about">
+<div class="section-inner">
+<h2>About Us</h2>
+<div class="about-grid">
+<div>
+<div class="rating-badge">⭐ 5.0/5 (38 reviews)</div>
+<p>Trevor Mangan Electrical is a Wellington-based electrical company with a flawless 5-star reputation across 38 reviews. We specialise in residential, commercial, and industrial electrical work. Safety is our top priority — every job is certified, tested, and backed by our satisfaction guarantee.</p>
+</div>
+<div class="about-image"></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-inner">
+<h2>Our Services</h2>
+<p class="subtitle">Expert electrical services — safe, certified, reliable</p>
+<div class="services-grid">
+<div class="service-card"><div class="icon">⚡</div><h3>Residential Electrical</h3><p>Switchboard upgrades, lighting installation, power point relocation, rewiring, and home automation. All work certified to NZ standards.</p></div>
+<div class="service-card"><div class="icon">🏢</div><h3>Commercial Electrical</h3><p>Shop fit-outs, office rewiring, data cabling, security lighting, and three-phase power for commercial premises.</p></div>
+<div class="service-card"><div class="icon">🔌</div><h3>Emergency & Repairs</h3><p>Fault finding, power outages, sparking outlets, and switchboard faults. Fast diagnosis and safe repair by licensed electricians.</p></div>
+</div>
+</div>
+</section>
+
+<section id="testimonials">
+<div class="section-inner">
+<h2>What Our Clients Say</h2>
+<p class="subtitle">Real reviews from real customers</p>
+<div class="testimonial-grid">
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Trevor rewired our 1920s villa. Meticulous work, minimal disruption, and everything passed inspection first time. True professional."</blockquote><div class="author"><div class="author-avatar">PW</div><div><div class="author-name">Paul W.</div><div class="author-title">Homeowner</div></div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"We've used TM Electrical for three shop fit-outs. They understand commercial deadlines and their work is always top quality."</blockquote><div class="author"><div class="author-avatar">NS</div><div><div class="author-name">Natalie S.</div><div class="author-title">Business Owner</div></div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Our switchboard was a horror show. Trevor sorted it safely and explained everything along the way. 5 stars all the way."</blockquote><div class="author"><div class="author-avatar">GH</div><div><div class="author-name">Graeme H.</div><div class="author-title">Homeowner</div></div></div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-inner">
+<h2>Get In Touch</h2>
+<p class="subtitle">Ready to get started? Reach out today</p>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="icon">📞</div>
+<a href="tel:022 673 5962">022 673 5962</a>
+<p>Call us for a free quote</p>
+</div>
+<div class="contact-card">
+<div class="icon">📧</div>
+<a href="mailto:info@trevormanganelectrical.co.nz">Email Us</a>
+<p>We'll get back to you fast</p>
+</div>
+<div class="contact-card">
+<div class="icon">📍</div>
+<p style="color:rgba(255,255,255,.6);font-size:.95em;margin-bottom:4px;font-weight:600">Kilbirnie, Wellington</p>
+<p>Serving the local area</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Trevor Mangan Electrical. All rights reserved. | Kilbirnie, Wellington</p>
+</footer>
+</body>
+</html>
