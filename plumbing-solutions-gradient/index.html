@@ -17,14 +17,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 @keyframes brushSweep{0%{left:-40%}100%{left:100%}}
 @keyframes fadeOut{to{opacity:0;visibility:hidden}}
 #loader.done{animation:fadeOut .6s ease .3s forwards}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:14px 24px;background:rgba(13,13,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);opacity:0;animation:fadeSlideDown .8s ease 1s forwards;gap:8px;max-width:100vw}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;flex-direction:column;align-items:center;padding:12px 16px;background:rgba(13,13,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);opacity:0;animation:fadeSlideDown .8s ease 1s forwards}
 @keyframes fadeSlideDown{to{opacity:1;transform:translateY(0)}}
-nav .logo{font-size:1.15em;font-weight:700;color:#fff;text-decoration:none;white-space:nowrap}
+nav .logo{font-size:1.1em;font-weight:700;color:#fff;text-decoration:none}
 nav .logo span{color:#38bdf8}
-nav div{display:flex;flex-wrap:wrap;gap:4px}
-nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85em;padding:4px 10px;transition:color .3s}
+nav div{display:flex;justify-content:center;flex-wrap:wrap;gap:2px 6px;margin-top:4px}
+nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.82em;padding:4px 8px;white-space:nowrap;transition:color .3s}
 nav a:hover{color:#fff}
-@media(max-width:500px){nav div a{font-size:.8em;padding:4px 6px}}
 section{padding:80px 24px}
 .section-inner{max-width:1100px;margin:0 auto}
 h2{font-size:2em;margin-bottom:16px;background:linear-gradient(135deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -88,46 +87,97 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div id="loader"><div class="loader-icon">💧</div><div class="brush-load"></div><div class="loader-text">Flowing in...</div></div>
 <nav><a href="#" class="logo">Plumbing <span>Solutions Wellington</span></a><div><a href="#about">About</a><a href="#services">Services</a><a href="#testimonials">Reviews</a><a href="#contact">Contact</a></div></nav>
 <section id="hero"><div class="theme-bg"><svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-  <!-- Big sweeping water wave 1 - top -->
-  <path d="M-100,320 Q50,220 200,300 T500,260 T800,320 T1100,270 T1400,310 T1600,280" fill="none" stroke="rgba(56,189,248,.2)" stroke-width="8" stroke-linecap="round">
-    <animate attributeName="d" values="M-100,320 Q50,220 200,300 T500,260 T800,320 T1100,270 T1400,310 T1600,280;M-100,330 Q50,440 200,310 T500,350 T800,280 T1100,360 T1400,290 T1600,350;M-100,300 Q50,200 200,280 T500,240 T800,300 T1100,250 T1400,290 T1600,260;M-100,320 Q50,220 200,300 T500,260 T800,320 T1100,270 T1400,310 T1600,280" dur="5s" repeatCount="indefinite"/>
+  <!-- Cascading water columns -->
+  <g opacity=".12">
+    <rect x="100" y="-50" width="80" height="400" rx="8" fill="url(#waterGrad)" opacity=".6">
+      <animate attributeName="y" values="-150;50;-150" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="400" y="-50" width="60" height="500" rx="6" fill="url(#waterGrad)" opacity=".5">
+      <animate attributeName="y" values="-250;100;-250" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="700" y="-50" width="100" height="350" rx="10" fill="url(#waterGrad)" opacity=".4">
+      <animate attributeName="y" values="-100;0;-100" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1050" y="-50" width="70" height="450" rx="7" fill="url(#waterGrad)" opacity=".5">
+      <animate attributeName="y" values="-200;80;-200" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1250" y="-50" width="50" height="550" rx="5" fill="url(#waterGrad)" opacity=".6">
+      <animate attributeName="y" values="-300;120;-300" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <defs>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(56,189,248,0)"/>
+      <stop offset="40%" stop-color="rgba(56,189,248,.4)"/>
+      <stop offset="100%" stop-color="rgba(56,189,248,.15)"/>
+    </linearGradient>
+    <linearGradient id="waveGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(56,189,248,0)"/>
+      <stop offset="30%" stop-color="rgba(56,189,248,.3)"/>
+      <stop offset="100%" stop-color="rgba(14,165,233,.05)"/>
+    </linearGradient>
+  </defs>
+  <!-- Deep wave band 1 -->
+  <path d="M-100,200 Q50,100 200,200 T500,160 T800,220 T1100,170 T1400,210 T1600,180" fill="none" stroke="rgba(56,189,248,.25)" stroke-width="12" stroke-linecap="round">
+    <animate attributeName="d" values="M-100,200 Q50,100 200,200 T500,160 T800,220 T1100,170 T1400,210 T1600,180;M-100,210 Q50,320 200,210 T500,250 T800,190 T1100,270 T1400,200 T1600,250;M-100,180 Q50,80 200,180 T500,140 T800,200 T1100,150 T1400,190 T1600,160;M-100,200 Q50,100 200,200 T500,160 T800,220 T1100,170 T1400,210 T1600,180" dur="4s" repeatCount="indefinite"/>
   </path>
-  <!-- Water wave 2 - mid -->
-  <path d="M-100,480 Q80,380 250,460 T550,420 T850,480 T1150,430 T1450,470 T1600,440" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="10" stroke-linecap="round">
-    <animate attributeName="d" values="M-100,480 Q80,380 250,460 T550,420 T850,480 T1150,430 T1450,470 T1600,440;M-100,490 Q80,580 250,470 T550,510 T850,450 T1150,530 T1450,460 T1600,510;M-100,460 Q80,360 250,440 T550,400 T850,460 T1150,410 T1450,450 T1600,420;M-100,480 Q80,380 250,460 T550,420 T850,480 T1150,430 T1450,470 T1600,440" dur="6s" repeatCount="indefinite"/>
+  <!-- Wave band 1 fill -->
+  <path fill="url(#waveGrad1)" opacity=".1">
+    <animate attributeName="d" values="M-100,200 Q50,100 200,200 T500,160 T800,220 T1100,170 T1400,210 T1600,180 L1600,900 L-100,900 Z;M-100,210 Q50,320 200,210 T500,250 T800,190 T1100,270 T1400,200 T1600,250 L1600,900 L-100,900 Z;M-100,180 Q50,80 200,180 T500,140 T800,200 T1100,150 T1400,190 T1600,160 L1600,900 L-100,900 Z;M-100,200 Q50,100 200,200 T500,160 T800,220 T1100,170 T1400,210 T1600,180 L1600,900 L-100,900 Z" dur="4s" repeatCount="indefinite"/>
   </path>
-  <!-- Water wave 3 - lower mid -->
-  <path d="M-100,620 Q100,520 280,600 T580,560 T880,620 T1180,570 T1480,610 T1600,580" fill="none" stroke="rgba(14,165,233,.15)" stroke-width="7" stroke-linecap="round">
-    <animate attributeName="d" values="M-100,620 Q100,520 280,600 T580,560 T880,620 T1180,570 T1480,610 T1600,580;M-100,630 Q100,720 280,610 T580,650 T880,590 T1180,670 T1480,600 T1600,650;M-100,600 Q100,500 280,580 T580,540 T880,600 T1180,550 T1480,590 T1600,560;M-100,620 Q100,520 280,600 T580,560 T880,620 T1180,570 T1480,610 T1600,580" dur="7s" repeatCount="indefinite"/>
+  <!-- Deep wave band 2 -->
+  <path d="M-100,350 Q80,250 250,340 T550,300 T850,360 T1150,310 T1450,350 T1600,320" fill="none" stroke="rgba(129,140,248,.22)" stroke-width="14" stroke-linecap="round">
+    <animate attributeName="d" values="M-100,350 Q80,250 250,340 T550,300 T850,360 T1150,310 T1450,350 T1600,320;M-100,360 Q80,470 250,350 T550,390 T850,330 T1150,420 T1450,340 T1600,400;M-100,330 Q80,230 250,320 T550,280 T850,340 T1150,290 T1450,330 T1600,300;M-100,350 Q80,250 250,340 T550,300 T850,360 T1150,310 T1450,350 T1600,320" dur="5s" repeatCount="indefinite"/>
   </path>
-  <!-- Water wave 4 - bottom -->
-  <path d="M-100,750 Q150,660 320,730 T620,690 T920,750 T1220,700 T1520,740 T1600,710" fill="none" stroke="rgba(56,189,248,.12)" stroke-width="6" stroke-linecap="round">
-    <animate attributeName="d" values="M-100,750 Q150,660 320,730 T620,690 T920,750 T1220,700 T1520,740 T1600,710;M-100,760 Q150,850 320,740 T620,780 T920,720 T1220,800 T1520,730 T1600,780;M-100,730 Q150,640 320,710 T620,670 T920,730 T1220,680 T1520,720 T1600,690;M-100,750 Q150,660 320,730 T620,690 T920,750 T1220,700 T1520,740 T1600,710" dur="5.5s" repeatCount="indefinite"/>
+  <!-- Wave band 3 -->
+  <path d="M-100,500 Q100,400 280,490 T580,450 T880,510 T1180,460 T1480,500 T1600,470" fill="none" stroke="rgba(14,165,233,.2)" stroke-width="11" stroke-linecap="round">
+    <animate attributeName="d" values="M-100,500 Q100,400 280,490 T580,450 T880,510 T1180,460 T1480,500 T1600,470;M-100,510 Q100,620 280,500 T580,540 T880,480 T1180,570 T1480,490 T1600,550;M-100,480 Q100,380 280,470 T580,430 T880,490 T1180,440 T1480,480 T1600,450;M-100,500 Q100,400 280,490 T580,450 T880,510 T1180,460 T1480,500 T1600,470" dur="4.5s" repeatCount="indefinite"/>
   </path>
-  <!-- Water splashes / spray -->
-  <path d="M300,200 Q305,180 310,195" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="3" stroke-linecap="round"><animate attributeName="opacity" values="0;.3;0" dur="2s" repeatCount="indefinite"/></path>
-  <path d="M700,180 Q705,160 710,175" fill="none" stroke="rgba(129,140,248,.12)" stroke-width="2" stroke-linecap="round"><animate attributeName="opacity" values="0;.25;0" dur="2.5s" repeatCount="indefinite"/></path>
-  <!-- Falling droplets - increased size and opacity -->
-  <circle cx="250" cy="400" r="6" fill="rgba(56,189,248,.2)">
-    <animate attributeName="cy" values="400;520;400" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".3;0;.3" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Wave band 4 -->
+  <path d="M-100,630 Q120,530 300,620 T600,580 T900,640 T1200,590 T1500,630 T1600,600" fill="none" stroke="rgba(56,189,248,.18)" stroke-width="10" stroke-linecap="round">
+    <animate attributeName="d" values="M-100,630 Q120,530 300,620 T600,580 T900,640 T1200,590 T1500,630 T1600,600;M-100,640 Q120,750 300,630 T600,670 T900,610 T1200,700 T1500,620 T1600,680;M-100,610 Q120,510 300,600 T600,560 T900,620 T1200,570 T1500,610 T1600,580;M-100,630 Q120,530 300,620 T600,580 T900,640 T1200,590 T1500,630 T1600,600" dur="5.5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Wave band 5 - bottom -->
+  <path d="M-100,780 Q150,680 320,770 T620,730 T920,790 T1220,740 T1520,780 T1600,750" fill="none" stroke="rgba(129,140,248,.15)" stroke-width="8" stroke-linecap="round">
+    <animate attributeName="d" values="M-100,780 Q150,680 320,770 T620,730 T920,790 T1220,740 T1520,780 T1600,750;M-100,790 Q150,900 320,780 T620,820 T920,760 T1220,850 T1520,770 T1600,830;M-100,760 Q150,660 320,750 T620,710 T920,770 T1220,720 T1520,760 T1600,730;M-100,780 Q150,680 320,770 T620,730 T920,790 T1220,740 T1520,780 T1600,750" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <!-- Water spray / mist -->
+  <path d="M350,150 Q355,120 360,140" fill="none" stroke="rgba(56,189,248,.2)" stroke-width="4" stroke-linecap="round"><animate attributeName="opacity" values="0;.4;0" dur="1.5s" repeatCount="indefinite"/></path>
+  <path d="M800,130 Q805,100 810,120" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="3" stroke-linecap="round"><animate attributeName="opacity" values="0;.35;0" dur="1.8s" repeatCount="indefinite"/></path>
+  <path d="M1200,180 Q1205,150 1210,170" fill="none" stroke="rgba(14,165,233,.15)" stroke-width="4" stroke-linecap="round"><animate attributeName="opacity" values="0;.3;0" dur="2s" repeatCount="indefinite"/></path>
+  <!-- Rising bubbles -->
+  <circle cx="200" cy="800" r="8" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="1.5">
+    <animate attributeName="cy" values="800;100;800" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.3;0" dur="8s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="600" cy="350" r="5" fill="rgba(129,140,248,.18)">
-    <animate attributeName="cy" values="350;480;350" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".25;0;.25" dur="3s" repeatCount="indefinite"/>
+  <circle cx="500" cy="800" r="5" fill="none" stroke="rgba(129,140,248,.12)" stroke-width="1.5">
+    <animate attributeName="cy" values="800;50;800" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.25;0" dur="7s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="900" cy="500" r="7" fill="rgba(56,189,248,.15)">
-    <animate attributeName="cy" values="500;640;500" dur="2.8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".2;0;.2" dur="2.8s" repeatCount="indefinite"/>
+  <circle cx="850" cy="800" r="10" fill="none" stroke="rgba(56,189,248,.1)" stroke-width="1.5">
+    <animate attributeName="cy" values="800;120;800" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.2;0" dur="9s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="1150" cy="450" r="4" fill="rgba(14,165,233,.2)">
-    <animate attributeName="cy" values="450;560;450" dur="3.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".3;0;.3" dur="3.2s" repeatCount="indefinite"/>
+  <circle cx="1100" cy="800" r="6" fill="none" stroke="rgba(14,165,233,.13)" stroke-width="1.5">
+    <animate attributeName="cy" values="800;80;800" dur="7.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.25;0" dur="7.5s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="450" cy="600" r="5" fill="rgba(56,189,248,.15)">
-    <animate attributeName="cy" values="600;720;600" dur="3.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".25;0;.25" dur="3.5s" repeatCount="indefinite"/>
+  <circle cx="1350" cy="800" r="7" fill="none" stroke="rgba(56,189,248,.1)" stroke-width="1.5">
+    <animate attributeName="cy" values="800;150;800" dur="8.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.2;0" dur="8.5s" repeatCount="indefinite"/>
   </circle>
+  <!-- Falling droplets -->
+  <circle cx="250" cy="350" r="6" fill="rgba(56,189,248,.25)"><animate attributeName="cy" values="350;500;350" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;0;.4" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="650" cy="450" r="5" fill="rgba(129,140,248,.22)"><animate attributeName="cy" values="450;620;450" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".35;0;.35" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="950" cy="280" r="7" fill="rgba(14,165,233,.2)"><animate attributeName="cy" values="280;440;280" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".3;0;.3" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="1150" cy="550" r="5" fill="rgba(56,189,248,.25)"><animate attributeName="cy" values="550;700;550" dur="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;0;.4" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="450" cy="650" r="6" fill="rgba(129,140,248,.2)"><animate attributeName="cy" values="650;800;650" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".35;0;.35" dur="3s" repeatCount="indefinite"/></circle>
+  <!-- Big animated water splash at bottom -->
+  <ellipse cx="720" cy="850" rx="200" ry="30" fill="rgba(56,189,248,.06)">
+    <animate attributeName="rx" values="200;280;200" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="30;50;30" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".06;.02;.06" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
 </svg></div><div class="hero-content paint-reveal"><div class="rating-badge">⭐ 4.8 · 21 reviews</div><h1>Expert Plumber Services<br>in Wellington Central</h1><p>Professional plumber serving Wellington Central and surrounding areas. Quality work guaranteed.</p><a href="tel:0224980167" class="btn">📞 Call 022 498 0167</a></div><div class="hero-fade"></div></section>
 <section id="about"><div class="section-inner reveal"><h2>About Us</h2><div class="about-grid"><div><div class="rating-badge">⭐ 4.8 · 21 reviews</div><p>Plumbing Solutions Wellington is a trusted plumber serving Wellington Central and surrounding areas. We take pride in delivering premium results that stand the test of time — every job done right, first time.</p><p>From small residential projects to large commercial contracts, our team brings precision, care, and an eye for detail to every project we undertake.</p></div><div class="about-image"><img src="images/about.jpg" alt="Plumber work in Wellington Central" loading="lazy"></div></div></div></section>
 <section id="services"><div class="section-inner reveal"><h2>Our Services</h2><p class="subtitle">Professional plumber services you can count on.</p><div class="services-grid"><div class="service-card"><div class="icon">💧</div><h3>Quality Plumber Work</h3><p>Professional plumber services tailored to your needs. Quality guaranteed.</p></div><div class="service-card"><div class="icon">📋</div><h3>Free Quotes</h3><p>Call us for a free no-obligation quote. We'll discuss your project and provide an honest estimate.</p></div><div class="service-card"><div class="icon">⭐</div><h3>Rated 4.8 · 21</h3><p>Rated 4.8 · 21 on Google. Our customers trust us with their projects.</p></div></div></div></section>
