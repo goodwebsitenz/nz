@@ -91,13 +91,23 @@ p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.95em;margin-bottom:16px}
 .hours-day .time{font-size:.85em;color:#fff;font-weight:500}
 .hours-day.closed .time{color:#ef4444}
 #contact{background:#0b0b17}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
 .contact-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px}
 .contact-card .icon{font-size:2em;margin-bottom:12px}
 .contact-card a{color:#d97706;text-decoration:none;font-size:1.1em;font-weight:600;display:block;margin-bottom:8px}
 .contact-card p{font-size:.85em;margin:0}
-footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,.04)}
+.map-section{padding:0 24px 80px;background:#0b0b17}
+.map-container{max-width:1100px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.map-container iframe{width:100%;height:350px;border:0;display:block}
+@media(max-width:768px){.map-container iframe{height:250px}}
+.competitor-card{padding:0 24px 60px;background:#0b0b17}
+.comp-alert{max-width:1100px;margin:0 auto;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 24px;display:flex;align-items:flex-start;gap:16px;border-left:3px solid #f59e0b}
+.comp-alert .comp-icon{font-size:2em;flex-shrink:0}
+.comp-alert h2{margin-bottom:8px;font-size:1.3em}
+.comp-alert p{margin:0;font-size:.9em;line-height:1.6}
+.comp-link{color:#d97706;text-decoration:underline}
+footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,.04);background:#151527}
 footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -108,6 +118,16 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <nav><a href="#" class="logo">Aspire Joinery Limited</a><div><a href="#about">About</a><a href="#services">Services</a><a href="#testimonials">Reviews</a><a href="#hours">Hours</a><a href="#contact">Contact</a></div></nav>
 <section id="hero"><div class="grid-bg"></div><div class="wash-overlay"></div><div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div><div class="particle p4"></div><div class="particle p5"></div><div class="hero-content"><span class="hero-icon">🪚</span><div class="rating-badge">⭐ 5 · 1 reviews</div><h1>Expert Carpenter Services<br>in Christchurch</h1><p>Professional carpenter serving Christchurch and surrounding areas. Trusted by 1 Google reviewers with a 5 star rating.</p><a href="tel:039432900" class="btn">📞 Call 03 943 2900</a></div><div class="hero-fade"></div></section>
 <section id="about"><div class="section-inner reveal"><h2>About Us</h2><div class="about-grid"><div><div class="rating-badge">⭐ 5 · 1 reviews</div><p>Aspire Joinery Limited is a trusted carpenter serving Christchurch and surrounding areas. With a 5 star rating from 1 Google reviews, our customers trust us with their projects.</p><p>From small residential projects to large commercial contracts, our team brings precision, care, and an eye for detail to every project we undertake.</p></div><div class="about-image"><img src="images/about3.jpg" alt="carpenter work in Christchurch" loading="lazy"></div></div></div></section>
+
+<section id="competitors" class="competitor-card"><div class="section-inner reveal">
+<div class="comp-alert">
+<div class="comp-icon">⚠️</div>
+<div class="comp-text">
+<h2>Your competitors are online</h2>
+<p><a href="https://www.google.com/search?q=Finesse+Joinery" target="_blank" rel="noopener" class="comp-link">Finesse Joinery</a> and <a href="https://www.google.com/search?q=Paul+Renwick+Joinery" target="_blank" rel="noopener" class="comp-link">Paul Renwick Joinery</a> in Christchurch already have websites. When customers search for carpenter services online, they find your competitors instead of you. A brochure website changes that.</p>
+</div>
+</div>
+</div></section>
 <section id="services"><div class="section-inner reveal"><h2>Our Services</h2><p class="subtitle">Professional carpenter services you can count on.</p><div class="services-grid">
 <div class="service-card"><div class="icon">🪚</div><h3>Custom Furniture</h3><p>Bespoke furniture design and construction for any space or requirement.</p></div>
 <div class="service-card"><div class="icon">🔨</div><h3>Kitchen Cabinetry</h3><p>Custom kitchen cabinets and joinery with precision craftsmanship.</p></div>
@@ -119,10 +139,13 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 
 </div></div></section>
 <section id="hours" class="hours-card"><div class="section-inner reveal"><h2>Business Hours</h2><p class="subtitle">When you can reach us</p><div class="hours-grid">
-<div class="hours-day"><div class="day">Hours</div><div class="time">Call for details</div></div>
+<div class="hours-day"><div class="day">Hours</div><div class="time">Call</div></div>
 </div></div></section>
 <section id="contact"><div class="section-inner reveal"><h2>Get in Touch</h2><p class="subtitle">Call, email, or visit — free no-obligation quotes.</p><div class="contact-grid"><div class="contact-card"><div class="icon">📞</div><h3>Phone</h3><a href="tel:039432900">03 943 2900</a><p>Call or text anytime</p></div><div class="contact-card"><div class="icon">✉️</div><h3>Email</h3><a href="mailto:info@aspire-joinery-limited.co.nz">info@aspire-joinery-limited.co.nz</a><p>We'll respond within 24h</p></div><div class="contact-card"><div class="icon">📍</div><h3>Location</h3><p style="color:#fff;font-size:1.1em;font-weight:600">Christchurch</p><p>Serving all of Christchurch</p></div></div></div></section>
-<footer><p>&copy; 2026 Aspire Joinery Limited — Christchurch. Data via Google Places API.</p></footer>
+<section class="map-section"><div class="section-inner reveal"><div class="map-container">
+<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSy...51Qg&q=5+Timothy+Place%2C+Wigram%2C+Christchurch+8042" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Aspire Joinery Limited location on Google Maps"></iframe>
+</div></div></section>
+<footer><p>&copy; 2026 Aspire Joinery Limited — Christchurch. Real Google reviews data via Places API.</p></footer>
 <script>
 setTimeout(() => document.getElementById('loader').classList.add('done'), 2200);
 const observer = new IntersectionObserver(entries => {entries.forEach(entry => {if (entry.isIntersecting) {entry.target.classList.add('visible')}})}, {threshold: 0.15});
