@@ -112,6 +112,8 @@ footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255
 footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
+#lightning-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.7}
 </style>
 </head>
 <body>
@@ -132,6 +134,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <section id="hero">
 <div class="grid-bg"></div>
 <div class="wash-overlay"></div>
+<canvas id="lightning-canvas"></canvas>
 <div class="particle p1"></div>
 <div class="particle p2"></div>
 <div class="particle p3"></div>
@@ -276,5 +279,56 @@ if (heroBtn && emergencyBtn) {
 }, 3000);
 </script>
 
+
+<script>
+(function(){var c=document.getElementById('lightning-canvas');if(!c)return;var ctx=c.getContext('2d');var W,H;
+function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+resize();window.addEventListener('resize',resize);
+// ── Circuit trace class ──
+var circuits=[];function Circuit(){this.x=Math.random()*W;this.y=Math.random()*H;this.w=30+Math.random()*80;this.h=2+Math.random()*3;this.horiz=Math.random()>0.5;this.speed=0.2+Math.random()*0.4;this.opacity=0;this.dir=1;this.phase=Math.random()*Math.PI*2}
+Circuit.prototype.draw=function(t){this.opacity+=0.005*this.dir;if(this.opacity>0.15){this.dir=-1}else if(this.opacity<0){this.dir=1;this.x=Math.random()*W;this.y=Math.random()*H;this.phase=Math.random()*Math.PI*2}
+ctx.save();ctx.globalAlpha=Math.max(0,this.opacity);ctx.strokeStyle='#38bdf8';ctx.lineWidth=this.h;ctx.shadowColor='#38bdf8';ctx.shadowBlur=4;
+if(this.horiz){ctx.beginPath();ctx.moveTo(this.x,this.y);ctx.lineTo(this.x+this.w*Math.sin(t*this.speed+this.phase),this.y);ctx.stroke();ctx.beginPath();ctx.moveTo(this.x+this.w*Math.sin(t*this.speed+this.phase),this.y-2);ctx.lineTo(this.x+this.w*Math.sin(t*this.speed+this.phase)+4,this.y-4);ctx.stroke()}
+else{ctx.beginPath();ctx.moveTo(this.x,this.y);ctx.lineTo(this.x,this.y+this.w*Math.sin(t*this.speed+this.phase));ctx.stroke();ctx.beginPath();ctx.moveTo(this.x-2,this.y+this.w*Math.sin(t*this.speed+this.phase));ctx.lineTo(this.x-4,this.y+this.w*Math.sin(t*this.speed+this.phase)+4);ctx.stroke()}
+ctx.restore()};
+for(var i=0;i<12;i++)circuits.push(new Circuit());
+// ── Lightning bolts ──
+var bolts=[];function Bolt(){this.reset()}
+Bolt.prototype.reset=function(){this.y=20+Math.random()*(H-40);this.x=-50;this.targetX=W+50+Math.random()*100;this.speed=4+Math.random()*8;this.segments=[];this.life=1;this.sparks=[];this.build()}
+Bolt.prototype.build=function(){var pts=[{x:this.x,y:this.y}];var segs=6+Math.floor(Math.random()*5);for(var i=0;i<segs;i++){var px=pts[i].x+(this.targetX-this.x)/segs;var py=pts[i].y+(Math.random()-0.5)*60-30;if(i===0)py=this.y;pts.push({x:px,y:py})}
+pts[pts.length-1].x=this.targetX;this.segments=pts;
+// Sparks
+for(var i=0;i<3+Math.floor(Math.random()*4);i++){var idx=Math.floor(Math.random()*(pts.length-2))+1;this.sparks.push({x:pts[idx].x,y:pts[idx].y,vx:(Math.random()-0.5)*4,vy:-2-Math.random()*4,life:1+Math.random()*0.5})}}
+Bolt.prototype.draw=function(){if(this.life<=0)return;ctx.save();ctx.globalAlpha=this.life;
+// Main bolt
+ctx.strokeStyle='#60a5fa';ctx.lineWidth=2+Math.random()*1;ctx.shadowColor='#38bdf8';ctx.shadowBlur=20;
+ctx.beginPath();ctx.moveTo(this.segments[0].x,this.segments[0].y);
+for(var i=1;i<this.segments.length;i++){var bx=this.segments[i-1].x+(this.segments[i].x-this.segments[i-1].x)*this.life;var by=this.segments[i-1].y+(this.segments[i].y-this.segments[i-1].y)*this.life;ctx.lineTo(bx,by)}
+ctx.stroke();
+// Inner bright core
+ctx.strokeStyle='#fff';ctx.lineWidth=1;ctx.shadowBlur=0;
+ctx.beginPath();ctx.moveTo(this.segments[0].x,this.segments[0].y);
+for(var i=1;i<this.segments.length;i++){var bx=this.segments[i-1].x+(this.segments[i].x-this.segments[i-1].x)*this.life;var by=this.segments[i-1].y+(this.segments[i].y-this.segments[i-1].y)*this.life;ctx.lineTo(bx,by)}
+ctx.stroke();
+// Sparks/branch bolts - yellow/white sparks jumping between
+ctx.shadowColor='#fbbf24';ctx.shadowBlur=10;
+for(var s=0;s<this.sparks.length;s++){var sp=this.sparks[s];if(sp.life<=0)continue;
+ctx.globalAlpha=this.life*sp.life;ctx.fillStyle='#fbbf24';ctx.beginPath();ctx.arc(sp.x,sp.y,1.5+sp.life,0,Math.PI*2);ctx.fill();
+ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(sp.x,sp.y,0.8*sp.life,0,Math.PI*2);ctx.fill();
+sp.x+=sp.vx;sp.y+=sp.vy;sp.vy+=0.15;sp.life-=0.02}
+this.life-=0.008;ctx.restore()};
+// ── Animation loop ──
+var lastSpawn=0;var t=0;
+function animate(){t+=0.016;requestAnimationFrame(animate);ctx.clearRect(0,0,W,H);
+// Draw circuits
+for(var i=0;i<circuits.length;i++)circuits[i].draw(t);
+// Spawn new bolts
+lastSpawn+=0.016;if(lastSpawn>0.8+Math.random()*1.5&&bolts.length<4){bolts.push(new Bolt());lastSpawn=0}
+// Draw & clean bolts
+for(var i=bolts.length-1;i>=0;i--){var b=bolts[i];b.draw();if(b.life<=0)bolts.splice(i,1)}
+// Add an occasional full-screen flash
+if(bolts.length>0&&Math.random()<0.003){ctx.save();ctx.fillStyle='rgba(96,165,250,.05)';ctx.fillRect(0,0,W,H);ctx.restore()}}
+animate()})();
+</script>
 </body>
 </html>
