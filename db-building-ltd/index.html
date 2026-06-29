@@ -291,7 +291,7 @@ if (heroBtn && emergencyBtn) {
  if (el.querySelector('.day').textContent.trim() === today) {
  var t = el.querySelector('.time').textContent.trim();
  if (!t || t === 'Closed') return;
- if (t === '24 hrs' || t === '24/7') { open = true; return; }
+ if (t === '24 hrs' || t === '24/7' || t === 'Open 24 hours') { open = true; return; }
  var parts = t.split('\u2013');
  if (parts.length < 2) parts = t.split('-');
  if (parts.length === 2) {
