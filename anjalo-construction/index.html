@@ -300,13 +300,13 @@ for(var i=0;i<grid.length;i++){
   ctx.lineTo(g.x1+(g.x2-g.x1)*Math.min(1,g.prog),g.y1+(g.y2-g.y1)*Math.min(1,g.prog));
   ctx.stroke();ctx.setLineDash([]);ctx.restore()
 }
-// Blueprint icon (📐) fading in and out
+// Blueprint icon (📐) — top-left corner, away from center text
 var ts=Date.now()/1000;
 var iconAlpha=0.12+Math.sin(ts*0.6)*0.12;
 ctx.save();ctx.globalAlpha=Math.max(0,iconAlpha);
-ctx.font='80px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+ctx.font='70px sans-serif';ctx.textAlign='left';ctx.textBaseline='top';
 ctx.fillStyle='#60a5fa';ctx.shadowColor='#60a5fa';ctx.shadowBlur=20;
-ctx.fillText('📐',W/2,H/2);
+ctx.fillText('📐',25,15);
 ctx.restore();
 // Small corner accent lines
 var cornerLines=[
