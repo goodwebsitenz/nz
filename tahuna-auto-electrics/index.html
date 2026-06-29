@@ -113,7 +113,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-#lightning-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.7}
+#lightning-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.85}
 </style>
 </head>
 <body>
@@ -283,7 +283,7 @@ if (heroBtn && emergencyBtn) {
 
 <script>
 (function(){var c=document.getElementById('lightning-canvas');if(!c)return;var ctx=c.getContext('2d');var W,H;
-function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+function resize(){W=c.width=window.innerWidth||c.parentNode.offsetWidth;H=c.height=window.innerHeight||c.parentNode.offsetHeight}
 resize();window.addEventListener('resize',resize);
 // ── Circuit traces (bigger, brighter) ──
 var circuits=[];function Circuit(){this.reset()}
