@@ -113,7 +113,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-#lightning-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.85}
+#lightning-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;opacity:1}
 </style>
 </head>
 <body>
@@ -285,89 +285,91 @@ if (heroBtn && emergencyBtn) {
 (function(){var c=document.getElementById('lightning-canvas');if(!c)return;var ctx=c.getContext('2d');var W,H;
 function resize(){W=c.width=window.innerWidth||c.parentNode.offsetWidth;H=c.height=window.innerHeight||c.parentNode.offsetHeight}
 resize();window.addEventListener('resize',resize);
-// ── Circuit traces (bigger, brighter) ──
+// ── Wait a beat then re-resize (catches layout shifts) ──
+setTimeout(resize,100);setTimeout(resize,500);
+// ── Circuit traces ──
 var circuits=[];function Circuit(){this.reset()}
 Circuit.prototype.reset=function(){this.x=Math.random()*W;this.y=Math.random()*H;this.w=60+Math.random()*120;this.h=2+Math.random()*4;this.horiz=Math.random()>0.5;this.speed=0.3+Math.random()*0.6;this.opacity=0;this.dir=1;this.phase=Math.random()*Math.PI*2;this.life=0}
 Circuit.prototype.draw=function(t){this.life+=0.02;if(this.life<1){this.opacity=this.life*0.3}else{this.opacity+=0.008*this.dir;if(this.opacity>0.3){this.dir=-1}else if(this.opacity<0){this.dir=1;this.reset()}}
 ctx.save();ctx.globalAlpha=this.opacity;
-// Main trace line
-ctx.strokeStyle='#38bdf8';ctx.lineWidth=this.h;ctx.shadowColor='#38bdf8';ctx.shadowBlur=8;
+ctx.strokeStyle='#38bdf8';ctx.lineWidth=this.h;ctx.shadowColor='#38bdf8';ctx.shadowBlur=12;
 if(this.horiz){var endX=this.x+this.w*Math.sin(t*this.speed+this.phase);ctx.beginPath();ctx.moveTo(this.x,this.y);ctx.lineTo(endX,this.y);ctx.stroke();
-// Branch lines (little circuit branches)
-ctx.strokeStyle='#60a5fa';ctx.lineWidth=1;ctx.shadowBlur=4;
-for(var b=0;b<3;b++){var bx=this.x+((endX-this.x)/3)*(b+1);var by=this.y;var dir=(b%2===0?-1:1);ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+dir*8,by+dir*6);ctx.stroke();ctx.beginPath();ctx.moveTo(bx+dir*8,by+dir*6);ctx.lineTo(bx+dir*12,by+dir*9);ctx.stroke()}}
+ctx.strokeStyle='#60a5fa';ctx.lineWidth=1;ctx.shadowBlur=6;
+for(var b=0;b<3;b++){var bx=this.x+((endX-this.x)/3)*(b+1);var by=this.y;var dir=(b%2===0?-1:1);ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+dir*10,by+dir*8);ctx.stroke();ctx.beginPath();ctx.moveTo(bx+dir*10,by+dir*8);ctx.lineTo(bx+dir*16,by+dir*12);ctx.stroke()}}
 else{var endY=this.y+this.w*Math.sin(t*this.speed+this.phase);ctx.beginPath();ctx.moveTo(this.x,this.y);ctx.lineTo(this.x,endY);ctx.stroke();
-ctx.strokeStyle='#60a5fa';ctx.lineWidth=1;ctx.shadowBlur=4;
-for(var b=0;b<3;b++){var by=this.y+((endY-this.y)/3)*(b+1);var bx=this.x;var dir=(b%2===0?-1:1);ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+dir*6,by+dir*8);ctx.stroke();ctx.beginPath();ctx.moveTo(bx+dir*6,by+dir*8);ctx.lineTo(bx+dir*9,by+dir*12);ctx.stroke()}}
-// Dot at endpoint
-ctx.fillStyle='#38bdf8';ctx.shadowBlur=6;ctx.beginPath();ctx.arc(endX||this.x,endY||this.y,2,0,Math.PI*2);ctx.fill();
+ctx.strokeStyle='#60a5fa';ctx.lineWidth=1;ctx.shadowBlur=6;
+for(var b=0;b<3;b++){var by=this.y+((endY-this.y)/3)*(b+1);var bx=this.x;var dir=(b%2===0?-1:1);ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+dir*8,by+dir*10);ctx.stroke();ctx.beginPath();ctx.moveTo(bx+dir*8,by+dir*10);ctx.lineTo(bx+dir*12,by+dir*16);ctx.stroke()}}
+ctx.fillStyle='#38bdf8';ctx.shadowBlur=10;ctx.beginPath();ctx.arc(endX||this.x,endY||this.y,2.5,0,Math.PI*2);ctx.fill();
 ctx.restore()};
-for(var i=0;i<18;i++)circuits.push(new Circuit());
-// ── Lightning bolts (much stronger) ──
+for(var i=0;i<24;i++)circuits.push(new Circuit());
+// ── Lightning bolts ──
 var bolts=[];function Bolt(){this.reset()}
-Bolt.prototype.reset=function(){this.y=30+Math.random()*(H-60);this.x=-60;this.targetX=W+60+Math.random()*150;this.speed=5+Math.random()*10;this.segments=[];this.life=1;this.sparks=[];this.build();this.branches=[];this.buildBranches()}
-Bolt.prototype.build=function(){var pts=[{x:this.x,y:this.y}];var segs=8+Math.floor(Math.random()*6);for(var i=0;i<segs;i++){var t=(i+1)/segs;var px=this.x+(this.targetX-this.x)*t+Math.sin(i*1.5)*(Math.random()-0.5)*50;var py=this.y+(Math.random()-0.5)*80;if(i===0)py=this.y;pts.push({x:px,y:py})}
-pts[pts.length-1].x=this.targetX+Math.random()*30;this.segments=pts;
-// Sparks from main bolt
-for(var i=0;i<8+Math.floor(Math.random()*8);i++){var idx=Math.floor(Math.random()*(pts.length-3))+2;this.sparks.push({x:pts[idx].x+Math.random(),y:pts[idx].y+Math.random(),vx:(Math.random()-0.5)*6,vy:-3-Math.random()*6,life:0.5+Math.random()*0.8,maxLife:0})}
+Bolt.prototype.reset=function(){// Y spans ENTIRE hero height - from nav area to below headline
+this.y=20+Math.random()*(H-40);
+this.x=-80-Math.random()*40;
+this.targetX=W+80+Math.random()*100;
+this.speed=4+Math.random()*12;
+this.segments=[];this.life=1;this.sparks=[];this.build();this.branches=[];this.buildBranches()}
+Bolt.prototype.build=function(){var pts=[{x:this.x,y:this.y}];var segs=8+Math.floor(Math.random()*6);
+for(var i=0;i<segs;i++){var t=(i+1)/segs;var px=this.x+(this.targetX-this.x)*t+Math.sin(i*2)*(Math.random()-0.5)*60;var py=this.y+(Math.random()-0.5)*100;if(i===0)py=this.y;pts.push({x:px,y:py})}
+pts[pts.length-1].x=this.targetX+Math.random()*40;this.segments=pts;
+for(var i=0;i<10+Math.floor(Math.random()*12);i++){var idx=Math.floor(Math.random()*(pts.length-3))+2;this.sparks.push({x:pts[idx].x+Math.random(),y:pts[idx].y+Math.random(),vx:(Math.random()-0.5)*8,vy:-4-Math.random()*8,life:0.5+Math.random()*1,maxLife:0})}
 for(var s=0;s<this.sparks.length;s++)this.sparks[s].maxLife=this.sparks[s].life}
-Bolt.prototype.buildBranches=function(){var count=2+Math.floor(Math.random()*3);for(var b=0;b<count;b++){var startIdx=Math.floor(Math.random()*(this.segments.length-4))+2;var start=this.segments[startIdx];var pts=[];pts.push({x:start.x,y:start.y});var dir=(Math.random()>0.5?1:-1);var segs=3+Math.floor(Math.random()*4);for(var i=0;i<segs;i++){pts.push({x:pts[i].x+dir*(20+Math.random()*40),y:pts[i].y+(Math.random()-0.5)*50})}
+Bolt.prototype.buildBranches=function(){var count=2+Math.floor(Math.random()*4);
+for(var b=0;b<count;b++){var startIdx=Math.floor(Math.random()*(this.segments.length-4))+2;var start=this.segments[startIdx];var pts=[];pts.push({x:start.x,y:start.y});var dir=(Math.random()>0.5?1:-1);var segs=3+Math.floor(Math.random()*4);for(var i=0;i<segs;i++){pts.push({x:pts[i].x+dir*(25+Math.random()*50),y:pts[i].y+(Math.random()-0.5)*60})}
 this.branches.push({pts:pts,life:1})}}
 Bolt.prototype.draw=function(){if(this.life<=0)return;
-// Glow flash
-ctx.save();ctx.globalAlpha=this.life*0.15;
-var grad=ctx.createRadialGradient(this.segments[0].x,this.segments[0].y,10,this.segments[0].x,this.segments[0].y,80);
-grad.addColorStop(0,'rgba(147,197,253,0.3)');grad.addColorStop(1,'rgba(147,197,253,0)');
-ctx.fillStyle=grad;ctx.beginPath();ctx.arc(this.segments[0].x,this.segments[0].y,80,0,Math.PI*2);ctx.fill();
+// Flash glow at bolt head
+ctx.save();ctx.globalAlpha=this.life*0.2;
+var grad=ctx.createRadialGradient(this.segments[0].x,this.segments[0].y,10,this.segments[0].x,this.segments[0].y,120);
+grad.addColorStop(0,'rgba(147,197,253,0.4)');grad.addColorStop(1,'rgba(147,197,253,0)');
+ctx.fillStyle=grad;ctx.beginPath();ctx.arc(this.segments[0].x,this.segments[0].y,120,0,Math.PI*2);ctx.fill();
 ctx.restore();
 // Outer glow
-ctx.save();ctx.globalAlpha=this.life*0.7;ctx.strokeStyle='rgba(56,189,248,0.4)';ctx.lineWidth=6;ctx.shadowColor='#38bdf8';ctx.shadowBlur=40;
+ctx.save();ctx.globalAlpha=this.life*0.8;ctx.strokeStyle='rgba(56,189,248,0.5)';ctx.lineWidth=8;ctx.shadowColor='#38bdf8';ctx.shadowBlur=50;
 ctx.beginPath();ctx.moveTo(this.segments[0].x,this.segments[0].y);
 for(var i=1;i<this.segments.length;i++){var bx=this.segments[i-1].x+(this.segments[i].x-this.segments[i-1].x)*this.life;var by=this.segments[i-1].y+(this.segments[i].y-this.segments[i-1].y)*this.life;ctx.lineTo(bx,by)}
 ctx.stroke();
 // Main bolt
-ctx.strokeStyle='#60a5fa';ctx.lineWidth=2.5;ctx.shadowColor='#93c5fd';ctx.shadowBlur=30;
+ctx.strokeStyle='#60a5fa';ctx.lineWidth=3;ctx.shadowColor='#93c5fd';ctx.shadowBlur=40;
 ctx.beginPath();ctx.moveTo(this.segments[0].x,this.segments[0].y);
 for(var i=1;i<this.segments.length;i++){var bx=this.segments[i-1].x+(this.segments[i].x-this.segments[i-1].x)*this.life;var by=this.segments[i-1].y+(this.segments[i].y-this.segments[i-1].y)*this.life;ctx.lineTo(bx,by)}
 ctx.stroke();
-// Bright core
-ctx.strokeStyle='#fff';ctx.lineWidth=1.2;ctx.shadowBlur=0;
+// Bright white core
+ctx.strokeStyle='#fff';ctx.lineWidth=1.5;ctx.shadowBlur=0;
 ctx.beginPath();ctx.moveTo(this.segments[0].x,this.segments[0].y);
 for(var i=1;i<this.segments.length;i++){var bx=this.segments[i-1].x+(this.segments[i].x-this.segments[i-1].x)*this.life;var by=this.segments[i-1].y+(this.segments[i].y-this.segments[i-1].y)*this.life;ctx.lineTo(bx,by)}
 ctx.stroke();
 // Branch bolts
 for(var b=0;b<this.branches.length;b++){var br=this.branches[b];if(br.life<=0)continue;
-ctx.save();ctx.globalAlpha=this.life*br.life*0.5;ctx.strokeStyle='#818cf8';ctx.lineWidth=1.5;ctx.shadowColor='#818cf8';ctx.shadowBlur=15;
+ctx.save();ctx.globalAlpha=this.life*br.life*0.6;ctx.strokeStyle='#818cf8';ctx.lineWidth=2;ctx.shadowColor='#818cf8';ctx.shadowBlur=25;
 ctx.beginPath();ctx.moveTo(br.pts[0].x,br.pts[0].y);
 for(var i=1;i<br.pts.length;i++){ctx.lineTo(br.pts[i].x,br.pts[i].y)}
 ctx.stroke();ctx.restore()}
-// Sparks (yellow/white)
-ctx.save();ctx.shadowColor='#fbbf24';ctx.shadowBlur=15;
+// Sparks
+ctx.save();ctx.shadowColor='#fbbf24';ctx.shadowBlur=20;
 for(var s=0;s<this.sparks.length;s++){var sp=this.sparks[s];if(sp.life<=0)continue;
 var a=this.life*(sp.life/sp.maxLife);
-ctx.globalAlpha=a;ctx.fillStyle='#fbbf24';ctx.beginPath();ctx.arc(sp.x,sp.y,2.5*a,0,Math.PI*2);ctx.fill();
-ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(sp.x,sp.y,1.2*a,0,Math.PI*2);ctx.fill();
-sp.x+=sp.vx+Math.random()*0.5;sp.y+=sp.vy+Math.random()*0.5;sp.vy+=0.2;sp.vx*=0.98;sp.life-=0.015}
-this.life-=0.006;
-// Remaining life glow pulse on last 20%
-if(this.life<0.2){ctx.save();ctx.globalAlpha=(1-this.life/0.2)*0.4;ctx.fillStyle='rgba(147,197,253,0.2)';
-ctx.fillRect(0,0,W,H);ctx.restore()}
+ctx.globalAlpha=a;ctx.fillStyle='#fbbf24';ctx.beginPath();ctx.arc(sp.x,sp.y,3*a,0,Math.PI*2);ctx.fill();
+ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(sp.x,sp.y,1.5*a,0,Math.PI*2);ctx.fill();
+sp.x+=sp.vx+Math.random()*1;sp.y+=sp.vy+Math.random()*1;sp.vy+=0.25;sp.vx*=0.97;sp.life-=0.018}
+this.life-=0.007;
+// Final flash before bolt dies
+if(this.life<0.3){ctx.save();ctx.globalAlpha=(1-this.life/0.3)*0.5;ctx.fillStyle='rgba(147,197,253,0.15)';ctx.fillRect(0,0,W,H);ctx.restore()}
 ctx.restore()};
 // ── Animation loop ──
 var lastSpawn=0;var t=0;
 function animate(){t+=0.016;requestAnimationFrame(animate);ctx.clearRect(0,0,W,H);
-// Circuits background
 for(var i=0;i<circuits.length;i++)circuits[i].draw(t);
-// Spawn bolts aggressively
-lastSpawn+=0.016;if(lastSpawn>0.3+Math.random()*0.8&&bolts.length<6){bolts.push(new Bolt());lastSpawn=0}
-// Also spawn directional bolts from right occasionally
-if(Math.random()<0.008){var b=new Bolt();b.x=W+60;b.targetX=-60;b.y=30+Math.random()*(H-60);bolts.push(b)}
-// Draw & clean bolts
+// Spawn bolts frequently across full height
+lastSpawn+=0.016;
+if(lastSpawn>0.2+Math.random()*0.6&&bolts.length<8){bolts.push(new Bolt());lastSpawn=0}
+// Also spawn reverse bolts
+if(Math.random()<0.01){var b=new Bolt();b.x=W+80;b.targetX=-80;b.y=20+Math.random()*(H-40);bolts.push(b)}
 for(var i=bolts.length-1;i>=0;i--){bolts[i].draw();if(bolts[i].life<=0)bolts.splice(i,1)}
-// Frequent screen flash
-if(bolts.length>0){if(Math.random()<0.008){ctx.save();ctx.fillStyle='rgba(147,197,253,0.08)';ctx.fillRect(0,0,W,H);ctx.restore()}
-// Brighter flash when a new bolt spawns
-if(Math.random()<0.005){ctx.save();ctx.fillStyle='rgba(255,255,255,0.03)';ctx.fillRect(0,0,W,H);ctx.restore()}}
+// Screen flash
+if(bolts.length>0&&Math.random()<0.01){ctx.save();ctx.fillStyle='rgba(147,197,253,0.06)';ctx.fillRect(0,0,W,H);ctx.restore()}
+if(Math.random()<0.003){ctx.save();ctx.fillStyle='rgba(255,255,255,0.03)';ctx.fillRect(0,0,W,H);ctx.restore()}
 }animate()})();
 </script></script>
 </body>
