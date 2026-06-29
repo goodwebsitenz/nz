@@ -261,6 +261,24 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <a href="tel:0276215786" class="emergency-btn"><span class="pulse-dot"></span> 🟢 Open · 📞 Call Now</a>
 
 <script>
+setTimeout(() => document.getElementById('loader').classList.add('done'), 2200);
+const observer = new IntersectionObserver(entries => {entries.forEach(entry => {if (entry.isIntersecting) {entry.target.classList.add('visible')}})}, {threshold: 0.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+setTimeout(() => {
+const heroBtn = document.querySelector('.hero-content .btn');
+const emergencyBtn = document.querySelector('.emergency-btn');
+if (heroBtn && emergencyBtn) {
+  const ctaObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      emergencyBtn.classList.toggle('show', !entry.isIntersecting);
+    });
+  }, { threshold: 0 });
+  ctaObserver.observe(heroBtn);
+}
+}, 3000);
+</script>
+
+<script>
 (function(){var c=document.getElementById('anim-canvas');if(!c)return;var ctx=c.getContext('2d');var W,H;
 function resize(){var r=c.getBoundingClientRect();if(!r||r.width<10){setTimeout(resize,200);return};W=c.width=r.width*2;H=c.height=r.height*2;c.style.width=r.width+"px";c.style.height=r.height+"px";if(!sd){sd=true;setup()}}
 window.addEventListener('resize',resize);var sd=false;
