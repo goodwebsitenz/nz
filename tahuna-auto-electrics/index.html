@@ -283,8 +283,8 @@ if (heroBtn && emergencyBtn) {
 
 <script>
 (function(){var c=document.getElementById('lightning-canvas');if(!c)return;var ctx=c.getContext('2d');var W,H;
-function resize(){W=c.width=window.innerWidth||c.parentNode.offsetWidth;H=c.height=window.innerHeight||c.parentNode.offsetHeight}
-resize();window.addEventListener('resize',resize);
+function resize(){var r=c.getBoundingClientRect();W=c.width=r.width*2;H=c.height=r.height*2;c.style.width=r.width+"px";c.style.height=r.height+"px"}
+setTimeout(function(){resize()},200);window.addEventListener('resize',resize);
 setTimeout(resize,100);setTimeout(resize,500);
 // ── Circuit traces (subtle) ──
 var circuits=[];function Circuit(){this.reset()}
