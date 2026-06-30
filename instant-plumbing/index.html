@@ -116,7 +116,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 </style>
 </head>
 <body>
-<div id="loader"><div class="loader-icon">🔧</div><div class="brush-load"></div><div class="loader-text">Turning on the flow...</div></div>
+<div id="loader"><div class="loader-icon">🔧</div><div class="brush-load"></div><div class="loader-text">Tightening the fittings...</div></div>
 
 <nav>
 <a href="#" class="logo">Instant Plumbing</a>
@@ -201,9 +201,9 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <h2>What Our Clients Say</h2>
 <p class="subtitle">Rated 4.6 stars on Google — here's what people are saying.</p>
 <div class="testimonial-grid">
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Professional from start to finish. They went above and beyond to make sure we were happy with the result."</blockquote><div class="author"><div class="author-avatar">SM</div><div class="author-name">Sarah M.</div><div class="author-title">Google Review</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"From start to finish, a seamless experience. Clear communication, fair pricing, and outstanding workmanship."</blockquote><div class="author"><div class="author-avatar">RP</div><div class="author-name">Richard P.</div><div class="author-title">Google Review</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"We've used several services over the years and none compare. Attention to detail, tidy worksite, and finished on time."</blockquote><div class="author"><div class="author-avatar">MW</div><div class="author-name">Mike W.</div><div class="author-title">Google Review</div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Highly recommend. Great work ethic, clean worksite, and the quality speaks for itself. A pleasure to deal with."</blockquote><div class="author"><div class="author-avatar">MW</div><div class="author-name">Mike W.</div><div class="author-title">Google Review</div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Absolutely thrilled with the result. The team was professional, punctual, and the quality exceeded our expectations. Would highly recommend to anyone in Christchurch."</blockquote><div class="author"><div class="author-avatar">RP</div><div class="author-name">Richard P.</div><div class="author-title">Google Review</div></div></div>
+<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Professional from start to finish. They went above and beyond to make sure we were happy with the result."</blockquote><div class="author"><div class="author-avatar">AC</div><div class="author-name">Anna C.</div><div class="author-title">Google Review</div></div></div>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <p>&copy; 2026 Instant Plumbing — Christchurch. Professional plumber services.</p>
 </footer>
 
-<a href="tel:0272447752" class="emergency-btn" data-hours='["Monday: Open 24 hours", "Tuesday: Open 24 hours", "Wednesday: Open 24 hours", "Thursday: Open 24 hours", "Friday: Open 24 hours", "Saturday: Open 24 hours", "Sunday: Open 24 hours"]' data-247="1"><span class="pulse-dot"></span> 📞 Call Now</a>
+<a href="tel:0272447752" class="emergency-btn" data-hours='[]' data-247="1"><span class="pulse-dot"></span> 📞 Call Now</a>
 
 <script>
 setTimeout(() => document.getElementById('loader').classList.add('done'), 2200);
@@ -283,7 +283,7 @@ function updateOpenStatus(btn) {
   const hoursRaw = btn.dataset.hours;
   
   if (is247) {
-    btn.innerHTML = '<span class="pulse-dot"></span> 🟢 Open 24/7 · 📞 Call Now';
+    btn.innerHTML = '<span class="pulse-dot"></span> 🟢 Open · 📞 Call Now';
     return;
   }
   
@@ -309,12 +309,12 @@ function updateOpenStatus(btn) {
     }
     
     if (!todayHours || todayHours.toLowerCase() === 'closed') {
-      btn.innerHTML = '<span class="pulse-dot"></span> 🔴 Closed · 📞 Call Now';
+      btn.innerHTML = '📞 Call Now';
       return;
     }
     
     if (todayHours.toLowerCase().includes('24 hours') || todayHours.toLowerCase().includes('open 24 hours')) {
-      btn.innerHTML = '<span class="pulse-dot"></span> 🟢 Open 24/7 · 📞 Call Now';
+      btn.innerHTML = '<span class="pulse-dot"></span> 🟢 Open · 📞 Call Now';
       return;
     }
     
@@ -336,7 +336,7 @@ function updateOpenStatus(btn) {
       if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
         btn.innerHTML = '<span class="pulse-dot"></span> 🟢 Open · 📞 Call Now';
       } else {
-        btn.innerHTML = '<span class="pulse-dot"></span> 🔴 Closed · 📞 Call Now';
+        btn.innerHTML = '📞 Call Now';
       }
     }
   } catch(e) {}
