@@ -30,8 +30,10 @@ nav a:hover{color:#fff}
 .wash-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(100,116,139,.3),rgba(249,115,22,.12),#0b0b17);z-index:2;pointer-events:none;clip-path:inset(0 0 0 0);animation:washReveal 1.8s cubic-bezier(.65,0,.35,1) .2s forwards}
 @keyframes washReveal{0%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(100% 0 0 0)}}
 .hero-content{position:relative;z-index:3;margin-top:60px}
-.hero-icon{font-size:5em;display:block;margin-bottom:10px;line-height:1;animation:iconBounce 1.2s cubic-bezier(.22,1,.36,1) .6s forwards;opacity:0;transform:scale(0) rotate(-30deg);filter:blur(4px)}
-@keyframes iconBounce{0%{opacity:0;transform:scale(0) rotate(-30deg);filter:blur(4px)}50%{opacity:1;transform:scale(1.4) rotate(5deg);filter:blur(0)}70%{opacity:1;transform:scale(.9) rotate(-2deg)}100%{opacity:1;transform:scale(1) rotate(0deg);filter:blur(0)}}
+.hero-house{width:86px;height:86px;display:block;margin:0 auto 12px;animation:houseBreath 4.5s ease-in-out 5s infinite}
+.hp{stroke-dasharray:1;stroke-dashoffset:1;animation:houseDraw 1.15s cubic-bezier(.65,0,.35,1) forwards;animation-delay:var(--d)}
+@keyframes houseDraw{to{stroke-dashoffset:0}}
+@keyframes houseBreath{0%,100%{filter:drop-shadow(0 0 10px rgba(249,115,22,.28))}50%{filter:drop-shadow(0 0 24px rgba(249,115,22,.55))}}
 .hero-content .rating-badge{opacity:0;transform:translateY(30px);animation:slideUpBlur .8s cubic-bezier(.22,1,.36,1) 1.2s forwards}
 @keyframes slideUpBlur{0%{opacity:0;transform:translateY(30px);filter:blur(3px)}100%{opacity:1;transform:translateY(0);filter:blur(0)}}
 .hero-content h1{opacity:0;transform:translateY(50px) scale(.95);animation:headlineIn 1s cubic-bezier(.16,1,.3,1) 1.5s forwards}
@@ -115,7 +117,6 @@ footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255
 footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-#anim-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
 </style>
 </head>
 <body>
@@ -134,14 +135,25 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <section id="hero">
 <div class="grid-bg"></div>
 <div class="wash-overlay"></div>
-<canvas id="anim-canvas"></canvas>
 <div class="particle p1"></div>
 <div class="particle p2"></div>
 <div class="particle p3"></div>
 <div class="particle p4"></div>
 <div class="particle p5"></div>
 <div class="hero-content">
-<span class="hero-icon">🏠</span>
+<svg class="hero-house" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+<defs>
+<linearGradient id="houseGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#fb923c"/>
+<stop offset="1" stop-color="#b45309"/>
+</linearGradient>
+</defs>
+<g stroke="url(#houseGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path class="hp" style="--d:2.3s" pathLength="1" d="M10,54 L60,16 L110,54"/>
+<path class="hp" style="--d:2.75s" pathLength="1" d="M10,54 L10,106 L110,106 L110,54"/>
+<path class="hp" style="--d:3.05s" pathLength="1" d="M70,36 L70,10 L80,10 L80,36"/>
+</g>
+</svg>
 <div class="rating-badge">👍 48 followers on Facebook</div>
 <h1>Professional Roofing Auckland Ltd<br>in Auckland</h1>
 <p>Trusted roofing experts serving Auckland and surrounding areas.</p>
@@ -282,120 +294,6 @@ if (heroBtn && emergencyBtn) {
 }, 3000);
 </script>
 
-<script>
-/* Shingle lay-in: rows slide in from left/right and lock into a roof, bottom-up.
-   After the build completes, a soft light sheen sweeps across the roof. */
-(function(){
-var c=document.getElementById('anim-canvas');if(!c)return;
-var ctx=c.getContext('2d');
-var W=0,H=0,DPR=1;
-var shingles=[],built=false,buildStart=0;
-var rx=0,ry=0,rw=0,rhb=0;
-var COLS=['#f97316','#b45309','#fb923c','#c2410c','#eab308'];
-var ROWS=9,ROOF_W=0.88,ROOF_H=0.40,BOTTOM=0.965;
-var ROW_GAP=300,SLIDE_DUR=640,LOCK_GLOW=240,BASE_DELAY=2600;
-var SHEEN_EVERY=4200,SHEEN_DUR=1700,SHEEN_W=170;
-var lastSheen=0,sheenT=-1;
 
-function resize(){
-  var r=c.getBoundingClientRect();
-  if(!r||r.width<10){setTimeout(resize,200);return}
-  DPR=window.devicePixelRatio||1;
-  W=r.width;H=r.height;
-  c.width=W*DPR;c.height=H*DPR;
-  c.style.width=W+'px';c.style.height=H+'px';
-  ctx.setTransform(DPR,0,0,DPR,0,0);
-  buildRoof();
-}
-window.addEventListener('resize',resize);
-
-function buildRoof(){
-  shingles=[];
-  var bw=W*ROOF_W,bh=H*ROOF_H;
-  rx=(W-bw)/2; ry=H*BOTTOM-bh; rw=bw; rhb=bh;
-  var rowH=bh/ROWS;
-  var sh=Math.max(9,rowH*0.62);
-  var sw=Math.max(34,bw/9.5);
-  var n=Math.ceil(bw/sw)+2;
-  for(var i=0;i<ROWS;i++){
-    var rowY=H*BOTTOM-(i+1)*rowH+(rowH-sh)/2;
-    var off=(i%2)?sw/2:0;
-    var fromLeft=(i%2===0);
-    for(var j=0;j<n;j++){
-      var tx=rx-off+j*sw;
-      if(tx>rx+bw)continue;
-      shingles.push({
-        x:fromLeft?-sw-j*10:W+sw+j*10,
-        tx:tx,y:rowY,w:sw,h:sh,
-        col:COLS[Math.floor(Math.random()*COLS.length)],
-        fromLeft:fromLeft,
-        delay:BASE_DELAY+i*ROW_GAP+j*46,
-        dur:SLIDE_DUR+Math.random()*220,
-        locked:false,popT:0
-      });
-    }
-  }
-  built=false;buildStart=0;
-}
-
-function fillShingle(x,y,w,h,col,alpha,glow,pop){
-  ctx.save();
-  ctx.globalAlpha=alpha;
-  ctx.fillStyle=col;
-  if(glow>0){ctx.shadowColor=col;ctx.shadowBlur=glow;}
-  ctx.beginPath();
-  if(ctx.roundRect)ctx.roundRect(x,y,w,h,3);else ctx.rect(x,y,w,h);
-  ctx.fill();
-  ctx.restore();
-}
-
-function draw(t){
-  ctx.clearRect(0,0,W,H);
-  if(!buildStart)buildStart=t;
-  if(!shingles.length){requestAnimationFrame(draw);return}
-  var allLocked=true;
-  for(var k=0;k<shingles.length;k++){
-    var s=shingles[k];
-    var tt=(t-buildStart-s.delay)/s.dur;
-    if(tt>=1){
-      if(!s.locked){s.locked=true;s.popT=t;}
-      var sc=1,glow=0;
-      if(t-s.popT<LOCK_GLOW){
-        var p=(t-s.popT)/LOCK_GLOW;
-        sc=1+0.10*Math.sin(p*Math.PI);
-        glow=12;
-      }
-      var pw=s.w*sc,ph=s.h*sc;
-      fillShingle(s.tx-(pw-s.w)/2,s.y-(ph-s.h)/2,pw,ph,s.col,0.62,glow,true);
-    }else if(tt>0){
-      allLocked=false;
-      var e=1-Math.pow(1-tt,3);
-      var x=s.x+(s.tx-s.x)*e;
-      fillShingle(x,s.y,s.w,s.h,s.col,0.30+0.32*e,0,false);
-    }else{
-      allLocked=false;
-    }
-  }
-  if(allLocked&&!built){built=true;lastSheen=t;sheenT=-1;}
-  if(built&&t-lastSheen>=SHEEN_EVERY){lastSheen=t;sheenT=t;}
-  if(built&&sheenT>=0&&t-sheenT<SHEEN_DUR){
-    var p=(t-sheenT)/SHEEN_DUR;
-    var sx=rx-SHEEN_W+(rw+2*SHEEN_W)*p;
-    ctx.save();
-    ctx.beginPath();ctx.rect(rx,ry,rw,rhb);ctx.clip();
-    var g=ctx.createLinearGradient(sx-SHEEN_W,0,sx+SHEEN_W,0);
-    g.addColorStop(0,'rgba(255,255,255,0)');
-    g.addColorStop(0.5,'rgba(255,255,255,0.08)');
-    g.addColorStop(1,'rgba(255,255,255,0)');
-    ctx.fillStyle=g;
-    ctx.fillRect(sx-SHEEN_W,ry,SHEEN_W*2,rhb);
-    ctx.restore();
-  }
-  requestAnimationFrame(draw);
-}
-setTimeout(resize,200);
-requestAnimationFrame(draw);
-})();
-</script>
 </body>
 </html>
