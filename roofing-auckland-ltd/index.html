@@ -30,8 +30,10 @@ nav a:hover{color:#fff}
 .wash-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(100,116,139,.3),rgba(249,115,22,.12),#0b0b17);z-index:2;pointer-events:none;clip-path:inset(0 0 0 0);animation:washReveal 1.8s cubic-bezier(.65,0,.35,1) .2s forwards}
 @keyframes washReveal{0%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(100% 0 0 0)}}
 .hero-content{position:relative;z-index:3;margin-top:60px}
-.hero-house{width:86px;height:86px;display:block;margin:0 auto 12px;animation:houseBreath 4.5s ease-in-out 5s infinite}
-.hp{stroke-dasharray:1;stroke-dashoffset:1;animation:houseDraw 1.15s cubic-bezier(.65,0,.35,1) forwards;animation-delay:var(--d)}
+.hero-house{width:86px;height:86px;display:block;margin:0 auto 12px;animation:houseBreath 4.5s ease-in-out 6.5s infinite}
+.hp{stroke-dasharray:1;stroke-dashoffset:1;animation:houseDraw var(--dur,1.15s) cubic-bezier(.65,0,.35,1) forwards;animation-delay:var(--d)}
+.roof-fill{fill:url(#houseGrad);fill-opacity:0;animation:roofFill .9s ease 5.7s forwards}
+@keyframes roofFill{to{fill-opacity:.12}}
 @keyframes houseDraw{to{stroke-dashoffset:0}}
 @keyframes houseBreath{0%,100%{filter:drop-shadow(0 0 10px rgba(249,115,22,.28))}50%{filter:drop-shadow(0 0 24px rgba(249,115,22,.55))}}
 .hero-content .rating-badge{opacity:0;transform:translateY(30px);animation:slideUpBlur .8s cubic-bezier(.22,1,.36,1) 1.2s forwards}
@@ -148,10 +150,11 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <stop offset="1" stop-color="#b45309"/>
 </linearGradient>
 </defs>
+<path class="roof-fill" d="M4,58 L60,15 L116,58 Z"/>
 <g stroke="url(#houseGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<path class="hp" style="--d:2.3s" pathLength="1" d="M10,54 L60,16 L110,54"/>
-<path class="hp" style="--d:2.75s" pathLength="1" d="M10,54 L10,106 L110,106 L110,54"/>
-<path class="hp" style="--d:3.05s" pathLength="1" d="M70,36 L70,10 L80,10 L80,36"/>
+<path class="hp" style="--d:2.3s;--dur:1s" pathLength="1" d="M10,54 L10,106 L110,106 L110,54"/>
+<path class="hp" style="--d:2.9s;--dur:.7s" pathLength="1" d="M70,36 L70,10 L80,10 L80,36"/>
+<path class="hp" style="--d:4.4s;--dur:1.3s" pathLength="1" d="M4,58 L60,15 L116,58"/>
 </g>
 </svg>
 <div class="rating-badge">👍 48 followers on Facebook</div>
