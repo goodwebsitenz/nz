@@ -159,6 +159,20 @@ footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255
 footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
+.area-map-wrap{position:relative;max-width:760px;margin:0 auto}
+.area-map{display:block;width:100%;height:auto}
+.map-fade-top{position:absolute;top:0;left:0;right:0;height:70px;background:linear-gradient(to bottom,#151527 0%,rgba(21,21,39,0) 100%);pointer-events:none;z-index:5}
+.map-glow{filter:blur(6px)}
+.map-outline{stroke-dasharray:1;stroke-dashoffset:1}
+#areas .section-inner.visible .map-outline{animation:mapDraw 1.8s cubic-bezier(.65,0,.35,1) .3s forwards}
+@keyframes mapDraw{to{stroke-dashoffset:0}}
+.map-watermark{fill:rgba(255,255,255,.05);font-size:70px;font-weight:800;letter-spacing:16px}
+.area-ring{fill:rgba(249,115,22,.14);transform-origin:center;transform-box:fill-box;animation:ringPulse 2.4s ease-in-out infinite}
+@keyframes ringPulse{0%{transform:scale(.4);opacity:0}40%{opacity:1}100%{transform:scale(1.7);opacity:0}}
+.area-dot{fill:#fb923c;stroke:rgba(255,255,255,.85);stroke-width:1.4;transform-origin:center;transform-box:fill-box;animation:dotPulse 2.4s ease-in-out infinite}
+@keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.area-label{fill:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:2.2px;font-weight:700;text-anchor:middle}
 </style>
 </head>
 <body>
@@ -252,14 +266,50 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <section id="areas">
 <div class="section-inner reveal">
 <h2>Areas We Service</h2>
-<p class="subtitle">Serving all of Auckland — tap your area to call for a free quote.</p>
-<div class="area-chips">
-<a class="area-chip" href="tel:021 263 6446"><span class="pin">📍</span>Auckland Central</a>
-<a class="area-chip" href="tel:021 263 6446"><span class="pin">📍</span>Auckland North</a>
-<a class="area-chip" href="tel:021 263 6446"><span class="pin">📍</span>Auckland South</a>
-<a class="area-chip" href="tel:021 263 6446"><span class="pin">📍</span>Auckland East</a>
-<a class="area-chip" href="tel:021 263 6446"><span class="pin">📍</span>Auckland West</a>
-<a class="area-chip" href="tel:021 263 6446"><span class="pin">📍</span>Surrounding Areas</a>
+<p class="subtitle">Serving all of Auckland — tap an area on the map to call for a free quote.</p>
+<!-- Auckland region map (real boundary data, OSM/Natural Earth). Auckland-specific: for other cities, replace the SVG with that city's region outline. -->
+<div class="area-map-wrap">
+<svg class="area-map" viewBox="0 398 760 563" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Service area map of Auckland">
+<defs>
+<linearGradient id="akFill" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="rgba(249,115,22,.10)"/>
+<stop offset="1" stop-color="rgba(180,83,9,.05)"/>
+</linearGradient>
+<linearGradient id="akStroke" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#fb923c"/>
+<stop offset="1" stop-color="#b45309"/>
+</linearGradient>
+</defs>
+<path class="map-glow" d="M 334.5,871.4 L 322.4,842.6 L 316.6,820.4 L 303.5,795.3 L 298.0,774.3 L 274.3,729.2 L 270.4,709.8 L 295.3,712.7 L 317.7,705.9 L 331.4,714.6 L 323.9,733.7 L 352.1,789.1 L 354.3,811.6 L 362.4,829.1 L 372.1,836.9 L 378.1,820.4 L 369.8,791.5 L 376.2,786.6 L 400.1,788.9 L 408.4,782.2 L 369.0,777.4 L 359.0,772.7 L 367.4,768.6 L 397.8,741.9 L 401.6,743.6 L 401.1,758.8 L 424.3,730.8 L 437.0,720.7 L 450.7,719.3 L 472.0,744.1 L 479.4,748.4 L 487.2,745.0 L 488.7,737.1 L 481.3,719.3 L 482.3,711.8 L 453.8,700.3 L 443.1,691.1 L 434.4,694.3 L 420.2,661.6 L 405.8,678.8 L 397.7,671.9 L 396.6,656.3 L 403.0,647.6 L 416.3,640.6 L 424.0,626.0 L 387.9,619.5 L 350.1,621.4 L 331.4,626.9 L 316.6,638.1 L 311.8,646.8 L 305.5,671.5 L 300.2,678.8 L 295.6,679.1 L 282.3,666.8 L 274.5,679.1 L 262.5,689.8 L 249.3,694.4 L 238.0,688.4 L 231.6,676.2 L 208.9,596.4 L 196.6,530.5 L 186.1,499.2 L 157.0,445.9 L 79.9,347.8 L 63.5,315.7 L 60.0,283.6 L 63.9,269.3 L 75.3,264.5 L 69.2,283.5 L 68.5,293.0 L 71.5,303.1 L 86.0,277.0 L 94.1,274.0 L 101.9,279.2 L 110.3,302.2 L 121.5,312.7 L 134.1,335.9 L 151.5,343.9 L 157.0,350.4 L 156.5,358.3 L 147.9,365.1 L 176.5,374.7 L 171.5,379.9 L 155.5,384.2 L 163.0,394.1 L 159.4,408.1 L 171.3,410.5 L 182.6,418.1 L 182.6,398.6 L 199.4,432.1 L 205.2,418.1 L 211.1,418.7 L 217.0,389.0 L 229.6,376.5 L 232.6,369.9 L 220.8,374.7 L 216.0,361.0 L 221.3,329.8 L 217.0,321.7 L 212.0,332.2 L 209.7,327.0 L 209.4,288.3 L 220.8,274.0 L 205.0,250.9 L 207.3,243.0 L 219.7,231.7 L 218.7,227.7 L 197.4,216.9 L 176.2,238.6 L 143.3,241.1 L 125.6,237.0 L 113.3,225.2 L 109.6,202.8 L 117.3,207.2 L 121.6,190.4 L 127.7,188.8 L 144.1,197.6 L 179.1,192.3 L 197.1,176.5 L 220.8,164.1 L 236.1,149.8 L 249.8,144.6 L 251.7,135.5 L 244.1,126.0 L 325.2,60.0 L 363.7,117.4 L 381.6,137.9 L 404.9,154.2 L 419.3,160.4 L 416.3,173.7 L 419.8,177.7 L 418.3,180.9 L 412.9,178.5 L 406.1,180.4 L 404.9,188.0 L 409.2,200.9 L 450.7,212.3 L 433.8,215.3 L 378.1,214.5 L 387.3,253.1 L 396.3,271.7 L 397.4,283.7 L 393.8,307.4 L 382.4,274.3 L 373.6,260.4 L 359.0,254.5 L 369.2,285.3 L 367.9,297.1 L 355.2,297.8 L 355.2,303.1 L 365.5,307.8 L 374.3,316.9 L 370.3,324.2 L 355.2,336.5 L 355.1,345.7 L 362.8,367.5 L 362.5,381.8 L 378.0,395.3 L 385.7,397.4 L 401.1,398.6 L 424.9,389.2 L 431.6,389.0 L 437.5,393.9 L 409.1,412.8 L 395.3,418.1 L 362.8,408.1 L 374.3,420.2 L 382.9,437.5 L 416.3,542.6 L 389.0,529.8 L 374.3,537.9 L 367.6,530.0 L 370.5,518.7 L 359.6,516.2 L 351.7,497.1 L 343.6,497.1 L 323.7,507.2 L 305.5,523.5 L 305.5,528.3 L 330.1,525.8 L 340.0,528.3 L 321.4,544.2 L 324.3,549.8 L 335.9,557.8 L 336.1,591.7 L 338.6,601.2 L 345.5,605.1 L 350.1,601.5 L 351.4,576.0 L 355.2,581.3 L 365.0,566.7 L 378.1,557.4 L 386.9,556.0 L 412.9,561.8 L 448.0,561.8 L 460.2,569.8 L 458.4,590.9 L 444.3,610.0 L 450.1,632.4 L 453.1,637.3 L 456.8,636.4 L 462.2,628.6 L 477.5,552.2 L 481.3,552.2 L 497.9,601.2 L 496.9,619.5 L 523.9,615.5 L 531.0,610.3 L 521.8,593.2 L 519.6,581.6 L 532.7,578.3 L 550.5,580.4 L 562.2,585.2 L 568.9,601.2 L 562.7,633.1 L 569.9,645.3 L 578.5,647.6 L 614.2,628.1 L 623.3,633.4 L 646.7,623.4 L 676.2,640.9 L 700.0,672.6 L 670.8,678.8 L 651.2,677.4 L 620.1,693.7 L 611.7,722.8 L 606.9,778.0 L 572.6,798.3 L 448.7,828.5 L 400.4,843.6 L 334.5,871.4 Z" stroke="rgba(249,115,22,.22)" stroke-width="7" stroke-linejoin="round" filter="blur(6px)"/>
+<path class="map-outline" d="M 334.5,871.4 L 322.4,842.6 L 316.6,820.4 L 303.5,795.3 L 298.0,774.3 L 274.3,729.2 L 270.4,709.8 L 295.3,712.7 L 317.7,705.9 L 331.4,714.6 L 323.9,733.7 L 352.1,789.1 L 354.3,811.6 L 362.4,829.1 L 372.1,836.9 L 378.1,820.4 L 369.8,791.5 L 376.2,786.6 L 400.1,788.9 L 408.4,782.2 L 369.0,777.4 L 359.0,772.7 L 367.4,768.6 L 397.8,741.9 L 401.6,743.6 L 401.1,758.8 L 424.3,730.8 L 437.0,720.7 L 450.7,719.3 L 472.0,744.1 L 479.4,748.4 L 487.2,745.0 L 488.7,737.1 L 481.3,719.3 L 482.3,711.8 L 453.8,700.3 L 443.1,691.1 L 434.4,694.3 L 420.2,661.6 L 405.8,678.8 L 397.7,671.9 L 396.6,656.3 L 403.0,647.6 L 416.3,640.6 L 424.0,626.0 L 387.9,619.5 L 350.1,621.4 L 331.4,626.9 L 316.6,638.1 L 311.8,646.8 L 305.5,671.5 L 300.2,678.8 L 295.6,679.1 L 282.3,666.8 L 274.5,679.1 L 262.5,689.8 L 249.3,694.4 L 238.0,688.4 L 231.6,676.2 L 208.9,596.4 L 196.6,530.5 L 186.1,499.2 L 157.0,445.9 L 79.9,347.8 L 63.5,315.7 L 60.0,283.6 L 63.9,269.3 L 75.3,264.5 L 69.2,283.5 L 68.5,293.0 L 71.5,303.1 L 86.0,277.0 L 94.1,274.0 L 101.9,279.2 L 110.3,302.2 L 121.5,312.7 L 134.1,335.9 L 151.5,343.9 L 157.0,350.4 L 156.5,358.3 L 147.9,365.1 L 176.5,374.7 L 171.5,379.9 L 155.5,384.2 L 163.0,394.1 L 159.4,408.1 L 171.3,410.5 L 182.6,418.1 L 182.6,398.6 L 199.4,432.1 L 205.2,418.1 L 211.1,418.7 L 217.0,389.0 L 229.6,376.5 L 232.6,369.9 L 220.8,374.7 L 216.0,361.0 L 221.3,329.8 L 217.0,321.7 L 212.0,332.2 L 209.7,327.0 L 209.4,288.3 L 220.8,274.0 L 205.0,250.9 L 207.3,243.0 L 219.7,231.7 L 218.7,227.7 L 197.4,216.9 L 176.2,238.6 L 143.3,241.1 L 125.6,237.0 L 113.3,225.2 L 109.6,202.8 L 117.3,207.2 L 121.6,190.4 L 127.7,188.8 L 144.1,197.6 L 179.1,192.3 L 197.1,176.5 L 220.8,164.1 L 236.1,149.8 L 249.8,144.6 L 251.7,135.5 L 244.1,126.0 L 325.2,60.0 L 363.7,117.4 L 381.6,137.9 L 404.9,154.2 L 419.3,160.4 L 416.3,173.7 L 419.8,177.7 L 418.3,180.9 L 412.9,178.5 L 406.1,180.4 L 404.9,188.0 L 409.2,200.9 L 450.7,212.3 L 433.8,215.3 L 378.1,214.5 L 387.3,253.1 L 396.3,271.7 L 397.4,283.7 L 393.8,307.4 L 382.4,274.3 L 373.6,260.4 L 359.0,254.5 L 369.2,285.3 L 367.9,297.1 L 355.2,297.8 L 355.2,303.1 L 365.5,307.8 L 374.3,316.9 L 370.3,324.2 L 355.2,336.5 L 355.1,345.7 L 362.8,367.5 L 362.5,381.8 L 378.0,395.3 L 385.7,397.4 L 401.1,398.6 L 424.9,389.2 L 431.6,389.0 L 437.5,393.9 L 409.1,412.8 L 395.3,418.1 L 362.8,408.1 L 374.3,420.2 L 382.9,437.5 L 416.3,542.6 L 389.0,529.8 L 374.3,537.9 L 367.6,530.0 L 370.5,518.7 L 359.6,516.2 L 351.7,497.1 L 343.6,497.1 L 323.7,507.2 L 305.5,523.5 L 305.5,528.3 L 330.1,525.8 L 340.0,528.3 L 321.4,544.2 L 324.3,549.8 L 335.9,557.8 L 336.1,591.7 L 338.6,601.2 L 345.5,605.1 L 350.1,601.5 L 351.4,576.0 L 355.2,581.3 L 365.0,566.7 L 378.1,557.4 L 386.9,556.0 L 412.9,561.8 L 448.0,561.8 L 460.2,569.8 L 458.4,590.9 L 444.3,610.0 L 450.1,632.4 L 453.1,637.3 L 456.8,636.4 L 462.2,628.6 L 477.5,552.2 L 481.3,552.2 L 497.9,601.2 L 496.9,619.5 L 523.9,615.5 L 531.0,610.3 L 521.8,593.2 L 519.6,581.6 L 532.7,578.3 L 550.5,580.4 L 562.2,585.2 L 568.9,601.2 L 562.7,633.1 L 569.9,645.3 L 578.5,647.6 L 614.2,628.1 L 623.3,633.4 L 646.7,623.4 L 676.2,640.9 L 700.0,672.6 L 670.8,678.8 L 651.2,677.4 L 620.1,693.7 L 611.7,722.8 L 606.9,778.0 L 572.6,798.3 L 448.7,828.5 L 400.4,843.6 L 334.5,871.4 Z" fill="url(#akFill)" stroke="url(#akStroke)" stroke-width="2.2" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+<text class="map-watermark" x="380" y="680" text-anchor="middle">AUCKLAND</text>
+<a href="tel:021 263 6446">
+<circle class="area-ring" cx="387.2" cy="518.4" r="11" style="animation-delay:0.0s"/>
+<circle class="area-dot" cx="387.2" cy="518.4" r="4.6" style="animation-delay:0.0s"/>
+<text class="area-label" x="387.2" y="502.4" style="animation-delay:0.0s">NORTH SHORE</text>
+</a>
+<a href="tel:021 263 6446">
+<circle class="area-ring" cx="311.6" cy="582.7" r="11" style="animation-delay:0.28s"/>
+<circle class="area-dot" cx="311.6" cy="582.7" r="4.6" style="animation-delay:0.28s"/>
+<text class="area-label" x="297.6" y="587.7" style="animation-delay:0.28s">WEST</text>
+</a>
+<a href="tel:021 263 6446">
+<circle class="area-ring" cx="384.9" cy="559.7" r="11" style="animation-delay:0.56s"/>
+<circle class="area-dot" cx="384.9" cy="559.7" r="4.6" style="animation-delay:0.56s"/>
+<text class="area-label" x="384.9" y="581.7" style="animation-delay:0.56s">CENTRAL</text>
+</a>
+<a href="tel:021 263 6446">
+<circle class="area-ring" cx="470.6" cy="619.8" r="11" style="animation-delay:0.8400000000000001s"/>
+<circle class="area-dot" cx="470.6" cy="619.8" r="4.6" style="animation-delay:0.8400000000000001s"/>
+<text class="area-label" x="484.6" y="624.8" style="animation-delay:0.8400000000000001s">EAST</text>
+</a>
+<a href="tel:021 263 6446">
+<circle class="area-ring" cx="449.9" cy="661.1" r="11" style="animation-delay:1.12s"/>
+<circle class="area-dot" cx="449.9" cy="661.1" r="4.6" style="animation-delay:1.12s"/>
+<text class="area-label" x="449.9" y="683.1" style="animation-delay:1.12s">SOUTH</text>
+</a>
+</svg>
+<div class="map-fade-top"></div>
 </div>
 </div>
 </section>
