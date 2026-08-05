@@ -37,9 +37,7 @@ nav a:hover{color:#fff}
 .hero-logo-wrap{width:230px;margin:0 auto 18px;position:relative;opacity:0;animation:slamIn 1.3s cubic-bezier(.22,1,.36,1) 3.2s both}
 .hero-logo{display:block;position:relative;z-index:1}
 .hero-logo img{display:block;width:100%;height:auto;position:relative;animation:heroFloat 5s ease-in-out 4.5s infinite}
-.hero-ring{position:absolute;top:50%;left:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border:2px solid rgba(34,197,94,.85);border-radius:50%;z-index:0;pointer-events:none;box-shadow:0 0 24px rgba(34,197,94,.35);animation:ringPop 1.3s cubic-bezier(.22,1,.36,1) 3.2s both}
 @keyframes slamIn{0%{opacity:0;transform:scale(.45);filter:blur(8px)}55%{opacity:1;transform:scale(1.06);filter:blur(0)}75%{transform:scale(.97)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
-@keyframes ringPop{0%{opacity:0;transform:scale(.2)}30%{opacity:.9}100%{opacity:0;transform:scale(6)}}
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 .hero-content .rating-badge{opacity:0;transform:translateY(30px);animation:slideUpBlur .8s cubic-bezier(.22,1,.36,1) 1.2s forwards}
 @keyframes slideUpBlur{0%{opacity:0;transform:translateY(30px);filter:blur(3px)}100%{opacity:1;transform:translateY(0);filter:blur(0)}}
@@ -199,7 +197,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="particle p5"></div>
 <div class="hero-content">
 <div class="hero-logo-wrap">
-<div class="hero-ring"></div>
 <div class="hero-logo"><img src="images/spm-logo.png" alt="SPM Roofing NZ logo"></div>
 </div>
 <!-- <div class="rating-badge">👍 <a href="https://www.facebook.com/spmroofingnz" target="_blank" rel="noopener">257 followers on Facebook</a></div> — build fills: real followers badge (+ rating only if the page actually has one). Empty string if no data. -->
