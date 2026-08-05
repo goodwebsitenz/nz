@@ -445,12 +445,16 @@ setTimeout(() => {
 const heroBtn = document.querySelector('.hero-content .btn');
 const emergencyBtn = document.querySelector('.emergency-btn');
 if (heroBtn && emergencyBtn) {
- const ctaObserver = new IntersectionObserver(entries => {
- entries.forEach(entry => {
- emergencyBtn.classList.toggle('show', !entry.isIntersecting);
- });
- }, { threshold: 0 });
- ctaObserver.observe(heroBtn);
+ const updateFloatCall = () => {
+   const r = heroBtn.getBoundingClientRect();
+   // show the floating call button ONLY after the user has actually scrolled
+   // past the hero's call button (its bottom edge off the top of the viewport)
+   emergencyBtn.classList.toggle('show', r.bottom < 0 && window.scrollY > 10);
+ };
+ window.addEventListener('scroll', updateFloatCall, { passive: true });
+ window.addEventListener('resize', updateFloatCall, { passive: true });
+ window.addEventListener('load', updateFloatCall);
+ updateFloatCall();
  // Check if open based on hours
  (function() {
  var now = new Date();
