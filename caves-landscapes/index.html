@@ -113,6 +113,9 @@ footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255
 footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+.note-line{color:rgba(255,255,255,.5);font-size:.82em;margin-top:16px;display:flex;gap:8px;align-items:flex-start}
+.note-line::before{content:"\24D8";opacity:.7}
+body.light .note-line{color:rgba(20,22,26,.55)}
 </style>
 </head>
 <body>
@@ -124,7 +127,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
-<a href="#testimonials">Reviews</a>
+
 <a href="#hours">Hours</a>
 <a href="#contact">Contact</a>
 </div>
@@ -140,7 +143,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="particle p5"></div>
 <div class="hero-content">
 <span class="hero-icon">🌿</span>
-<div class="rating-badge">⭐ 4.6 · 5 reviews</div>
 <h1>Professional landscaper Services<br>in New Plymouth</h1>
 <p>Trusted landscaper serving New Plymouth and surrounding areas.</p>
 <a href="tel:0274611425" class="btn">📞 Call 0274 611 425</a>
@@ -153,7 +155,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <h2>About Us</h2>
 <div class="about-grid">
 <div>
-<div class="rating-badge">⭐ 4.6 · 5 reviews</div>
 <p>Caves Landscapes is a trusted landscaper serving New Plymouth and surrounding areas. We take pride in delivering premium results that stand the test of time — every job done right, first time.</p>
 <p>From small residential projects to large commercial contracts, our team brings precision, care, and an eye for detail to every project we undertake.</p>
 </div>
@@ -182,31 +183,18 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 
 <section id="gallery" style="background:#0b0b17">
 <div class="section-inner reveal">
-<h2>Our Work</h2>
-<p class="subtitle">A glimpse of our recent landscaper projects in New Plymouth.</p>
+<h2>Where your photos go</h2>
+<p class="subtitle">Illustrative layout — your own job photos replace these.</p>
 <div class="gallery-grid">
-<div class="gallery-card" style="background:linear-gradient(135deg,#22c55e,#0eb14a)"><div class="gallery-icon">🌿</div><div class="gallery-label">Interior · New Plymouth</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#10b981,#01a56d)"><div class="gallery-icon">🌿</div><div class="gallery-label">Exterior · Project</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#38bdf8,#0ea5e9)"><div class="gallery-icon">🌿</div><div class="gallery-label">Detail · Closeup</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">🌿</div><div class="gallery-label">Residential · New Plymouth</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">🌿</div><div class="gallery-label">Commercial · Install</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#f472b6,#ec4899)"><div class="gallery-icon">🌿</div><div class="gallery-label">Featured · Renovation</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#22c55e,#0eb14a)"><div class="gallery-icon">🌿</div><div class="gallery-label">Example: Interior</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#10b981,#01a56d)"><div class="gallery-icon">🌿</div><div class="gallery-label">Example: Exterior</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#38bdf8,#0ea5e9)"><div class="gallery-icon">🌿</div><div class="gallery-label">Example: Detail</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">🌿</div><div class="gallery-label">Example: Residential</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">🌿</div><div class="gallery-label">Example: Commercial</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#f472b6,#ec4899)"><div class="gallery-icon">🌿</div><div class="gallery-label">Example: Featured</div></div>
 
 </div>
-</div>
-</section>
-
-<section id="testimonials">
-<div class="section-inner reveal">
-<h2>What Our Clients Say</h2>
-<p class="subtitle">Rated 4.6 stars on Google — here's what people are saying.</p>
-<div class="testimonial-grid">
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Absolutely thrilled with the result. The team was professional, punctual, and the quality exceeded our expectations. Would highly recommend to anyone in New Plymouth."</blockquote><div class="author"><div class="author-avatar">LK</div><div class="author-name">Lisa K.</div><div class="author-title">Google Review</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"From start to finish, a seamless experience. Clear communication, fair pricing, and outstanding workmanship."</blockquote><div class="author"><div class="author-avatar">AC</div><div class="author-name">Anna C.</div><div class="author-title">Google Review</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"We've used several services over the years and none compare. Attention to detail, tidy worksite, and finished on time."</blockquote><div class="author"><div class="author-avatar">RP</div><div class="author-name">Richard P.</div><div class="author-title">Google Review</div></div></div>
-
-</div>
-</div>
+<p class="note-line">Illustrative stock images — not Caves Landscapes&#x27;s jobs. Your own photos replace these in the live build.</p></div>
 </section>
 
 <section id="hours" class="hours-card">

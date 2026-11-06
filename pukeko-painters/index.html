@@ -113,6 +113,9 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 #anim-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.note-line{color:rgba(255,255,255,.5);font-size:.82em;margin-top:16px;display:flex;gap:8px;align-items:flex-start}
+.note-line::before{content:"\24D8";opacity:.7}
+body.light .note-line{color:rgba(20,22,26,.55)}
 </style>
 </head>
 <body>
@@ -124,7 +127,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
-<a href="#testimonials">Reviews</a>
+
 <a href="#hours">Hours</a>
 <a href="#contact">Contact</a>
 </div>
@@ -141,7 +144,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="particle p5"></div>
 <div class="hero-content">
 <span class="hero-icon">🎨</span>
-<div class="rating-badge">⭐ 5 · 5 reviews</div>
 <h1>Professional painter Services<br>in Napier</h1>
 <p>Trusted professional serving Napier and surrounding areas.</p>
 <a href="tel:+64 210 844 2529" class="btn">📞 Call +64 210 844 2529</a>
@@ -154,7 +156,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <h2>About Us</h2>
 <div class="about-grid">
 <div>
-<div class="rating-badge">⭐ 5 · 5 reviews</div>
 <p>Pukeko Painters is a trusted painter serving Napier and surrounding areas. We take pride in delivering premium results that stand the test of time — every job done right, first time.</p>
 <p>From small residential projects to large commercial contracts, our team brings precision, care, and an eye for detail to every project we undertake.</p>
 </div>
@@ -183,32 +184,18 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 
 <section id="gallery" style="background:#0b0b17">
 <div class="section-inner reveal">
-<h2>Our Work</h2>
-<p class="subtitle">A glimpse of our recent painter projects in your area.</p>
+<h2>Where your photos go</h2>
+<p class="subtitle">Illustrative layout — your own job photos replace these.</p>
 <div class="gallery-grid">
-<div class="gallery-card" style="background:linear-gradient(135deg,#818cf8,#6d78e4)"><div class="gallery-icon">🎨</div><div class="gallery-label">Interior </div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#c084fc,#ac70e8)"><div class="gallery-icon">🎨</div><div class="gallery-label">Exterior Project</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#38bdf8,#0ea5e9)"><div class="gallery-icon">🎨</div><div class="gallery-label">Detail Closeup</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">🎨</div><div class="gallery-label">Residential </div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">🎨</div><div class="gallery-label">Commercial Install</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#f472b6,#ec4899)"><div class="gallery-icon">🎨</div><div class="gallery-label">Featured Renovation</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#818cf8,#6d78e4)"><div class="gallery-icon">🎨</div><div class="gallery-label">Example: Interior</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#c084fc,#ac70e8)"><div class="gallery-icon">🎨</div><div class="gallery-label">Example: Exterior Project</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#38bdf8,#0ea5e9)"><div class="gallery-icon">🎨</div><div class="gallery-label">Example: Detail Closeup</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">🎨</div><div class="gallery-label">Example: Residential</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">🎨</div><div class="gallery-label">Example: Commercial Install</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#f472b6,#ec4899)"><div class="gallery-icon">🎨</div><div class="gallery-label">Example: Featured Renovation</div></div>
 
 </div>
-</div>
-</section>
-
-<section id="testimonials">
-<div class="section-inner reveal">
-<h2>What Our Clients Say</h2>
-<p class="subtitle">Rated 5 stars on Google — here's what people are saying.</p>
-<div class="testimonial-grid">
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Thanks for such a great job, I will come back and post some pics."</blockquote><div class="author"><div class="author-avatar">SA</div><div class="author-name">Scot AfriKiwi</div><div class="author-title">Google Review · 3 weeks ago</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Great service, friendly and reliable. Great results too!"</blockquote><div class="author"><div class="author-avatar">AS</div><div class="author-name">andy sweetascuz</div><div class="author-title">Google Review · 3 weeks ago</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Awesome dude
-Great painter."</blockquote><div class="author"><div class="author-avatar">RM</div><div class="author-name">Rodney Matthews</div><div class="author-title">Google Review · in the last week</div></div></div>
-
-</div>
-</div>
+<p class="note-line">Illustrative stock images — not Pukeko Painters&#x27;s jobs. Your own photos replace these in the live build.</p></div>
 </section>
 
 <section id="hours" class="hours-card">

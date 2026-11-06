@@ -173,6 +173,9 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .area-mini-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:18px auto 0;max-width:760px}
 .area-mini-chip{display:inline-flex;align-items:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.8);text-decoration:none;padding:9px 18px;border-radius:30px;font-size:.82em;font-weight:500;transition:all .3s}
 .area-mini-chip:hover{border-color:#f97316;color:#fff;transform:translateY(-2px)}
+.note-line{color:rgba(255,255,255,.5);font-size:.82em;margin-top:16px;display:flex;gap:8px;align-items:flex-start}
+.note-line::before{content:"\24D8";opacity:.7}
+body.light .note-line{color:rgba(20,22,26,.55)}
 </style>
 </head>
 <body>
@@ -207,8 +210,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="hero-ring"></div>
 <div class="hero-logo"><img src="images/hroofing-logo.png" alt="H-Roofing Restoration NZ logo"></div>
 </div>
-<!-- <div class="rating-badge">👍 <a href="https://www.facebook.com/profile.php?id=100057695180360" target="_blank" rel="noopener">378 followers on Facebook</a></div> — build fills: real followers badge (+ rating only if the page actually has one). Empty string if no data. -->
-<div class="rating-badge">👍 <a href="https://www.facebook.com/profile.php?id=100057695180360" target="_blank" rel="noopener">378 followers on Facebook</a></div>
+<!-- — build fills: real followers badge (+ rating only if the page actually has one). Empty string if no data. -->
 <h1>Roof Restoration<br>Auckland &amp; Whangarei</h1>
 <p>Re-roofs, tile restoration, water pressure cleaning, roof painting, gutter cleaning and repairs — for concrete, clay, Decramastic, tin tile and longrun roofs.</p>
 <div class="trust-strip">
@@ -320,18 +322,18 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 
 <section id="gallery" style="background:#0b0b17">
 <div class="section-inner reveal">
-<h2>Our Work</h2>
-<p class="subtitle">A glimpse of our recent roofing projects in your area.</p>
+<h2>Where your photos go</h2>
+<p class="subtitle">Illustrative layout — your own job photos replace these.</p>
 <div class="gallery-grid">
-<div class="gallery-card" style="background:linear-gradient(135deg,#f97316,#c2410c)"><div class="gallery-icon">🏠</div><div class="gallery-label">Re-Roof</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#b45309,#92400e)"><div class="gallery-icon">🔧</div><div class="gallery-label">Tile Restoration</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#64748b,#334155)"><div class="gallery-icon">🛡️</div><div class="gallery-label">Pressure Clean</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">💧</div><div class="gallery-label">Roof Painting</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">⚡</div><div class="gallery-label">Gutter Cleaning</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#94a3b8,#475569)"><div class="gallery-icon">🏗️</div><div class="gallery-label">Roof Repairs</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#f97316,#c2410c)"><div class="gallery-icon">🏠</div><div class="gallery-label">Example: Re-Roof</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#b45309,#92400e)"><div class="gallery-icon">🔧</div><div class="gallery-label">Example: Tile Restoration</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#64748b,#334155)"><div class="gallery-icon">🛡️</div><div class="gallery-label">Example: Pressure Clean</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">💧</div><div class="gallery-label">Example: Roof Painting</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Gutter Cleaning</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#94a3b8,#475569)"><div class="gallery-icon">🏗️</div><div class="gallery-label">Example: Roof Repairs</div></div>
 
 </div>
-</div>
+<p class="note-line">Illustrative stock images — not H-Roofing Restoration NZ&#x27;s jobs. Your own photos replace these in the live build.</p></div>
 </section>
 
 <!-- 
@@ -340,64 +342,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
   - No reviews on the page  -> inject '' (no section at all).
   - Rating exists           -> section with cards: first name ONLY + star rating.
     Card format:
-      <section id="testimonials">
-      <div class="section-inner reveal">
-      <h2>What Our Clients Say</h2>
-      <p class="subtitle">Rated X.X stars on Facebook</p>
-      <div class="testimonial-grid">
-      <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <div class="author"><div class="author-avatar">J</div><div class="author-name">James</div><div class="author-title">Facebook review</div></div>
-      </div>
-      ...
-  - NEVER show review text/quotes. NEVER invent names. Only first name of the reviewer.
-  - Only include a review card if its rating is 4 stars or higher.
-  - If the page shows no rating at all -> no section.
--->
-
-
-<section id="faq">
-<div class="section-inner reveal">
-<h2>Frequently Asked Questions</h2>
-<p class="subtitle">Straight answers to the questions we get most.</p>
-<div class="faq-list">
-<details>
-<summary>How much does a new roof cost?<span class="chev">+</span></summary>
-<div class="faq-answer">Every roof is different — size, pitch, access and material choice all affect the price. We give you a fixed written quote after a free inspection, so there are no surprises. <!-- OPTIONAL: replace with the client's real price guide, e.g. "Most residential reroofs cost between $14,000 and $45,000." Only if the client confirms it. --></div>
-</details>
-<details>
-<summary>How long does a reroof take?<span class="chev">+</span></summary>
-<div class="faq-answer">Most residential reroofs take around 5–7 working days, weather depending. You get a clear timeline before we start, and we keep you updated if anything changes.</div>
-</details>
-<details>
-<summary>Do you do both residential and commercial roofing?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes. We run residential and commercial work under one team — from single-home reroofs to multi-unit and warehouse projects. The same standards apply to both.</div>
-</details>
-<details>
-<summary>Are you licensed and insured?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes — we're fully licensed and insured for the work we take on, and every job meets the New Zealand Building Code. Ask us for our details before you commit.</div>
-</details>
-<details>
-<summary>Do you offer emergency roof repairs?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes. We handle urgent leak repairs with fast turnaround where possible — call <a href="tel:0210 261 3433">0210 261 3433</a> and we'll sort it out.</div>
-</details>
-<details>
-<summary>What roofing materials do you use?<span class="chev">+</span></summary>
-<div class="faq-answer">We install longrun metal, corrugated and trapezoidal profiles, and membrane systems for flat roofs — and we recommend the right system for your building and budget.</div>
-</details>
-<details>
-<summary>Do you offer a warranty?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes. Our workmanship is covered by a warranty, and the materials we install carry manufacturer warranties.</div>
-</details>
-<details>
-<summary>Does a quote cost anything?<span class="chev">+</span></summary>
-<div class="faq-answer">No — quotes are free. We inspect the roof, give you a fixed written quote, and only start work when you're happy.</div>
-</details>
-</div>
-</div>
-</section>
-
-<section id="cta-band">
+      <section id="cta-band">
 <h2>Get Your Roofing Quote</h2>
 <p>Free inspection · fixed written quote · no obligation. Call now or message us on Facebook.</p>
 <div class="cta-btns">

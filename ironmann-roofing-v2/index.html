@@ -169,6 +169,9 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .area-dot{fill:#D64545;stroke:rgba(255,255,255,.85);stroke-width:1.4;transform-origin:center;transform-box:fill-box;animation:dotPulse 2.4s ease-in-out infinite}
 @keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
 .area-label{fill:rgba(255,255,255,.55);font-size:12.5px;letter-spacing:2.2px;font-weight:700;text-anchor:middle}
+.note-line{color:rgba(255,255,255,.5);font-size:.82em;margin-top:16px;display:flex;gap:8px;align-items:flex-start}
+.note-line::before{content:"\24D8";opacity:.7}
+body.light .note-line{color:rgba(20,22,26,.55)}
 </style>
 </head>
 <body>
@@ -203,8 +206,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="hero-ring"></div>
 <div class="hero-logo"><img src="images/ironmann-logo.png" alt="Ironmann Roofing logo"></div>
 </div>
-<!-- <div class="rating-badge">👍 <a href="https://www.facebook.com/IronmannRoofing" target="_blank" rel="noopener">418 followers on Facebook</a></div> — build fills: real followers badge (+ rating only if the page actually has one). Empty string if no data. -->
-<div class="rating-badge">👍 <a href="https://www.facebook.com/IronmannRoofing" target="_blank" rel="noopener">418 followers on Facebook</a></div>
+<!-- — build fills: real followers badge (+ rating only if the page actually has one). Empty string if no data. -->
 <h1>Professional Roofing<br>Auckland Wide</h1>
 <p>Reroofing, new roofs, maintenance, repairs and gutters — for homes across Auckland and surrounds. No job too small.</p>
 <div class="trust-strip">
@@ -256,13 +258,13 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="service-card"><div class="icon">🔧</div><h3>Maintenance</h3><p>Roof maintenance, repairs and leak fixes to keep your roof sound.</p></div>
 <div class="service-card"><div class="icon">💧</div><h3>Gutters</h3><p>Gutter installation, repair and maintenance to protect your home.</p></div>
 <div class="service-card"><div class="icon">🛠️</div><h3>Repairs</h3><p>Fast, honest roof repairs — no job too small.</p></div>
-<div class="service-card"><div class="icon">📞</div><h3>Free Quotes</h3><p>Contact Ironmann Roofing for a measure and quote on your roof.</p></div>
+<div class="service-card"><div class="icon">📞</div><h3>Quotes</h3><p>Contact Ironmann Roofing for a measure and quote on your roof.</p></div>
 </div></div></section>
 
 <section id="areas">
 <div class="section-inner reveal">
 <h2>Areas We Service</h2>
-<p class="subtitle">Serving all of Auckland — tap an area on the map to call for a free quote.</p>
+<p class="subtitle">Serving all of Auckland — tap an area on the map to get in touch.</p>
 <!-- Auckland region map (real boundary data, OSM/Natural Earth). Auckland-specific: for other cities, replace the SVG with that city's region outline. -->
 <div class="area-map-wrap">
 <svg class="area-map" viewBox="0 398 760 563" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Service area map of Auckland">
@@ -312,18 +314,18 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 
 <section id="gallery" style="background:#1B1B24">
 <div class="section-inner reveal">
-<h2>Our Work</h2>
-<p class="subtitle">A glimpse of our recent roofing projects in your area.</p>
+<h2>Where your photos go</h2>
+<p class="subtitle">Illustrative layout — your own job photos replace these.</p>
 <div class="gallery-grid">
-<div class="gallery-card" style="background:linear-gradient(135deg,#BC3838,#9A2828)"><div class="gallery-icon">🏠</div><div class="gallery-label">New Metal Roof</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#8F2626,#7A2020)"><div class="gallery-icon">🔧</div><div class="gallery-label">Re-Roof Project</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#7A8598,#3D4759)"><div class="gallery-icon">🛡️</div><div class="gallery-label">Roof Restoration</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#D64545,#B83232)"><div class="gallery-icon">💧</div><div class="gallery-label">Gutter Replacement</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#D64545,#BC3838)"><div class="gallery-icon">⚡</div><div class="gallery-label">Leak Repair</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#9CA8BA,#55627A)"><div class="gallery-icon">🏗️</div><div class="gallery-label">Commercial Roof</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#BC3838,#9A2828)"><div class="gallery-icon">🏠</div><div class="gallery-label">Example: New Metal Roof</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#8F2626,#7A2020)"><div class="gallery-icon">🔧</div><div class="gallery-label">Example: Re-Roof Project</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#7A8598,#3D4759)"><div class="gallery-icon">🛡️</div><div class="gallery-label">Example: Roof Restoration</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#D64545,#B83232)"><div class="gallery-icon">💧</div><div class="gallery-label">Example: Gutter Replacement</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#D64545,#BC3838)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Leak Repair</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#9CA8BA,#55627A)"><div class="gallery-icon">🏗️</div><div class="gallery-label">Example: Commercial Roof</div></div>
 
 </div>
-</div>
+<p class="note-line">Illustrative stock images — not Ironmann Roofing&#x27;s jobs. Your own photos replace these in the live build.</p></div>
 </section>
 
 <!-- 
@@ -332,64 +334,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
   - No reviews on the page  -> inject '' (no section at all).
   - Rating exists           -> section with cards: first name ONLY + star rating.
     Card format:
-      <section id="testimonials">
-      <div class="section-inner reveal">
-      <h2>What Our Clients Say</h2>
-      <p class="subtitle">Rated X.X stars on Facebook</p>
-      <div class="testimonial-grid">
-      <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <div class="author"><div class="author-avatar">J</div><div class="author-name">James</div><div class="author-title">Facebook review</div></div>
-      </div>
-      ...
-  - NEVER show review text/quotes. NEVER invent names. Only first name of the reviewer.
-  - Only include a review card if its rating is 4 stars or higher.
-  - If the page shows no rating at all -> no section.
--->
-
-
-<section id="faq">
-<div class="section-inner reveal">
-<h2>Frequently Asked Questions</h2>
-<p class="subtitle">Straight answers to the questions we get most.</p>
-<div class="faq-list">
-<details>
-<summary>How much does a new roof cost?<span class="chev">+</span></summary>
-<div class="faq-answer">Every roof is different — size, pitch, access and material choice all affect the price. We give you a fixed written quote after a free inspection, so there are no surprises. <!-- OPTIONAL: replace with the client's real price guide, e.g. "Most residential reroofs cost between $14,000 and $45,000." Only if the client confirms it. --></div>
-</details>
-<details>
-<summary>How long does a reroof take?<span class="chev">+</span></summary>
-<div class="faq-answer">Most residential reroofs take around 5–7 working days, weather depending. You get a clear timeline before we start, and we keep you updated if anything changes.</div>
-</details>
-<details>
-<summary>Do you do both residential and commercial roofing?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes. We run residential and commercial work under one team — from single-home reroofs to multi-unit and warehouse projects. The same standards apply to both.</div>
-</details>
-<details>
-<summary>Are you licensed and insured?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes — we're fully licensed and insured for the work we take on, and every job meets the New Zealand Building Code. Ask us for our details before you commit.</div>
-</details>
-<details>
-<summary>Do you offer emergency roof repairs?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes. We handle urgent leak repairs with fast turnaround where possible — call <a href="tel:021 263 6446">021 263 6446</a> and we'll sort it out.</div>
-</details>
-<details>
-<summary>What roofing materials do you use?<span class="chev">+</span></summary>
-<div class="faq-answer">We install longrun metal, corrugated and trapezoidal profiles, and membrane systems for flat roofs — and we recommend the right system for your building and budget.</div>
-</details>
-<details>
-<summary>Do you offer a warranty?<span class="chev">+</span></summary>
-<div class="faq-answer">Yes. Our workmanship is covered by a warranty, and the materials we install carry manufacturer warranties.</div>
-</details>
-<details>
-<summary>Does a quote cost anything?<span class="chev">+</span></summary>
-<div class="faq-answer">No — quotes are free. We inspect the roof, give you a fixed written quote, and only start work when you're happy.</div>
-</details>
-</div>
-</div>
-</section>
-
-<section id="cta-band">
+      <section id="cta-band">
 <h2>Get Your Free Fixed Quote</h2>
 <p>Free inspection · fixed written quote · no obligation. Call now or message us on Facebook.</p>
 <div class="cta-btns">

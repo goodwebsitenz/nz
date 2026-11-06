@@ -113,6 +113,9 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 #lightning-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.note-line{color:rgba(255,255,255,.5);font-size:.82em;margin-top:16px;display:flex;gap:8px;align-items:flex-start}
+.note-line::before{content:"\24D8";opacity:.7}
+body.light .note-line{color:rgba(20,22,26,.55)}
 </style>
 </head>
 <body>
@@ -124,7 +127,7 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
-<a href="#testimonials">Reviews</a>
+
 <a href="#hours">Hours</a>
 <a href="#contact">Contact</a>
 </div>
@@ -141,7 +144,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <div class="particle p5"></div>
 <div class="hero-content">
 <span class="hero-icon">⚡</span>
-<div class="rating-badge">⭐ 5 · 44 reviews</div>
 <h1>Professional electrician Services<br>in Hamilton</h1>
 <p>Trusted professional serving Hamilton and surrounding areas.</p>
 <a href="tel:+64 20 4158 4777" class="btn">📞 Call +64 20 4158 4777</a>
@@ -154,7 +156,6 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 <h2>About Us</h2>
 <div class="about-grid">
 <div>
-<div class="rating-badge">⭐ 5 · 44 reviews</div>
 <p>So Watt Electrical is a trusted electrician serving Hamilton and surrounding areas. We take pride in delivering premium results that stand the test of time — every job done right, first time.</p>
 <p>From small residential projects to large commercial contracts, our team brings precision, care, and an eye for detail to every project we undertake.</p>
 </div>
@@ -183,32 +184,18 @@ footer p{font-size:.8em;color:rgba(255,255,255,.2);margin:0}
 
 <section id="gallery" style="background:#0b0b17">
 <div class="section-inner reveal">
-<h2>Our Work</h2>
-<p class="subtitle">A glimpse of our recent electrician projects in your area.</p>
+<h2>Where your photos go</h2>
+<p class="subtitle">Illustrative layout — your own job photos replace these.</p>
 <div class="gallery-grid">
-<div class="gallery-card" style="background:linear-gradient(135deg,#f59e0b,#e18a01)"><div class="gallery-icon">⚡</div><div class="gallery-label">Interior </div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#f97316,#e55f02)"><div class="gallery-icon">⚡</div><div class="gallery-label">Exterior Project</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#38bdf8,#0ea5e9)"><div class="gallery-icon">⚡</div><div class="gallery-label">Detail Closeup</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">⚡</div><div class="gallery-label">Residential </div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">⚡</div><div class="gallery-label">Commercial Install</div></div>
-<div class="gallery-card" style="background:linear-gradient(135deg,#f472b6,#ec4899)"><div class="gallery-icon">⚡</div><div class="gallery-label">Featured Renovation</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#f59e0b,#e18a01)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Interior</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#f97316,#e55f02)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Exterior Project</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#38bdf8,#0ea5e9)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Detail Closeup</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#34d399,#10b981)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Residential</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#fb923c,#f97316)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Commercial Install</div></div>
+<div class="gallery-card" style="background:linear-gradient(135deg,#f472b6,#ec4899)"><div class="gallery-icon">⚡</div><div class="gallery-label">Example: Featured Renovation</div></div>
 
 </div>
-</div>
-</section>
-
-<section id="testimonials">
-<div class="section-inner reveal">
-<h2>What Our Clients Say</h2>
-<p class="subtitle">Rated 5 stars on Google — here's what people are saying.</p>
-<div class="testimonial-grid">
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"Great service,  very prompt. Extremely happy with the jobs that were done. Definitely use him again."</blockquote><div class="author"><div class="author-avatar">JB</div><div class="author-name">Joy Bell</div><div class="author-title">Google Review · 3 months ago</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"We had an excellent experience with Nick. He completed all the work exactly as requested and handled every last minute change we threw at him without any hesitation. It’s rare to find someone so reliable and willing to go the extra mile. Highly recommend his services."</blockquote><div class="author"><div class="author-avatar">KL</div><div class="author-name">Krystal Lee</div><div class="author-title">Google Review · 3 months ago</div></div></div>
-<div class="testimonial-card"><div class="stars">⭐⭐⭐⭐⭐</div><blockquote>"We use Nick for all our electrical work around the house. Great service and communication and an experienced tradesman who takes pride in his work. Nothing&#39;s too much trouble and his workmanship is second to none.
-Highly recommended!"</blockquote><div class="author"><div class="author-avatar">RP</div><div class="author-name">Roger Pennell</div><div class="author-title">Google Review · 3 months ago</div></div></div>
-
-</div>
-</div>
+<p class="note-line">Illustrative stock images — not So Watt Electrical&#x27;s jobs. Your own photos replace these in the live build.</p></div>
 </section>
 
 <section id="hours" class="hours-card">
