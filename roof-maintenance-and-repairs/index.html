@@ -197,24 +197,8 @@ body.light footer{background:#efece7;border-color:rgba(0,0,0,.07)}
 body.light footer p{color:rgba(20,22,26,.4)}
 body.light footer .demo-note{color:rgba(20,22,26,.5)}
 
-/* ---- enquiry form / action bar / save-contact (added 2026-11-07) ---- */
-.enq-wrap{max-width:720px;margin:30px 0 0}
-.enq-wrap h3{font-size:1.4em;margin-bottom:8px}
-.enq-lede{font-size:.9em;color:rgba(255,255,255,.62);margin-bottom:20px}
-body.light .enq-lede{color:rgba(20,22,26,.62)}
-#enq label{display:block;font-size:.72em;letter-spacing:.7px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
-body.light #enq label{color:rgba(20,22,26,.5)}
-.enq-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:600px){.enq-row{grid-template-columns:1fr}}
-#enq input,#enq textarea{width:100%;margin-top:6px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:#fff;font:inherit;font-size:.95em;text-transform:none;letter-spacing:0}
-body.light #enq input,body.light #enq textarea{background:#fff;border-color:rgba(0,0,0,.12);color:#14161a}
-#enq input::placeholder,#enq textarea::placeholder{color:rgba(255,255,255,.3)}
-body.light #enq input::placeholder,body.light #enq textarea::placeholder{color:rgba(20,22,26,.35)}
-#enq input:focus,#enq textarea:focus{outline:none;border-color:#f97316;box-shadow:0 0 0 3px rgba(249,115,22,.16)}
-#enq textarea{resize:vertical}
-.enq-btn{cursor:pointer;border:0;font-family:inherit}
-.enq-note{font-size:.82em;color:#f97316;margin-top:12px;min-height:1.3em}
-.coverage-note{font-size:.86em;color:rgba(255,255,255,.55);margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07)}
+/* ---- email card / action bar / save-contact (added 2026-11-07) ---- */
+.coverage-note{font-size:.86em;color:rgba(255,255,255,.55);margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07)}
 body.light .coverage-note{color:rgba(20,22,26,.58);border-color:rgba(0,0,0,.08)}
 .coverage-note a{color:#f97316;text-decoration:none}
 .action-bar{position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;grid-template-columns:repeat(3,1fr);background:rgba(11,11,23,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);padding:7px 6px calc(7px + env(safe-area-inset-bottom))}
@@ -246,33 +230,15 @@ body.light .action-bar a.primary{color:#c2410c}
 </div></div></section><section id="process"><div class="section-inner reveal"><h2>How it works</h2><div class="process"><div class="step"><h3>Have a chat</h3><p>Tell us what&#x27;s going on with the roof, or send a photo.</p></div><div class="step"><h3>Get a proper look</h3><p>We inspect it and explain what actually needs doing.</p></div><div class="step"><h3>The plan</h3><p>What needs doing and why, before any work starts.</p></div><div class="step"><h3>Job done</h3><p>We turn up, do the work, tidy up and show you what we did.</p></div></div></div></section><section id="faq"><div class="section-inner reveal"><h2>Common questions</h2><div class="faq"><details><summary>How soon can you get to a leak?</summary><p>Leaks get priority. Call us and we&#x27;ll tell you honestly whether it&#x27;s an emergency fix or something that can wait for a booked visit.</p></details><details><summary>Do you work on residential and commercial roofs?</summary><p>Both. Houses, rentals, and light commercial roofs — longrun metal, tile, shingle and membrane.</p></details><details><summary>How do I get a price?</summary><p>Send a message with a photo and a few details, or give us a call — we&#x27;ll look at what&#x27;s involved and come back to you. We cover Auckland and the surrounding area.</p></details><details><summary>What areas do you cover?</summary><p>Auckland and the surrounding region. If you&#x27;re not sure whether we reach you, just ask.</p></details></div></div></section><section class="cta-band"><div class="section-inner reveal"><h2>Need a roofer in Auckland?</h2><p>Send a message or give us a call — we&#x27;ll tell you straight what the roof needs.</p><a href="https://www.facebook.com/profile.php?id=100064426060851" target="_blank" rel="noopener" class="btn fb">💬 Message us on Facebook</a></div></section><section id="contact"><div class="section-inner reveal"><h2>Get in touch</h2>
 <div class="contact-grid">
 <div class="contact-card"><div class="icon">💬</div><a href="https://www.facebook.com/profile.php?id=100064426060851" target="_blank" rel="noopener">Message us on Facebook</a><p>Send a photo of the roof and we&#39;ll tell you what we think.</p></div>
-<div class="contact-card"><div class="icon">✉️</div><a href="mailto:roofmaintenance121@gmail.com?subject=Roof%20enquiry">roofmaintenance121@gmail.com</a><p>Email us directly — photos welcome.</p></div>
+<div class="contact-card"><div class="icon">✉️</div><a href="mailto:roofmaintenance121@gmail.com?subject=Roof%20enquiry">roofmaintenance121@gmail.com</a><p>Click to email us — photos welcome. Opens your usual mail app.</p></div>
 <div class="contact-card"><div class="icon">📇</div><a href="#" class="save-contact">Save our contact</a><p>Adds Roof Maintenance and Repairs to your phone in one tap.</p></div>
 </div>
-
-<div class="enq-wrap">
-<h3>Tell us about the roof</h3>
-<p class="enq-lede">Fill this in and it opens an email to us with your details already written — just hit send.</p>
-<form id="enq" novalidate>
-<div class="enq-row">
-<label>Your name<input name="name" autocomplete="name" placeholder="First name"></label>
-<label>Best phone<input name="phone" type="tel" autocomplete="tel" placeholder="Mobile (optional)"></label>
-</div>
-<div class="enq-row">
-<label>Suburb<input name="suburb" placeholder="e.g. Mount Eden"></label>
-<label>Roughly when?<input name="when" placeholder="e.g. this month, no rush"></label>
-</div>
-<label>What&#39;s happening with the roof?<textarea name="job" rows="4" placeholder="Leak above the kitchen, iron roof, two storeys…"></textarea></label>
-<button class="btn enq-btn" type="submit">Send enquiry</button>
-<p class="enq-note" id="enq-note" aria-live="polite"></p>
-</form>
-<p class="coverage-note">Based in Auckland — working across Auckland and the surrounding area. Not sure if we cover you? <a href="#contact">Ask in the form above</a>.</p>
-</div>
+<p class="coverage-note">Based in Auckland — working across Auckland and the surrounding area. Not sure if we reach you? <a href="https://www.facebook.com/profile.php?id=100064426060851" target="_blank" rel="noopener">Message us on Facebook</a> or email <a href="mailto:roofmaintenance121@gmail.com">roofmaintenance121@gmail.com</a>.</p>
 </div></section>
 <div class="action-bar" id="action-bar">
 <a href="https://www.facebook.com/profile.php?id=100064426060851" target="_blank" rel="noopener"><span>💬</span>Message</a>
-<a href="mailto:roofmaintenance121@gmail.com"><span>✉️</span>Email</a>
-<a href="#contact" class="primary"><span>📝</span>Enquiry</a>
+<a href="mailto:roofmaintenance121@gmail.com" class="primary"><span>✉️</span>Email</a>
+<a href="#" class="save-contact"><span>📇</span>Save</a>
 </div>
 <footer><p><strong>Roof Maintenance and Repairs</strong> — roofer in Auckland</p><p>&copy; Roof Maintenance and Repairs</p><p class="demo-note">Demo preview built by <a href="https://goodwebsite.co" target="_blank" rel="noopener">Good Website Co</a> — not a live site yet.</p></footer>
 
@@ -283,25 +249,8 @@ document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   var fc=document.querySelector('.float-call'),hero=document.querySelector('#hero');
 
-  // --- enquiry form: prefilled email ---
-  var form=document.getElementById('enq');
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      function v(n){var el=form.elements[n];return el?el.value.trim():'';}
-      var note=document.getElementById('enq-note');
-      var name=v('name'),job=v('job');
-      if(!name||!job){note.textContent='Pop in your name and a line about the roof, then hit send.';return;}
-      var body='Name: '+name+'\nPhone: '+(v('phone')||'-')+'\nSuburb: '+(v('suburb')||'-')
-        +'\nWhen: '+(v('when')||'-')+'\n\n'+job;
-      window.location.href='mailto:roofmaintenance121@gmail.com?subject='+encodeURIComponent('Roof enquiry — '+name)
-        +'&body='+encodeURIComponent(body);
-      note.textContent='Opening your email app with the details filled in. If nothing opens, email roofmaintenance121@gmail.com';
-    });
-  }
   // --- save contact (vCard) ---
-  var sc=document.querySelector('.save-contact');
-  if(sc){
+  document.querySelectorAll('.save-contact').forEach(function(sc){
     sc.addEventListener('click',function(e){
       e.preventDefault();
       var vcf=['BEGIN:VCARD','VERSION:3.0','FN:Roof Maintenance and Repairs','ORG:Roof Maintenance and Repairs',
@@ -315,7 +264,7 @@ document.addEventListener('DOMContentLoaded',function(){
       a.download='roof-maintenance-and-repairs.vcf';
       document.body.appendChild(a);a.click();a.remove();
     });
-  }
+  });
   // --- sticky action bar reveal ---
   var ab=document.getElementById('action-bar'),heroEl=document.querySelector('#hero');
   function barScroll(){
