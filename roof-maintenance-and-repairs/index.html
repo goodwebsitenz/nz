@@ -209,6 +209,15 @@ body.light .action-bar{background:rgba(255,255,255,.98);border-color:rgba(0,0,0,
 body.light .action-bar a{color:rgba(20,22,26,.72)}
 body.light .action-bar a.primary{color:#c2410c}
 @media(max-width:860px){.action-bar.show{display:grid}body{padding-bottom:62px}}
+
+/* ---- location map (OSM, no Google, no key) ---- */
+.map-wrap{margin-top:26px}
+.osm-map{width:100%;height:340px;border:1px solid rgba(255,255,255,.08);border-radius:16px;filter:saturate(.92);display:block}
+body.light .osm-map{border-color:rgba(0,0,0,.1)}
+@media(max-width:700px){.osm-map{height:240px}}
+.map-note{font-size:.82em;color:rgba(255,255,255,.55);margin-top:10px}
+body.light .map-note{color:rgba(20,22,26,.58)}
+.map-note a{color:#f97316;text-decoration:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RoofingContractor", "name": "Roof Maintenance and Repairs", "url": "https://goodwebsitenz.github.io/nz/roof-maintenance-and-repairs/", "email": "roofmaintenance121@gmail.com", "description": "Roofing, roof repairs and maintenance in Auckland.", "areaServed": {"@type": "City", "name": "Auckland"}, "address": {"@type": "PostalAddress", "addressLocality": "Auckland", "addressCountry": "NZ"}, "sameAs": ["https://www.facebook.com/profile.php?id=100064426060851"]}</script>
@@ -232,6 +241,11 @@ body.light .action-bar a.primary{color:#c2410c}
 <div class="contact-card"><div class="icon">💬</div><a href="https://www.facebook.com/profile.php?id=100064426060851" target="_blank" rel="noopener">Message us on Facebook</a><p>Send a photo of the roof and we&#39;ll tell you what we think.</p></div>
 <div class="contact-card"><div class="icon">✉️</div><a href="mailto:roofmaintenance121@gmail.com?subject=Roof%20enquiry">roofmaintenance121@gmail.com</a><p>Click to email us — photos welcome. Opens your usual mail app.</p></div>
 <div class="contact-card"><div class="icon">📇</div><a href="#" class="save-contact">Save our contact</a><p>Adds Roof Maintenance and Repairs to your phone in one tap.</p></div>
+</div>
+<div class="map-wrap">
+<iframe class="osm-map" title="Map of Auckland" loading="lazy" allowfullscreen
+ src="https://www.openstreetmap.org/export/embed.html?bbox=174.4833,-37.0285,175.0433,-36.6685&amp;layer=mapnik&amp;marker=-36.8485%2C174.7633"></iframe>
+<p class="map-note">📍 Pin marks central Auckland — we work right across Auckland and the surrounding area. <a href="https://www.openstreetmap.org/?mlat=-36.8485&amp;mlon=174.7633#map=11/-36.8485/174.7633" target="_blank" rel="noopener">Open bigger map</a></p>
 </div>
 <p class="coverage-note">Based in Auckland — working across Auckland and the surrounding area. Not sure if we reach you? <a href="https://www.facebook.com/profile.php?id=100064426060851" target="_blank" rel="noopener">Message us on Facebook</a> or email <a href="mailto:roofmaintenance121@gmail.com">roofmaintenance121@gmail.com</a>.</p>
 </div></section>
