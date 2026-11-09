@@ -80,9 +80,10 @@ footer.site a:hover{color:var(--ink)}
 .service{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:24px;transition:transform .2s ease,box-shadow .2s ease}
 .service:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,27,45,.09)}
-.service .dot{width:34px;height:34px;border-radius:10px;background:var(--accent);
+.service .ico{width:34px;height:34px;border-radius:10px;background:var(--accent);
   display:flex;align-items:center;justify-content:center;color:var(--accent-ink);
-  font-weight:700;font-size:.85rem;margin-bottom:14px}
+  padding:8px;margin-bottom:14px}
+.ico svg{width:100%;height:100%;display:block}
 .service p{color:var(--muted);font-size:.93rem;margin:0}
 .about-block{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(26px,4vw,50px);
   align-items:center;background:var(--panel);border:1px solid var(--line);
@@ -101,8 +102,8 @@ footer.site a:hover{color:var(--ink)}
 .reviews .card{border-radius:var(--radius)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .step{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.step b{display:flex;width:30px;height:30px;border-radius:50%;background:var(--accent);
-  color:var(--accent-ink);align-items:center;justify-content:center;font-size:.85rem;
+.step .ico{display:flex;width:34px;height:34px;border-radius:50%;background:var(--accent);
+  color:var(--accent-ink);align-items:center;justify-content:center;padding:8px;
   margin-bottom:12px}
 .faq-item{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:16px 18px;margin-bottom:10px}

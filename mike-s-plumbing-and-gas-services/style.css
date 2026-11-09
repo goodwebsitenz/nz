@@ -81,8 +81,8 @@ footer.site a:hover{color:var(--ink)}
   border:1px solid var(--line)}
 .service{background:var(--bg);padding:30px 26px;transition:background .2s ease}
 .service:hover{background:var(--panel)}
-.service .num{font-family:var(--display);font-size:2rem;color:var(--line);
-  display:block;margin-bottom:10px}
+.service .ico{width:26px;height:26px;color:var(--accent);display:block;margin-bottom:12px}
+.ico svg{width:100%;height:100%;display:block}
 .service h3{text-transform:uppercase;font-size:1.02rem;letter-spacing:.04em}
 .service p{color:var(--muted);font-size:.94rem;margin:0}
 .about-block{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
@@ -103,8 +103,7 @@ footer.site a:hover{color:var(--ink)}
   line-height:1.35;letter-spacing:.01em}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
 .step{background:var(--bg);padding:24px 20px}
-.step b{display:block;font-family:var(--display);color:var(--accent);font-size:1.6rem;
-  margin-bottom:8px}
+.step .ico{display:block;width:24px;height:24px;color:var(--accent);margin-bottom:10px}
 .faq-item{border-bottom:1px solid var(--line);padding:18px 0}
 .faq-item summary{cursor:pointer;font-weight:700;text-transform:uppercase;font-size:.92rem;
   letter-spacing:.04em;list-style:none}
