@@ -1,0 +1,13 @@
+{
+ "slug": "your-local-roofer-ltd",
+ "business": "Your Local Roofer Ltd",
+ "town": "Auckland",
+ "trade": "roofer",
+ "phone": "",
+ "email": "yourlocalroofer@hotmail.com",
+ "template": "roofers-01",
+ "template_name": "Roofers Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "live": false,
+ "source": "library/roofers/01-editorial-premium/index.html"
+}

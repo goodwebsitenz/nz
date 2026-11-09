@@ -1,0 +1,13 @@
+{
+ "slug": "2ys-plumbing-drainlaying",
+ "business": "2YS Plumbing & Drainlaying",
+ "town": "Palmerston North",
+ "trade": "plumber",
+ "phone": "021 293 6063",
+ "email": "deejay.2ys@gmail.com",
+ "template": "plumbers-04",
+ "template_name": "Plumbers Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "live": false,
+ "source": "library/plumbers/04-carded-modern/index.html"
+}

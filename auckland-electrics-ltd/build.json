@@ -1,0 +1,13 @@
+{
+ "slug": "auckland-electrics-ltd",
+ "business": "Auckland Electrics Ltd",
+ "town": "Auckland",
+ "trade": "electrician",
+ "phone": "022 544 6720",
+ "email": "andrewareelectrical@gmail.com",
+ "template": "electricians-03",
+ "template_name": "Electricians Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "live": false,
+ "source": "library/electricians/03-minimal-honest/index.html"
+}

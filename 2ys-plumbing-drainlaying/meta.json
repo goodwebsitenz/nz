@@ -1,0 +1,37 @@
+{
+ "id": "plumbers-04",
+ "category": "plumbers",
+ "label": "Plumbers",
+ "number": "04",
+ "name": "Plumbers Template 04 — Modern & image-led",
+ "style": "Modern & image-led",
+ "style_notes": "Teal split hero, rounded cards, pill nav",
+ "archetype": "carded-modern",
+ "reference": "allplumbedin.co.nz",
+ "layout": "carded-modern",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/plumbers/04-carded-modern/index.html"
+}

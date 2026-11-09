@@ -1,0 +1,13 @@
+{
+ "slug": "mike-s-plumbing-and-gas-services",
+ "business": "Mike's Plumbing and Gas Services",
+ "town": "Whangarei",
+ "trade": "plumber",
+ "phone": "",
+ "email": "mike.plumbingandgas@gmail.com",
+ "template": "plumbers-02",
+ "template_name": "Plumbers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "live": false,
+ "source": "library/plumbers/02-industrial-bold/index.html"
+}
