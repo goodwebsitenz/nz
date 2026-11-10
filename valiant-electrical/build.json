@@ -1,0 +1,14 @@
+{
+ "slug": "valiant-electrical",
+ "business": "Valiant Electrical",
+ "town": "Auckland",
+ "trade": "electrician",
+ "phone": "09-626 5345",
+ "email": "valec@xtra.co.nz",
+ "template": "electricians-03",
+ "template_name": "Electricians Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/electricians/03-minimal-honest"
+}

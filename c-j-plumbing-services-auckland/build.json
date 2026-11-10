@@ -1,0 +1,14 @@
+{
+ "slug": "c-j-plumbing-services-auckland",
+ "business": "C&J Plumbing Services - Auckland",
+ "town": "Auckland",
+ "trade": "plumber",
+ "phone": "021 964 343",
+ "email": "david.aholelei@gmail.com",
+ "template": "plumbers-03",
+ "template_name": "Plumbers Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/03-minimal-honest"
+}

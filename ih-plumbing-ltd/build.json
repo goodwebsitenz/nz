@@ -1,0 +1,14 @@
+{
+ "slug": "ih-plumbing-ltd",
+ "business": "IH Plumbing Ltd",
+ "town": "Christchurch",
+ "trade": "plumber",
+ "phone": "021 140 3582",
+ "email": "ihplumbing@outlook.com",
+ "template": "plumbers-02",
+ "template_name": "Plumbers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/02-industrial-bold"
+}
