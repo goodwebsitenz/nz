@@ -1,0 +1,14 @@
+{
+ "slug": "conroy-plumbing-gas-limited",
+ "business": "Conroy Plumbing & Gas Limited",
+ "town": "Auckland",
+ "trade": "plumber",
+ "phone": "021 270 4050",
+ "email": "conroyplumbing@gmail.com",
+ "template": "plumbers-01",
+ "template_name": "Plumbers Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/01-editorial-premium"
+}

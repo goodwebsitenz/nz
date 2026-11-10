@@ -1,0 +1,14 @@
+{
+ "slug": "west-auckland-plumber",
+ "business": "West Auckland Plumber",
+ "town": "Auckland",
+ "trade": "plumber",
+ "phone": "09-886 0501",
+ "email": "westaucklandplumber@gmail.com",
+ "template": "plumbers-04",
+ "template_name": "Plumbers Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/04-carded-modern"
+}

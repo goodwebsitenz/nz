@@ -1,0 +1,14 @@
+{
+ "slug": "boulder-bank-electrical-dale-cooley",
+ "business": "Boulder Bank Electrical - Dale Cooley",
+ "town": "Nelson",
+ "trade": "electrician",
+ "phone": "022 096 1557",
+ "email": "boulderbankelec@xtra.co.nz",
+ "template": "electricians-04",
+ "template_name": "Electricians Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/electricians/04-carded-modern"
+}

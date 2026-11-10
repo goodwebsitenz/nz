@@ -1,0 +1,14 @@
+{
+ "slug": "kyle-symons-electricians-limited",
+ "business": "Kyle Symons Electricians Limited",
+ "town": "Napier",
+ "trade": "electrician",
+ "phone": "06-844 2231",
+ "email": "kylesymons@xtra.co.nz",
+ "template": "electricians-01",
+ "template_name": "Electricians Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/electricians/01-editorial-premium"
+}
