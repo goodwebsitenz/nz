@@ -1,0 +1,14 @@
+{
+ "slug": "black-ridge-plumbing-gas",
+ "business": "Black Ridge Plumbing & Gas",
+ "town": "Whangarei",
+ "trade": "plumber",
+ "phone": "021 334 820",
+ "email": "blackridgeplumbing@gmail.com",
+ "template": "plumbers-04",
+ "template_name": "Plumbers Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/04-carded-modern"
+}

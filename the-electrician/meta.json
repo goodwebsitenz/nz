@@ -1,0 +1,37 @@
+{
+ "id": "electricians-02",
+ "category": "electricians",
+ "label": "Electricians",
+ "number": "02",
+ "name": "Electricians Template 02 — Bold industrial",
+ "style": "Bold industrial",
+ "style_notes": "Black, electric yellow, oversized numerals",
+ "archetype": "industrial-bold",
+ "reference": "megaelectrical.co.nz",
+ "layout": "industrial-bold",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/electricians/02-industrial-bold/index.html"
+}

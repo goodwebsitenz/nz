@@ -1,0 +1,14 @@
+{
+ "slug": "wai-plumbing-limited",
+ "business": "Wai Plumbing Limited",
+ "town": "Hamilton",
+ "trade": "plumber",
+ "phone": "027 326 0249",
+ "email": "waiplumbing@yahoo.com",
+ "template": "plumbers-02",
+ "template_name": "Plumbers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/02-industrial-bold"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "the-electrician",
+ "business": "The Electrician",
+ "town": "Wellington",
+ "trade": "electrician",
+ "phone": "",
+ "email": "smckeich@gmail.com",
+ "template": "electricians-02",
+ "template_name": "Electricians Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/electricians/02-industrial-bold"
+}
