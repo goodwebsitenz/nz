@@ -1,0 +1,14 @@
+{
+ "slug": "holtom-builders-limited",
+ "business": "Holtom Builders Limited",
+ "town": "Auckland",
+ "trade": "builder",
+ "phone": "",
+ "email": "holtombuilders@gmail.com",
+ "template": "builders-01",
+ "template_name": "Builders Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/01-editorial-premium"
+}

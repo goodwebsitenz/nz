@@ -1,0 +1,14 @@
+{
+ "slug": "te-pahu-roofing-ltd",
+ "business": "Te Pahu Roofing Ltd",
+ "town": "Auckland",
+ "trade": "roofer",
+ "phone": "027 299 9956",
+ "email": "tepahuroofingltd@xtra.co.nz",
+ "template": "roofers-03",
+ "template_name": "Roofers Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/03-minimal-honest"
+}

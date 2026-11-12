@@ -1,0 +1,14 @@
+{
+ "slug": "expert-painter",
+ "business": "Expert Painter",
+ "town": "Auckland",
+ "trade": "painter",
+ "phone": "",
+ "email": "expertpainterltd@gmail.com",
+ "template": "painters-01",
+ "template_name": "Painters Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/painters/01-editorial-premium"
+}

@@ -1,0 +1,37 @@
+{
+ "id": "painters-01",
+ "category": "painters",
+ "label": "Painters",
+ "number": "01",
+ "name": "Painters Template 01 — Editorial premium",
+ "style": "Editorial premium",
+ "style_notes": "Warm white, ink type, gallery-led",
+ "archetype": "editorial-premium",
+ "reference": "paintanddecorate.com.au",
+ "layout": "editorial-premium",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/painters/01-editorial-premium/index.html"
+}
