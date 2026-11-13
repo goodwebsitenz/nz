@@ -1,0 +1,14 @@
+{
+ "slug": "paint-plus-decorators-hamilton",
+ "business": "Paint Plus Decorators Hamilton",
+ "town": "Hamilton",
+ "trade": "painter",
+ "phone": "",
+ "email": "ballithind001@gmail.com",
+ "template": "painters-02",
+ "template_name": "Painters Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/painters/02-industrial-bold"
+}

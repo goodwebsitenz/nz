@@ -1,0 +1,14 @@
+{
+ "slug": "onehunga-peoples-garden",
+ "business": "Onehunga Peoples Garden",
+ "town": "Auckland",
+ "trade": "landscaper",
+ "phone": "",
+ "email": "onehungapeoplesgarden@gmail.com",
+ "template": "landscapers-01",
+ "template_name": "Landscapers Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/landscapers/01-editorial-premium"
+}
