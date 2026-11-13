@@ -1,0 +1,37 @@
+{
+ "id": "roofers-01",
+ "category": "roofers",
+ "label": "Roofers",
+ "number": "01",
+ "name": "Roofers Template 01 — Editorial premium",
+ "style": "Editorial premium",
+ "style_notes": "Warm neutrals, serif display, full-bleed photography",
+ "archetype": "editorial-premium",
+ "reference": "brarroofingsolutionptyltd.com",
+ "layout": "editorial-premium",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/roofers/01-editorial-premium/index.html"
+}

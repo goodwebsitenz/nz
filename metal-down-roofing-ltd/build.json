@@ -1,0 +1,14 @@
+{
+ "slug": "metal-down-roofing-ltd",
+ "business": "Metal Down Roofing Ltd",
+ "town": "Auckland",
+ "trade": "roofer",
+ "phone": "022 648 0465",
+ "email": "metaldownltd@gmail.com",
+ "template": "roofers-01",
+ "template_name": "Roofers Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/01-editorial-premium"
+}
