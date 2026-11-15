@@ -1,0 +1,14 @@
+{
+ "slug": "sam-bluett-builders-ltd",
+ "business": "Sam Bluett Builders Ltd.",
+ "town": "Auckland",
+ "trade": "builder",
+ "phone": "021 629 467",
+ "email": "sambluettbuilders@gmail.com",
+ "template": "builders-04",
+ "template_name": "Builders Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/04-carded-modern"
+}

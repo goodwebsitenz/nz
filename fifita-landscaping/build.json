@@ -1,0 +1,14 @@
+{
+ "slug": "fifita-landscaping",
+ "business": "Fifita Landscaping",
+ "town": "Hamilton",
+ "trade": "landscaper",
+ "phone": "021 118 6779",
+ "email": "samufifita@gmail.com",
+ "template": "landscapers-03",
+ "template_name": "Landscapers Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/landscapers/03-minimal-honest"
+}

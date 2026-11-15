@@ -1,0 +1,14 @@
+{
+ "slug": "penno-builders",
+ "business": "Penno builders",
+ "town": "Auckland",
+ "trade": "builder",
+ "phone": "",
+ "email": "zanepenno160@gmail.com",
+ "template": "builders-03",
+ "template_name": "Builders Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/03-minimal-honest"
+}

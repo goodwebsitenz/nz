@@ -1,0 +1,14 @@
+{
+ "slug": "pro-roofs-copper-roofer-specialist",
+ "business": "Pro Roofs - Copper Roofer Specialist",
+ "town": "Auckland",
+ "trade": "roofer",
+ "phone": "021 270 3660",
+ "email": "proroofs@outlook.com",
+ "template": "roofers-02",
+ "template_name": "Roofers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/02-industrial-bold"
+}

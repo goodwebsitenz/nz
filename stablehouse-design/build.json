@@ -1,0 +1,14 @@
+{
+ "slug": "stablehouse-design",
+ "business": "Stablehouse Design",
+ "town": "Wellington",
+ "trade": "landscaper",
+ "phone": "021 511 223",
+ "email": "stablehousedesignnz@gmail.com",
+ "template": "landscapers-02",
+ "template_name": "Landscapers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/landscapers/02-industrial-bold"
+}

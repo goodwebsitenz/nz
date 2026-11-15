@@ -1,0 +1,37 @@
+{
+ "id": "carpenters-03",
+ "category": "carpenters",
+ "label": "Carpenters",
+ "number": "03",
+ "name": "Carpenters Template 03 — Clean & minimal",
+ "style": "Clean & minimal",
+ "style_notes": "Bone white, single accent, quiet",
+ "archetype": "minimal-honest",
+ "reference": "dekingcarpentry.com.au",
+ "layout": "minimal-honest",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/carpenters/03-minimal-honest/index.html"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "the-joinery",
+ "business": "The Joinery",
+ "town": "Hamilton",
+ "trade": "carpenter",
+ "phone": "027 582 5727",
+ "email": "e.opperman@xtra.co.nz",
+ "template": "carpenters-02",
+ "template_name": "Carpenters Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/carpenters/02-industrial-bold"
+}

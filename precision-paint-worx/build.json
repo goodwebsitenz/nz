@@ -1,0 +1,14 @@
+{
+ "slug": "precision-paint-worx",
+ "business": "Precision Paint Worx",
+ "town": "Auckland",
+ "trade": "painter",
+ "phone": "020 470 5150",
+ "email": "precisionpaintworxnz@gmail.com",
+ "template": "painters-03",
+ "template_name": "Painters Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/painters/03-minimal-honest"
+}

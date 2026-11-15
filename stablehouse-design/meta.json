@@ -1,0 +1,37 @@
+{
+ "id": "landscapers-02",
+ "category": "landscapers",
+ "label": "Landscapers",
+ "number": "02",
+ "name": "Landscapers Template 02 — Bold industrial",
+ "style": "Bold industrial",
+ "style_notes": "Moss + clay, heavy slab type",
+ "archetype": "industrial-bold",
+ "reference": "allseasonssyntheticturf.com.au",
+ "layout": "industrial-bold",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/landscapers/02-industrial-bold/index.html"
+}

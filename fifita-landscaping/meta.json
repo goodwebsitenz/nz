@@ -1,0 +1,37 @@
+{
+ "id": "landscapers-03",
+ "category": "landscapers",
+ "label": "Landscapers",
+ "number": "03",
+ "name": "Landscapers Template 03 — Clean & minimal",
+ "style": "Clean & minimal",
+ "style_notes": "Sage line-art, airy, quiet",
+ "archetype": "minimal-honest",
+ "reference": "busylizzygardens.com",
+ "layout": "minimal-honest",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/landscapers/03-minimal-honest/index.html"
+}

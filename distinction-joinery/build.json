@@ -1,0 +1,14 @@
+{
+ "slug": "distinction-joinery",
+ "business": "Distinction Joinery",
+ "town": "Auckland",
+ "trade": "carpenter",
+ "phone": "027 533 7525",
+ "email": "distjoin@gmail.com",
+ "template": "carpenters-03",
+ "template_name": "Carpenters Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/carpenters/03-minimal-honest"
+}
