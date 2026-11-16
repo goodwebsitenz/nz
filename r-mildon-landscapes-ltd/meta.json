@@ -1,0 +1,37 @@
+{
+ "id": "landscapers-04",
+ "category": "landscapers",
+ "label": "Landscapers",
+ "number": "04",
+ "name": "Landscapers Template 04 — Modern & image-led",
+ "style": "Modern & image-led",
+ "style_notes": "Terracotta split hero, soft cards",
+ "archetype": "carded-modern",
+ "reference": "gardnersgardening.co.nz",
+ "layout": "carded-modern",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/landscapers/04-carded-modern/index.html"
+}

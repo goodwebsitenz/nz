@@ -1,0 +1,14 @@
+{
+ "slug": "jt-joinery",
+ "business": "JT Joinery",
+ "town": "Wellington",
+ "trade": "carpenter",
+ "phone": "021423410",
+ "email": "jtjoinery5019@gmail.com",
+ "template": "carpenters-04",
+ "template_name": "Carpenters Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/carpenters/04-carded-modern"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "platinum-painters-nz",
+ "business": "Platinum Painters NZ",
+ "town": "Auckland",
+ "trade": "painter",
+ "phone": "021 116 4005",
+ "email": "platinumpaintersnz@gmail.com",
+ "template": "painters-04",
+ "template_name": "Painters Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/painters/04-carded-modern"
+}

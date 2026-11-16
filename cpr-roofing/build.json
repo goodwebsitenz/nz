@@ -1,0 +1,14 @@
+{
+ "slug": "cpr-roofing",
+ "business": "CPR Roofing",
+ "town": "Auckland",
+ "trade": "roofer",
+ "phone": "027 540 0057",
+ "email": "cpr.roofing23@gmail.com",
+ "template": "roofers-03",
+ "template_name": "Roofers Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/03-minimal-honest"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "reggie-builder",
+ "business": "Reggie Builder",
+ "town": "Hamilton",
+ "trade": "builder",
+ "phone": "027 911 1153",
+ "email": "reggiebuildernz@gmail.com",
+ "template": "builders-01",
+ "template_name": "Builders Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/01-editorial-premium"
+}

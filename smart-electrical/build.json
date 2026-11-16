@@ -1,0 +1,14 @@
+{
+ "slug": "smart-electrical",
+ "business": "Smart Electrical",
+ "town": "Auckland",
+ "trade": "electrician",
+ "phone": "021 518 241",
+ "email": "kam5126@yahoo.co.nz",
+ "template": "electricians-03",
+ "template_name": "Electricians Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/electricians/03-minimal-honest"
+}

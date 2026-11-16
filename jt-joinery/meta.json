@@ -1,0 +1,37 @@
+{
+ "id": "carpenters-04",
+ "category": "carpenters",
+ "label": "Carpenters",
+ "number": "04",
+ "name": "Carpenters Template 04 — Modern & image-led",
+ "style": "Modern & image-led",
+ "style_notes": "Olive split hero, rounded cards",
+ "archetype": "carded-modern",
+ "reference": "bearwoodcarpentry.com.au",
+ "layout": "carded-modern",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/carpenters/04-carded-modern/index.html"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "l-s-muir-builders-ltd",
+ "business": "L.S Muir Builders Ltd",
+ "town": "Auckland",
+ "trade": "builder",
+ "phone": "021 225 5282",
+ "email": "lsmuirbuilders@xtra.co.nz",
+ "template": "builders-02",
+ "template_name": "Builders Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/02-industrial-bold"
+}

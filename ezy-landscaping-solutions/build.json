@@ -1,0 +1,14 @@
+{
+ "slug": "ezy-landscaping-solutions",
+ "business": "Ezy Landscaping Solutions",
+ "town": "Dunedin",
+ "trade": "landscaper",
+ "phone": "027 875 2191",
+ "email": "ezylandscapingsolutions@gmail.com",
+ "template": "landscapers-01",
+ "template_name": "Landscapers Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/landscapers/01-editorial-premium"
+}
