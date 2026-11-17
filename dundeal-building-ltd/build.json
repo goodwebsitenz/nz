@@ -1,0 +1,14 @@
+{
+ "slug": "dundeal-building-ltd",
+ "business": "Dundeal Building Ltd",
+ "town": "Hastings",
+ "trade": "builder",
+ "phone": "021 906 622",
+ "email": "dundealbuilding@gmail.com",
+ "template": "builders-03",
+ "template_name": "Builders Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/03-minimal-honest"
+}

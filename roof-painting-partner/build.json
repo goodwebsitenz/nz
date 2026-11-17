@@ -1,0 +1,14 @@
+{
+ "slug": "roof-painting-partner",
+ "business": "Roof & Painting Partner",
+ "town": "Auckland",
+ "trade": "painter",
+ "phone": "021 084 4628",
+ "email": "roofandpaintingpartner@gmail.com",
+ "template": "painters-02",
+ "template_name": "Painters Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/painters/02-industrial-bold"
+}

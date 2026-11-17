@@ -1,0 +1,14 @@
+{
+ "slug": "dexter-s-roofing-fixing-service",
+ "business": "Dexter's Roofing & Fixing Service",
+ "town": "Auckland",
+ "trade": "roofer",
+ "phone": "",
+ "email": "dextersroofing007@gmail.com",
+ "template": "roofers-04",
+ "template_name": "Roofers Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/04-carded-modern"
+}

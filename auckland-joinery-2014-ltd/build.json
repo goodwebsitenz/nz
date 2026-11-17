@@ -1,0 +1,14 @@
+{
+ "slug": "auckland-joinery-2014-ltd",
+ "business": "Auckland Joinery 2014 Ltd",
+ "town": "Auckland",
+ "trade": "carpenter",
+ "phone": "",
+ "email": "aucklandjoinery@gmail.com",
+ "template": "carpenters-01",
+ "template_name": "Carpenters Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/carpenters/01-editorial-premium"
+}

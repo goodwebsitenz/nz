@@ -1,0 +1,37 @@
+{
+ "id": "builders-03",
+ "category": "builders",
+ "label": "Builders",
+ "number": "03",
+ "name": "Builders Template 03 — Clean & minimal",
+ "style": "Clean & minimal",
+ "style_notes": "Quiet, precise, portfolio-first",
+ "archetype": "minimal-honest",
+ "reference": "mjsconstructiongroup.com.au",
+ "layout": "minimal-honest",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/builders/03-minimal-honest/index.html"
+}

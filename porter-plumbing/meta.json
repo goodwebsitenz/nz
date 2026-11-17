@@ -1,0 +1,37 @@
+{
+ "id": "plumbers-01",
+ "category": "plumbers",
+ "label": "Plumbers",
+ "number": "01",
+ "name": "Plumbers Template 01 — Editorial premium",
+ "style": "Editorial premium",
+ "style_notes": "Deep navy, serif display, calm photography",
+ "archetype": "editorial-premium",
+ "reference": "cardiffplumbingandheating.co.uk",
+ "layout": "editorial-premium",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/plumbers/01-editorial-premium/index.html"
+}

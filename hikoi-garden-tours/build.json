@@ -1,0 +1,14 @@
+{
+ "slug": "hikoi-garden-tours",
+ "business": "Hikoi Garden Tours",
+ "town": "Auckland",
+ "trade": "landscaper",
+ "phone": "021 488 000",
+ "email": "pcliffin@gmail.com",
+ "template": "landscapers-02",
+ "template_name": "Landscapers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/landscapers/02-industrial-bold"
+}

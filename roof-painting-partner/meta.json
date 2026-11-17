@@ -1,0 +1,37 @@
+{
+ "id": "painters-02",
+ "category": "painters",
+ "label": "Painters",
+ "number": "02",
+ "name": "Painters Template 02 — Bold industrial",
+ "style": "Bold industrial",
+ "style_notes": "Charcoal + cobalt, big type",
+ "archetype": "industrial-bold",
+ "reference": "kristianspainting.com.au",
+ "layout": "industrial-bold",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/painters/02-industrial-bold/index.html"
+}
