@@ -146,7 +146,7 @@
       '<label>Day<select data-f="day"><option value="">Any day</option>' +
       ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((d, i) => '<option value="' + i + '">' + d + '</option>').join('') + '</select></label>' +
       '<label>Level<select data-f="lvl"><option value="">All levels</option><option>Beginner</option><option>Open</option><option>Advanced</option></select></label>' +
-      '</div><div class="classlist" data-out></div><p><button class="btn ghost" data-f="ics">Add next matching class to calendar</button></p>',
+      '</div><p><button class="btn ghost" data-f="ics">Add next matching class to calendar</button></p>',
     calc(root) {
       const CLASSES = [
         { d: 1, h: 6, dur: 45, name: 'Reformer — Early', lvl: 'Open' },
@@ -166,8 +166,7 @@
           const dt = nextWeekday(c.d, Math.floor(c.h), Math.round((c.h % 1) * 60));
           return { c, dt };
         }).sort((a, b) => a.dt - b.dt);
-        root.querySelector('[data-out]').innerHTML = next.length
-          ? '<table class="tbl"><tr><th>Class</th><th>When</th><th>Level</th></tr>' +
+        root.querySelector('[data-out]').innerHTML = next.length          ? '<table class="tbl"><tr><th>Class</th><th>When</th><th>Level</th></tr>' +
             next.map(x => '<tr><td>' + x.c.name + '</td><td>' + x.dt.toLocaleDateString('en-NZ', { weekday: 'short' }) + ' ' +
               String(Math.floor(x.c.h)).padStart(2, '0') + ':' + String(Math.round((x.c.h % 1) * 60)).padStart(2, '0') +
               '</td><td>' + x.c.lvl + '</td></tr>').join('') + '</table>' +
