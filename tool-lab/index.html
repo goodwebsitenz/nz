@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Good Website Co — Interactive Tool Lab</title>
+<meta name="description" content="30 working browser-only tools for small business websites. Every demo runs live on this page — no backend, no libraries.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="lab.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <p class="eyebrow">Good Website Co · internal demo</p>
+    <h1>Interactive Tool Lab</h1>
+    <p class="lede">30 tools, all working live on this page. Every one is plain HTML, CSS and
+      JavaScript — no backend, no libraries, no external services. Change any number and the
+      result updates.</p>
+    <p class="hint">Each card shows what the tool does, what a business would configure, and
+      what it deliberately will not do.</p>
+  </div>
+</header>
+
+<nav class="index wrap" id="index" aria-label="Tool index"></nav>
+
+<main class="wrap" id="tools"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Built 18 November 2026 as an assessment demo. Nothing here sends data anywhere —
+      downloads are generated in your browser.</p>
+  </div>
+</footer>
+
+<script src="core.js" defer></script>
+<script src="tools-a.js" defer></script>
+<script src="tools-b.js" defer></script>
+<script src="tools-c.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    LAB.mount(document.getElementById('tools'));
+  });
+</script>
+</body>
+</html>
