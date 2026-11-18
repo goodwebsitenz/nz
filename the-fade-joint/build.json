@@ -1,0 +1,14 @@
+{
+ "slug": "the-fade-joint",
+ "business": "The Fade Joint",
+ "town": "Auckland",
+ "trade": "barber",
+ "phone": "",
+ "email": "thefadejoint18@gmail.com",
+ "template": "barber:01-editorial-premium",
+ "template_name": "Barbering \u2014 01-editorial-premium",
+ "style": "Editorial Premium",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/01-editorial-premium"
+}

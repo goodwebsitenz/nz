@@ -1,0 +1,14 @@
+{
+ "slug": "jessups-joinery-repairs",
+ "business": "Jessups Joinery Repairs",
+ "town": "Tauranga",
+ "trade": "carpenter",
+ "phone": "027 905 8459",
+ "email": "jessupsjoineryrepairs@gmail.com",
+ "template": "carpenters-02",
+ "template_name": "Carpenters Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/carpenters/02-industrial-bold"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "midnite-roofing-ltd",
+ "business": "Midnite Roofing Ltd",
+ "town": "Wellington",
+ "trade": "roofer",
+ "phone": "",
+ "email": "midniteroofing@gmail.com",
+ "template": "roofers-01",
+ "template_name": "Roofers Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/01-editorial-premium"
+}

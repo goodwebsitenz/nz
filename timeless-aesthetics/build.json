@@ -1,0 +1,14 @@
+{
+ "slug": "timeless-aesthetics",
+ "business": "TIMELESS AESTHETICS",
+ "town": "Auckland",
+ "trade": "aesthetics_injectables",
+ "phone": "",
+ "email": "timelessaestheticsnz@gmail.com",
+ "template": "aesthetics_injectables:01-editorial-premium",
+ "template_name": "Aesthetics \u2014 01-editorial-premium",
+ "style": "Editorial Premium",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/01-editorial-premium"
+}
