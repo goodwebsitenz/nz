@@ -357,7 +357,7 @@
       '<label>Wall width (m)<input type="number" data-f="wall" value="3" step="0.1"></label>' +
       '<label>Your file width (px)<input type="number" data-f="px" value="4000" step="100"></label>' +
       '</div>' +
-      '<svg viewBox="0 0 400 240" width="100%" height="auto" role="img" aria-label="Wall preview">' +
+      '<svg viewBox="0 0 400 240" width="100%" role="img" aria-label="Wall preview">' +
       '<rect width="400" height="240" fill="#f3f0ea"/><rect x="0" y="196" width="400" height="44" fill="#e2dbcf"/>' +
       '<rect x="24" y="150" width="90" height="46" fill="#cfd6da"/><rect x="286" y="140" width="80" height="56" fill="#cfd6da"/>' +
       '<rect id="t20print" x="160" y="60" width="80" height="112" fill="#fff" stroke="#1c1917" stroke-width="2"/></svg>',

@@ -122,7 +122,7 @@
       ['#8a6a4f', '#c2410c', '#0f766e', '#1e3a5f', '#7c2d12', '#3f6212', '#6b7280', '#111827']
         .map(c => '<button class="sw" data-c="' + c + '" style="background:' + c + '" aria-label="colour ' + c + '"></button>').join('') +
       '</div>' +
-      '<svg id="t4svg" viewBox="0 0 400 240" width="100%" height="auto" role="img" aria-label="House illustration">' +
+      '<svg id="t4svg" viewBox="0 0 400 240" width="100%" role="img" aria-label="House illustration">' +
       '<rect width="400" height="240" fill="#eef2f5"/>' +
       '<rect x="0" y="196" width="400" height="44" fill="#dbe4ea"/>' +
       '<polygon id="t4roof" points="200,38 352,120 48,120" fill="#1e3a5f"/>' +

@@ -105,7 +105,7 @@
       ['#2f3e46', '#5a189a', '#7f1d1d', '#166534', '#334155', '#b45309', '#0f766e', '#4b5563']
         .map(c => '<button class="sw" data-roof="' + c + '" style="background:' + c + '"></button>').join('') +
       '</div>' +
-      '<svg id="t24svg" viewBox="0 0 400 220" width="100%" height="auto" role="img" aria-label="Roof preview">' +
+      '<svg id="t24svg" viewBox="0 0 400 220" width="100%" role="img" aria-label="Roof preview">' +
       '<rect width="400" height="220" fill="#e8eef4"/><rect y="180" width="400" height="40" fill="#d5dfe7"/>' +
       '<polygon id="t24roof" points="200,26 366,116 34,116" fill="#2f3e46"/>' +
       '<rect x="60" y="116" width="280" height="64" fill="#f7f5f1" stroke="#cfd8df"/>' +
