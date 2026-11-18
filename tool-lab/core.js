@@ -113,5 +113,47 @@ const LAB = (function () {
     }
   }
 
-  return { add, all, money, num, esc, val, valN, out, bind, dl, svgToPng, ics, nextWeekday, mount };
+  return { add, all, money, num, esc, val, valN, out, bind, dl, svgToPng, ics, nextWeekday, mount,
+           tools: all };
+})();
+
+/* Self-mount — no inline script needed, works whether or not DOMContentLoaded has fired.
+   If anything goes wrong the page says so instead of showing a blank screen. */
+(function autoMount() {
+  function boot() {
+    try {
+      if (typeof LAB === 'undefined') throw new Error('framework did not load');
+      const host = document.getElementById('tools');
+      if (!host) throw new Error('mount point #tools missing');
+      LAB.mount(host);
+      const n = host.querySelectorAll('.tool').length;
+      if (!n) throw new Error('no tools registered');
+      const badge = document.getElementById('boot-status');
+      if (badge) { badge.textContent = n + ' tools loaded'; badge.className = 'boot ok'; }
+    } catch (err) {
+      const box = document.getElementById('boot-error');
+      if (box) {
+        box.style.display = 'block';
+        box.textContent = 'The page could not start: ' + (err && err.message ? err.message : err);
+      }
+      console.error(err);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+  // watchdog: if nothing rendered after 4 s, say so rather than sit blank
+  setTimeout(function () {
+    const host = document.getElementById('tools');
+    if (host && !host.querySelector('.tool')) {
+      const box = document.getElementById('boot-error');
+      if (box) {
+        box.style.display = 'block';
+        box.textContent = 'Still starting after 4 seconds. Your browser may be blocking the ' +
+          'JavaScript files, or they failed to download. Try a hard refresh (Ctrl+F5).';
+      }
+    }
+  }, 4000);
 })();

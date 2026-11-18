@@ -6,7 +6,17 @@
 <title>Good Website Co — Interactive Tool Lab</title>
 <meta name="description" content="30 working browser-only tools for small business websites. Every demo runs live on this page — no backend, no libraries.">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="lab.css?v=3">
+<link rel="stylesheet" href="lab.css?v=4">
+<script>
+/* Report any boot failure on the page instead of leaving it blank. */
+window.addEventListener('error', function (e) {
+  var box = document.getElementById('boot-error');
+  if (!box) return;
+  box.style.display = 'block';
+  box.textContent = 'Load error: ' + (e.message || 'unknown') +
+    (e.filename ? ' — ' + String(e.filename).split('/').pop() + ':' + (e.lineno || '?') : '');
+}, true);
+</script>
 </head>
 <body>
 
@@ -19,8 +29,16 @@
       result updates.</p>
     <p class="hint">Each card shows what the tool does, what a business would configure, and
       what it deliberately will not do.</p>
+    <p id="boot-status" class="boot">loading…</p>
+    <p id="boot-error" class="boot err" style="display:none"></p>
   </div>
 </header>
+
+<noscript>
+  <div class="wrap"><p class="boot err">This demo needs JavaScript enabled. The real tools on a
+  client site are built the same way, so a no-JS visitor would see a short static message
+  instead of the calculator.</p></div>
+</noscript>
 
 <nav class="index wrap" id="index" aria-label="Tool index"></nav>
 
@@ -33,14 +51,9 @@
   </div>
 </footer>
 
-<script src="core.js?v=3" defer></script>
-<script src="tools-a.js?v=3" defer></script>
-<script src="tools-b.js?v=3" defer></script>
-<script src="tools-c.js?v=3" defer></script>
-<script defer>
-  document.addEventListener('DOMContentLoaded', function () {
-    LAB.mount(document.getElementById('tools'));
-  });
-</script>
+<script src="core.js?v=4"></script>
+<script src="tools-a.js?v=4"></script>
+<script src="tools-b.js?v=4"></script>
+<script src="tools-c.js?v=4"></script>
 </body>
 </html>

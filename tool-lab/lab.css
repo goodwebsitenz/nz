@@ -18,6 +18,10 @@ header.site{background:#17161a;color:#fff;padding:clamp(28px,5vw,52px) 0 clamp(2
 header.site .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#f0b171;margin:0 0 .7em;font-weight:700}
 header.site .lede{color:#d6d3da;max-width:62ch;margin-bottom:.6em}
 header.site .hint{color:#9d97a6;font-size:.86rem;max-width:62ch;margin:0}
+.boot{font-size:.8rem;margin:.7em 0 0;color:#9d97a6}
+.boot.ok{color:#86efac}
+.boot.err{color:#fecaca;background:rgba(185,28,28,.25);border:1px solid rgba(254,202,202,.4);
+  border-radius:8px;padding:10px 12px;max-width:70ch}
 
 nav.index{display:flex;flex-wrap:wrap;gap:6px;padding:16px 20px;position:sticky;top:0;z-index:20;
   background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
