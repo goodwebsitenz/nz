@@ -1,0 +1,14 @@
+{
+ "slug": "the-right-painters",
+ "business": "The Right Painters",
+ "town": "Queenstown",
+ "trade": "painter",
+ "phone": "021 224 6573",
+ "email": "therightpainters@outlook.com",
+ "template": "painters-03",
+ "template_name": "Painters Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/painters/03-minimal-honest"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "cosmetic-beauty-clinic",
+ "business": "Cosmetic Beauty Clinic",
+ "town": "Tauranga",
+ "trade": "facials_skin",
+ "phone": "",
+ "email": "cosmetbc@gmail.com",
+ "template": "facials_skin:01-editorial-premium",
+ "template_name": "Skin treatments \u2014 01-editorial-premium",
+ "style": "Editorial Premium",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/01-editorial-premium"
+}

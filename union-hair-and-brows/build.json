@@ -1,0 +1,14 @@
+{
+ "slug": "union-hair-and-brows",
+ "business": "UNION - Hair and Brows",
+ "town": "Auckland",
+ "trade": "hair_extensions",
+ "phone": "",
+ "email": "ari2extensions@gmail.com",
+ "template": "hair_extensions:02-industrial-bold",
+ "template_name": "Hair extensions \u2014 02-industrial-bold",
+ "style": "Industrial Bold",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/02-industrial-bold"
+}

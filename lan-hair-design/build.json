@@ -1,0 +1,14 @@
+{
+ "slug": "lan-hair-design",
+ "business": "LAN Hair Design",
+ "town": "Auckland",
+ "trade": "hair_salon",
+ "phone": "",
+ "email": "lanhairdezign@gmail.com",
+ "template": "hair_salon:05-warm-local",
+ "template_name": "Hair \u2014 05-warm-local",
+ "style": "Warm Local",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/05-warm-local"
+}

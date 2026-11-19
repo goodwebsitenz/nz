@@ -1,0 +1,14 @@
+{
+ "slug": "five-star-nails-aesthetic-ormiston",
+ "business": "Five Star Nails Aesthetic Ormiston",
+ "town": "Auckland",
+ "trade": "aesthetics_injectables",
+ "phone": "",
+ "email": "5starnailsaesthetic@gmail.com",
+ "template": "aesthetics_injectables:04-carded-modern",
+ "template_name": "Aesthetics \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}
