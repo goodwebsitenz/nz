@@ -46,6 +46,14 @@
   </div>
 </section>
 
+<section id="work">
+  <div class="wrap reveal">
+    <p class="eyebrow">Our work</p>
+    <h2>Where your photos go</h2>
+    <p class="muted">Illustrative stock images — not this business's jobs. The live build swaps in the owner's own photos.</p>
+    <div class="gallery"><figure><img src="img/3.jpg" alt="Illustrative stock photo — plumbers example 1" loading="lazy"><figcaption>Example: plumbing project 1</figcaption></figure><figure><img src="img/4.jpg" alt="Illustrative stock photo — plumbers example 2" loading="lazy"><figcaption>Example: plumbing project 2</figcaption></figure><figure><img src="img/1.jpg" alt="Illustrative stock photo — plumbers example 3" loading="lazy"><figcaption>Example: plumbing project 3</figcaption></figure></div>
+  </div>
+</section>
 <section id="services">
   <div class="wrap reveal">
     <p class="eyebrow">What we do</p>
@@ -72,14 +80,6 @@
     <p class="note">No invented credentials — real licensing, guarantees and years trading go here on the live build.</p>
   </div>
 </section>
-<section id="work">
-  <div class="wrap reveal">
-    <p class="eyebrow">Our work</p>
-    <h2>Where your photos go</h2>
-    <p class="muted">Illustrative stock images — not this business's jobs. The live build swaps in the owner's own photos.</p>
-    <div class="gallery"><figure><img src="img/3.jpg" alt="Illustrative stock photo — plumbers example 1" loading="lazy"><figcaption>Example: plumbing project 1</figcaption></figure><figure><img src="img/4.jpg" alt="Illustrative stock photo — plumbers example 2" loading="lazy"><figcaption>Example: plumbing project 2</figcaption></figure><figure><img src="img/1.jpg" alt="Illustrative stock photo — plumbers example 3" loading="lazy"><figcaption>Example: plumbing project 3</figcaption></figure></div>
-  </div>
-</section>
 <section id="process">
   <div class="wrap reveal">
     <p class="eyebrow">How it works</p>
@@ -94,6 +94,95 @@
     <details class="faq-item"><summary>Do you charge a callout fee?</summary><p class="muted">Call or email and we'll talk it through.</p></details><details class="faq-item"><summary>Can you come after hours?</summary><p class="muted">Call or email and we'll talk it through.</p></details><details class="faq-item"><summary>Do you do insurance work?</summary><p class="muted">Call or email and we'll talk it through.</p></details><details class="faq-item"><summary>Which areas do you cover?</summary><p class="muted">Call or email and we'll talk it through.</p></details>
   </div>
 </section>
+<section id="tool" class="tool-section"><div class="wrap"><style>
+.gwt{background:var(--panel,#f6f7f8);border:1px solid var(--line,#e6e8eb);
+  border-radius:16px;padding:22px;margin:22px 0}
+.gwt h3{margin:0 0 6px}
+.gwt p.gwt-lead{margin:0 0 16px;color:var(--muted,#666e78);font-size:15px}
+.gwt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.gwt label{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;
+  text-transform:uppercase;color:var(--muted,#666e78);margin-bottom:6px}
+.gwt select,.gwt input{width:100%;padding:11px 12px;font:inherit;font-size:16px;color:var(--ink,#111);
+  background:#fff;border:1px solid var(--line,#dfe3e8);border-radius:10px}
+.gwt .gwt-out{margin-top:18px;padding:16px;background:#fff;border:1px solid var(--line,#e6e8eb);
+  border-radius:12px;font-size:15px}
+.gwt .gwt-out table{width:100%;border-collapse:collapse;font-size:15px}
+.gwt .gwt-out th,.gwt .gwt-out td{padding:7px 0;border-bottom:1px solid var(--line,#eee);text-align:left}
+.gwt .gwt-out td.r{text-align:right}
+.gwt .gwt-note{font-size:13px;color:var(--muted,#666e78);margin:12px 0 0}
+.gwt .gwt-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.gwt .gwt-btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;
+  font-weight:600;font-size:15px;background:var(--accent,#111);color:var(--accent-ink,#fff);
+  border:1px solid transparent;cursor:pointer;font-family:inherit}
+.gwt .gwt-btn.ghost{background:transparent;color:var(--ink,#111);border-color:var(--line,#cbd2da)}
+@media(max-width:520px){.gwt{padding:16px}.gwt .gwt-actions .gwt-btn{width:100%;text-align:center}}
+</style><script>
+(function(){
+  function q(root,sel){return root.querySelector(sel);}
+  function v(root,name){var e=q(root,'[data-gwt="'+name+'"]');return e?e.value:'';}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function lines(root){return Array.prototype.slice.call(root.querySelectorAll('[data-gwt="'+'"]'));}
+  function payload(root){
+    var rows=[],i,n=0;
+    root.querySelectorAll('label, .gwt-field').forEach(function(f){
+      var c=f.querySelector('[data-gwt]'); i++;
+      if(c&&c.value&&c.value!=='') rows.push(f.firstChild.nodeValue.trim()+': '+c.value);
+    });
+    return rows;
+  }
+  function handoff(root,subject){
+    var body=payload(root).join('\n');
+    var a=q(root,'.gwt-mail'), p=q(root,'.gwt-print');
+    if(a){a.href='mailto:porterplumbing2014@gmail.com?subject='+encodeURIComponent(subject)+
+      '&body='+encodeURIComponent(body);}
+    if(p){p.onclick=function(){window.print();};}
+    return body;
+  }
+  window.GWT={
+    init:function(id){
+      var root=document.getElementById(id); if(!root) return;
+      root.querySelectorAll('[data-gwt]').forEach(function(el){
+        el.addEventListener('input',function(){if(window.GWT['run_'+id])window.GWT['run_'+id](root);});
+        el.addEventListener('change',function(){if(window.GWT['run_'+id])window.GWT['run_'+id](root);});
+      });
+      if(window.GWT['run_'+id]) window.GWT['run_'+id](root);
+    },
+    payload:payload, handoff:handoff, v:v, q:q, esc:esc
+  };
+})();
+</script><div class="gwt" id="gwtporterplumbing0"><h3>Get a real quote in a few taps</h3>
+<div class="gwt-grid">
+  <label>What do you need?<select data-gwt="svc"><option>Blocked drains</option><option>Hot water cylinders</option><option>Leaks &amp; taps</option><option>Bathroom &amp; kitchen fit-outs</option><option>Gas fitting</option><option>Emergency callouts</option></select></label>
+  <label>Approximate size<select data-gwt="size">
+    <option>Small / single item</option><option>Standard</option>
+    <option>Large / multiple areas</option><option>Not sure yet</option></select></label>
+  <label>How soon?<select data-gwt="when">
+    <option>As soon as possible</option><option>Within two weeks</option>
+    <option>Within a month</option><option>Just pricing for now</option></select></label>
+  <label>Suburb / town<input type="text" data-gwt="where" value="Wellington"></label>
+</div>
+<div class="gwt-out" data-gwt-out></div>
+<div class="gwt-actions">
+  <a class="gwt-btn gwt-mail" href="mailto:porterplumbing2014@gmail.com?subject=Enquiry">Send this to the plumber by email</a>
+  <a class="gwt-btn ghost" href="tel:0272157711">Call instead</a>
+  <button class="gwt-btn ghost gwt-print" type="button">Print / save</button>
+</div>
+<p class="gwt-note">This sends your details through to the business — it does not hold a slot
+and no price is quoted online. You will get a reply with a firm price.</p>
+<script>
+window.GWT.run_gwtporterplumbing0=function(root){
+  var svc=GWT.v(root,'svc'), size=GWT.v(root,'size'), when=GWT.v(root,'when'), where=GWT.v(root,'where');
+  var rows=[['Service',svc],['Size',size],['Timing',when],['Location',where]];
+  var html='<table>'+rows.map(function(r){
+    return '<tr><th>'+GWT.esc(r[0])+'</th><td class="r">'+GWT.esc(r[1])+'</td></tr>';
+  }).join('')+'</table><p class="gwt-note">Your request summary. Add anything else you want '+
+    'to mention in the message before sending.</p>';
+  var o=root.querySelector('[data-gwt-out]'); if(o) o.innerHTML=html;
+  GWT.handoff(root,'Quote request: '+svc);
+};
+GWT.init('gwtporterplumbing0');
+</script>
+</div></div></section>
 <section id="contact" class="contact">
   <div class="wrap reveal">
     <div class="contact-split">
