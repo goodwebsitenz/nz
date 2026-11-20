@@ -1,8 +1,8 @@
 
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --bg:#e2fbe4; --panel:#c8f4cb; --ink:#161916; --muted:#5a6b5b; --accent:#24832c;
-  --accent-ink:#ffffff; --line:#a7e2ac; --radius:16px;
+  --bg:#fbebe2; --panel:#f4d7c8; --ink:#191716; --muted:#6b605b; --accent:#b05f34;
+  --accent-ink:#ffffff; --line:#e2bca7; --radius:16px;
   --display:'Sora','Inter',-apple-system,'Segoe UI',Arial,sans-serif; --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   --maxw:1160px;
 }
@@ -130,5 +130,5 @@ img{max-width:100%}
 }
 
 /* brand text shade (same hue, readable on the tinted background) */
-.eyebrow,.service .num,.step::before,.btn.ghost:hover{color:#227b29}
-.btn.ghost:hover{border-color:#227b29}
+.eyebrow,.service .num,.step::before,.btn.ghost:hover{color:#a15730}
+.btn.ghost:hover{border-color:#a15730}
