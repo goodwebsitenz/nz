@@ -1,7 +1,7 @@
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --bg:#fffbf5; --panel:#fdf0e6; --ink:#1c1917; --muted:#6f6259; --accent:#b45309;
-  --accent-ink:#ffffff; --line:#f1e0d0; --radius:18px;
+  --bg:#fbe2e3; --panel:#f4c8c9; --ink:#191516; --muted:#6b5a5b; --accent:#b81a20;
+  --accent-ink:#ffffff; --line:#e2a7a9; --radius:18px;
   --display:'Fraunces','Iowan Old Style',Georgia,serif; --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   --maxw:1120px;
 }

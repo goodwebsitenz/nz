@@ -1,7 +1,7 @@
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --bg:#f5f9f8; --panel:#e1eeed; --ink:#152220; --muted:#5d6f6d; --accent:#044e4e;
-  --accent-ink:#ffffff; --line:#cfe2df; --radius:18px;
+  --bg:#fbeeeb; --panel:#f4dbd6; --ink:#191817; --muted:#6b6362; --accent:#b86d5c;
+  --accent-ink:#171717; --line:#e2c4bd; --radius:18px;
   --display:'Fraunces','Iowan Old Style',Georgia,serif; --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   --maxw:1120px;
 }
@@ -105,3 +105,7 @@ footer.site{border-top:1px solid var(--line);padding:34px 0 44px;font-size:.9rem
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* brand text shade (same hue, readable on the tinted background) */
+.eyebrow,.service .num,.step::before,.btn.ghost:hover{color:#995b4c}
+.btn.ghost:hover{border-color:#995b4c}

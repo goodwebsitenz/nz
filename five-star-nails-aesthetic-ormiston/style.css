@@ -1,8 +1,8 @@
 
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --bg:#f5eef9; --panel:#e9d7f2; --ink:#1d1626; --muted:#736579; --accent:#7f18af;
-  --accent-ink:#ffffff; --line:#dbc4e7; --radius:16px;
+  --bg:#e2fbe4; --panel:#c8f4cb; --ink:#161916; --muted:#5a6b5b; --accent:#24832c;
+  --accent-ink:#ffffff; --line:#a7e2ac; --radius:16px;
   --display:'Sora','Inter',-apple-system,'Segoe UI',Arial,sans-serif; --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   --maxw:1160px;
 }
@@ -128,3 +128,7 @@ img{max-width:100%}
   .services-grid,.why-list,.gallery,.reviews .grid,.steps,.g2,.g3,.g4,.grid,footer.site .cols{grid-template-columns:1fr}
   .pillnav{display:none}
 }
+
+/* brand text shade (same hue, readable on the tinted background) */
+.eyebrow,.service .num,.step::before,.btn.ghost:hover{color:#227b29}
+.btn.ghost:hover{border-color:#227b29}
