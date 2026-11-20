@@ -1,0 +1,37 @@
+{
+ "id": "landscapers-01",
+ "category": "landscapers",
+ "label": "Landscapers",
+ "number": "01",
+ "name": "Landscapers Template 01 — Editorial premium",
+ "style": "Editorial premium",
+ "style_notes": "Deep green, serif display, full-bleed",
+ "archetype": "editorial-premium",
+ "reference": "syntheticturfsydney.com.au",
+ "layout": "editorial-premium",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/landscapers/01-editorial-premium/index.html"
+}

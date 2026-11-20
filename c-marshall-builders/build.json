@@ -1,0 +1,14 @@
+{
+ "slug": "c-marshall-builders",
+ "business": "C Marshall Builders",
+ "town": "Dunedin",
+ "trade": "builder",
+ "phone": "027 304 6784",
+ "email": "cmarshallbuildersltd@gmail.com",
+ "template": "builders-02",
+ "template_name": "Builders Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/02-industrial-bold"
+}

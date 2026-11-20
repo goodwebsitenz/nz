@@ -1,0 +1,37 @@
+{
+ "id": "roofers-04",
+ "category": "roofers",
+ "label": "Roofers",
+ "number": "04",
+ "name": "Roofers Template 04 — Modern & image-led",
+ "style": "Modern & image-led",
+ "style_notes": "Split hero, rounded cards, sticky pill nav",
+ "archetype": "carded-modern",
+ "reference": "aucklandroofingsolutions.co.nz",
+ "layout": "carded-modern",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/roofers/04-carded-modern/index.html"
+}

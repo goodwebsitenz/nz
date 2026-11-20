@@ -1,0 +1,37 @@
+{
+ "id": "plumbers-03",
+ "category": "plumbers",
+ "label": "Plumbers",
+ "number": "03",
+ "name": "Plumbers Template 03 — Clean & minimal",
+ "style": "Clean & minimal",
+ "style_notes": "White space, blue accent, quiet hierarchy",
+ "archetype": "minimal-honest",
+ "reference": "baxterplumbingltd.co.nz",
+ "layout": "minimal-honest",
+ "sections": [
+  "header",
+  "hero",
+  "services",
+  "about",
+  "why",
+  "work",
+  "reviews",
+  "process",
+  "faq",
+  "contact",
+  "footer"
+ ],
+ "customisable": [
+  "business name",
+  "logo",
+  "phone",
+  "email",
+  "colours (6 CSS variables)",
+  "hero + gallery images",
+  "services",
+  "service area",
+  "FAQ"
+ ],
+ "path": "library/plumbers/03-minimal-honest/index.html"
+}

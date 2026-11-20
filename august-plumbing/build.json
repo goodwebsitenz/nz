@@ -1,0 +1,14 @@
+{
+ "slug": "august-plumbing",
+ "business": "August Plumbing",
+ "town": "Rotorua",
+ "trade": "plumber",
+ "phone": "027 273 5095",
+ "email": "augustplumbing@xtra.co.nz",
+ "template": "plumbers-04",
+ "template_name": "Plumbers Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/plumbers/04-carded-modern"
+}
