@@ -1,0 +1,14 @@
+{
+ "slug": "greenedge-gardening-and-landscaping",
+ "business": "Greenedge Gardening and Landscaping",
+ "town": "Wellington",
+ "trade": "landscaper",
+ "phone": "",
+ "email": "greenedgemow@gmail.com",
+ "template": "landscapers-02",
+ "template_name": "Landscapers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/landscapers/02-industrial-bold"
+}

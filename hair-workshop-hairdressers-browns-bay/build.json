@@ -1,0 +1,14 @@
+{
+ "slug": "hair-workshop-hairdressers-browns-bay",
+ "business": "Hair Workshop - Hairdressers Browns Bay",
+ "town": "Auckland",
+ "trade": "hair_salon",
+ "phone": "",
+ "email": "hairworkshop2023@gmail.com",
+ "template": "hair_salon:02-industrial-bold",
+ "template_name": "Hair \u2014 02-industrial-bold",
+ "style": "Industrial Bold",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/02-industrial-bold"
+}

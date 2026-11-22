@@ -1,0 +1,14 @@
+{
+ "slug": "bella-hair-extensions-and-braiding-studio",
+ "business": "Bella Hair Extensions and Braiding Studio",
+ "town": "Auckland",
+ "trade": "hair_extensions",
+ "phone": "",
+ "email": "bellahairinfo@gmail.com",
+ "template": "hair_extensions:04-carded-modern",
+ "template_name": "Hair extensions \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}

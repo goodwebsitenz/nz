@@ -1,0 +1,14 @@
+{
+ "slug": "about-time-builders",
+ "business": "About Time Builders",
+ "town": "Hamilton",
+ "trade": "builder",
+ "phone": "021 849 405",
+ "email": "abouttimebuilders@xtra.co.nz",
+ "template": "builders-02",
+ "template_name": "Builders Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/02-industrial-bold"
+}

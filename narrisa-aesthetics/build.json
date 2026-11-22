@@ -1,0 +1,14 @@
+{
+ "slug": "narrisa-aesthetics",
+ "business": "Narrisa Aesthetics",
+ "town": "Auckland",
+ "trade": "aesthetics_injectables",
+ "phone": "027 639 2456",
+ "email": "narrisa.aesthetics@gmail.com",
+ "template": "aesthetics_injectables:03-minimal-honest",
+ "template_name": "Aesthetics \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}
