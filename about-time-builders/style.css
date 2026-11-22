@@ -1,8 +1,8 @@
 
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --bg:#14161a; --panel:#1d2026; --ink:#f4f5f7; --muted:#a7adb8; --accent:#e11d48;
-  --accent-ink:#14161a; --line:#2b2f37; --radius:0px;
+  --bg:#fbe3e2; --panel:#f4cac8; --ink:#191616; --muted:#6b5b5a; --accent:#902721;
+  --accent-ink:#ffffff; --line:#e2aaa7; --radius:0px;
   --display:'Archivo Black','Arial Black','Helvetica Neue',Arial,sans-serif; --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   --maxw:1160px;
 }
