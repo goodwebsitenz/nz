@@ -1,0 +1,14 @@
+{
+ "slug": "bezett-builders-2015-ltd",
+ "business": "Bezett Builders 2015 Ltd",
+ "town": "Dunedin",
+ "trade": "builder",
+ "phone": "",
+ "email": "buzz.bezett@gmail.com",
+ "template": "builders-04",
+ "template_name": "Builders Template 04 \u2014 Modern & image-led",
+ "style": "Modern & image-led",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/04-carded-modern"
+}

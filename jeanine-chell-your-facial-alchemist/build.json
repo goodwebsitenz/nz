@@ -1,0 +1,14 @@
+{
+ "slug": "jeanine-chell-your-facial-alchemist",
+ "business": "Jeanine Chell - Your Facial Alchemist",
+ "town": "Auckland",
+ "trade": "facials_skin",
+ "phone": "",
+ "email": "jeaninechell@gmail.com",
+ "template": "facials_skin:04-carded-modern",
+ "template_name": "Skin treatments \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}

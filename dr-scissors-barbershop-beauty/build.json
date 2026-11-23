@@ -1,0 +1,14 @@
+{
+ "slug": "dr-scissors-barbershop-beauty",
+ "business": "Dr Scissors Barbershop & Beauty",
+ "town": "Auckland",
+ "trade": "barber",
+ "phone": "",
+ "email": "drscissorsnz@gmail.com",
+ "template": "barber:04-carded-modern",
+ "template_name": "Barbering \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}

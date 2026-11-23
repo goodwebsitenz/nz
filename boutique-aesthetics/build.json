@@ -1,0 +1,14 @@
+{
+ "slug": "boutique-aesthetics",
+ "business": "Boutique Aesthetics",
+ "town": "Auckland",
+ "trade": "aesthetics_injectables",
+ "phone": "",
+ "email": "boutiqueaesthetics1@gmail.com",
+ "template": "aesthetics_injectables:05-warm-local",
+ "template_name": "Aesthetics \u2014 05-warm-local",
+ "style": "Warm Local",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/05-warm-local"
+}

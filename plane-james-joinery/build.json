@@ -1,0 +1,14 @@
+{
+ "slug": "plane-james-joinery",
+ "business": "Plane James Joinery",
+ "town": "Nelson",
+ "trade": "carpenter",
+ "phone": "",
+ "email": "planejamesjoinery@gmail.com",
+ "template": "carpenters-01",
+ "template_name": "Carpenters Template 01 \u2014 Editorial premium",
+ "style": "Editorial premium",
+ "engine": "v2",
+ "live": false,
+ "source": "library/carpenters/01-editorial-premium"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "o-callaghan-roofing-limited",
+ "business": "O'Callaghan Roofing Limited",
+ "town": "Tauranga",
+ "trade": "roofer",
+ "phone": "027 640 5182",
+ "email": "ocallaghan.roofing@hotmail.com",
+ "template": "roofers-02",
+ "template_name": "Roofers Template 02 \u2014 Bold industrial",
+ "style": "Bold industrial",
+ "engine": "v2",
+ "live": false,
+ "source": "library/roofers/02-industrial-bold"
+}
