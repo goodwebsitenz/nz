@@ -1,0 +1,14 @@
+{
+ "slug": "glamour-spa-nails",
+ "business": "Glamour Spa Nails",
+ "town": "Auckland",
+ "trade": "nail_tech",
+ "phone": "",
+ "email": "glamourspanails2020@gmail.com",
+ "template": "nail_tech:03-minimal-honest",
+ "template_name": "Nails \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}

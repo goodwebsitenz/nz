@@ -1,0 +1,14 @@
+{
+ "slug": "pn-beauty-makeup-artist",
+ "business": "PN Beauty - Makeup Artist",
+ "town": "Auckland",
+ "trade": "makeup_artist",
+ "phone": "",
+ "email": "pnbeautyy@gmail.com",
+ "template": "makeup_artist:02-industrial-bold",
+ "template_name": "Makeup artistry \u2014 02-industrial-bold",
+ "style": "Industrial Bold",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/02-industrial-bold"
+}

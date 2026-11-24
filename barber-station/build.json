@@ -1,0 +1,14 @@
+{
+ "slug": "barber-station",
+ "business": "Barber Station",
+ "town": "Auckland",
+ "trade": "barber",
+ "phone": "020 422 7237",
+ "email": "barberstationltd@gmail.com",
+ "template": "barber:03-minimal-honest",
+ "template_name": "Barbering \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}

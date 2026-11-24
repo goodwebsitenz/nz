@@ -1,0 +1,14 @@
+{
+ "slug": "kotare-skincare",
+ "business": "Kotare Skincare",
+ "town": "Tauranga",
+ "trade": "facials_skin",
+ "phone": "",
+ "email": "kotareskincare@hotmail.com",
+ "template": "facials_skin:02-industrial-bold",
+ "template_name": "Skin treatments \u2014 02-industrial-bold",
+ "style": "Industrial Bold",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/02-industrial-bold"
+}

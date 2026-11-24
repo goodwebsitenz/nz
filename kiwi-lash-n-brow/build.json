@@ -1,0 +1,14 @@
+{
+ "slug": "kiwi-lash-n-brow",
+ "business": "Kiwi Lash n Brow",
+ "town": "Auckland",
+ "trade": "lash_brow",
+ "phone": "",
+ "email": "kiwilashnbrow@gmail.com",
+ "template": "lash_brow:03-minimal-honest",
+ "template_name": "Lash & brow \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}

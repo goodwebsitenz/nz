@@ -1,0 +1,14 @@
+{
+ "slug": "auckland-braiding",
+ "business": "Auckland Braiding",
+ "town": "Auckland",
+ "trade": "hair_extensions",
+ "phone": "",
+ "email": "sraybidmead@gmail.com",
+ "template": "hair_extensions:03-minimal-honest",
+ "template_name": "Hair extensions \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}
