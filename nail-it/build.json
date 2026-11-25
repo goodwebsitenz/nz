@@ -1,0 +1,14 @@
+{
+ "slug": "nail-it",
+ "business": "Nail It",
+ "town": "Auckland",
+ "trade": "nail_tech",
+ "phone": "",
+ "email": "zakara_cassandra@hotmail.com",
+ "template": "nail_tech:05-warm-local",
+ "template_name": "Nails \u2014 05-warm-local",
+ "style": "Warm Local",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/05-warm-local"
+}

@@ -1,0 +1,14 @@
+{
+ "slug": "charmaine-pitman-hairdresser",
+ "business": "Charmaine Pitman Hairdresser",
+ "town": "Auckland",
+ "trade": "hair_salon",
+ "phone": "",
+ "email": "charmainepitman@gmail.com",
+ "template": "hair_salon:04-carded-modern",
+ "template_name": "Hair \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}

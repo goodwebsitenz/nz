@@ -1,0 +1,14 @@
+{
+ "slug": "inail-lash-n-brow-panmure",
+ "business": "iNail Lash n Brow - Panmure",
+ "town": "Auckland",
+ "trade": "lash_brow",
+ "phone": "",
+ "email": "uongsykhanh@gmail.com",
+ "template": "lash_brow:01-editorial-premium",
+ "template_name": "Lash & brow \u2014 01-editorial-premium",
+ "style": "Editorial Premium",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/01-editorial-premium"
+}

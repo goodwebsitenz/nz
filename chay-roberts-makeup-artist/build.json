@@ -1,0 +1,14 @@
+{
+ "slug": "chay-roberts-makeup-artist",
+ "business": "Chay Roberts Makeup Artist",
+ "town": "Auckland",
+ "trade": "makeup_artist",
+ "phone": "",
+ "email": "chayrobertsmakeup@gmail.com",
+ "template": "makeup_artist:04-carded-modern",
+ "template_name": "Makeup artistry \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}

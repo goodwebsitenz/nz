@@ -1,0 +1,14 @@
+{
+ "slug": "eye-candy-eyelash-extensions",
+ "business": "EYE CANDY Eyelash Extensions",
+ "town": "Napier",
+ "trade": "hair_extensions",
+ "phone": "022 043 9097",
+ "email": "lynetteac09@gmail.com",
+ "template": "hair_extensions:01-editorial-premium",
+ "template_name": "Hair extensions \u2014 01-editorial-premium",
+ "style": "Editorial Premium",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/01-editorial-premium"
+}

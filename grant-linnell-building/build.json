@@ -1,0 +1,14 @@
+{
+ "slug": "grant-linnell-building",
+ "business": "Grant Linnell Building",
+ "town": "Hastings",
+ "trade": "builder",
+ "phone": "021 430 959",
+ "email": "grantlinnellbuilding@xtra.co.nz",
+ "template": "builders-03",
+ "template_name": "Builders Template 03 \u2014 Clean & minimal",
+ "style": "Clean & minimal",
+ "engine": "v2",
+ "live": false,
+ "source": "library/builders/03-minimal-honest"
+}

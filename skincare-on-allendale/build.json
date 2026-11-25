@@ -1,0 +1,14 @@
+{
+ "slug": "skincare-on-allendale",
+ "business": "Skincare on Allendale",
+ "town": "Auckland",
+ "trade": "facials_skin",
+ "phone": "021 800 770",
+ "email": "skincareonallendale@gmail.com",
+ "template": "facials_skin:05-warm-local",
+ "template_name": "Skin treatments \u2014 05-warm-local",
+ "style": "Warm Local",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/05-warm-local"
+}
