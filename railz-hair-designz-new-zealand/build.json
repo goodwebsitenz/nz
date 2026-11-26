@@ -1,0 +1,14 @@
+{
+ "slug": "railz-hair-designz-new-zealand",
+ "business": "Railz Hair Designz - New Zealand",
+ "town": "Auckland",
+ "trade": "hair_salon",
+ "phone": "",
+ "email": "railzhairdesignz@gmail.com",
+ "template": "hair_salon:02-industrial-bold",
+ "template_name": "Hair \u2014 02-industrial-bold",
+ "style": "Industrial Bold",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/02-industrial-bold"
+}

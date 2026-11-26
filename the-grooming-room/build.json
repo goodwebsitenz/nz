@@ -1,0 +1,14 @@
+{
+ "slug": "the-grooming-room",
+ "business": "The Grooming Room",
+ "town": "Auckland",
+ "trade": "barber",
+ "phone": "",
+ "email": "thegroomingroom182@outlook.com",
+ "template": "barber:04-carded-modern",
+ "template_name": "Barbering \u2014 04-carded-modern",
+ "style": "Carded Modern",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/04-carded-modern"
+}

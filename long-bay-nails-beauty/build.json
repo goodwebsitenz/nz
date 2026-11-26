@@ -1,0 +1,14 @@
+{
+ "slug": "long-bay-nails-beauty",
+ "business": "Long Bay Nails & Beauty",
+ "town": "Auckland",
+ "trade": "nail_tech",
+ "phone": "",
+ "email": "longbaybeauty2019@gmail.com",
+ "template": "nail_tech:01-editorial-premium",
+ "template_name": "Nails \u2014 01-editorial-premium",
+ "style": "Editorial Premium",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/01-editorial-premium"
+}

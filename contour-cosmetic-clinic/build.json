@@ -1,0 +1,14 @@
+{
+ "slug": "contour-cosmetic-clinic",
+ "business": "Contour Cosmetic Clinic",
+ "town": "Invercargill",
+ "trade": "aesthetics_injectables",
+ "phone": "",
+ "email": "contourcosmetics@hotmail.com",
+ "template": "aesthetics_injectables:03-minimal-honest",
+ "template_name": "Aesthetics \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}

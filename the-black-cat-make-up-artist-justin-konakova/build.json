@@ -1,0 +1,14 @@
+{
+ "slug": "the-black-cat-make-up-artist-justin-konakova",
+ "business": "The Black Cat - Make Up Artist Justin Konakova",
+ "town": "Auckland",
+ "trade": "makeup_artist",
+ "phone": "021 469 880",
+ "email": "tbc.makeup@gmail.com",
+ "template": "makeup_artist:03-minimal-honest",
+ "template_name": "Makeup artistry \u2014 03-minimal-honest",
+ "style": "Minimal Honest",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/03-minimal-honest"
+}

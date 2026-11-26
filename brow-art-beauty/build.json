@@ -1,0 +1,14 @@
+{
+ "slug": "brow-art-beauty",
+ "business": "Brow Art & Beauty",
+ "town": "Auckland",
+ "trade": "lash_brow",
+ "phone": "027 639 2456",
+ "email": "browartandbeauty@gmail.com",
+ "template": "lash_brow:05-warm-local",
+ "template_name": "Lash & brow \u2014 05-warm-local",
+ "style": "Warm Local",
+ "engine": "v2",
+ "live": false,
+ "source": "universal/05-warm-local"
+}
